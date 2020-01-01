@@ -1,0 +1,145 @@
+general {
+    output_format = "i3bar"
+    interval = 5
+    colors          = true
+    color_degraded  = "#cb4b16"
+    color_bad       = "#665555"
+    color_good      = "#aabbaa"
+    color_separator = "#555555"
+}
+
+order += "tztime local"
+#order += "ipv6"
+#order += "run_watch DHCP"
+#order += "run_watch VPNC"
+order += "run_watch VPNPPP"
+#order += "wireless wlan0"
+order += "wireless wlp2s0"
+order += "ethernet eth0"
+order += "ethernet enp3s0"
+#order += "path_exists VPN"
+#order += "cpu_temperature 0"
+#order += "disk /"
+order += "load"
+order += "battery 0"
+order += "volume master"
+
+wireless wlan0 {
+    #format_up = "📶%essid %quality %bitrate %ip"
+    format_up = "📶%essid %quality %bitrate"
+    format_down = "📶🛇"
+    separator = true
+    separator_block_width = 10
+}
+volume master {
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+	format = "♪ %volume "
+    separator = true
+    separator_block_width = 10
+}
+
+wireless wlp2s0 {
+    #format_up = "📶%essid %quality %bitrate %ip"
+    #format_up = "📶%essid %quality %bitrate"
+    format_up = "📶%essid"
+    format_down = "📶🛇"
+    separator = true
+    separator_block_width = 10
+}
+ethernet enp3s0 {
+    # if you use %speed, i3status requires the cap_net_admin capability
+    format_up = "🖧%speed %ip"
+    #format_down = "🖧🛇"
+    format_down = ""
+}
+
+ethernet eth0 {
+    # if you use %speed, i3status requires the cap_net_admin capability
+    format_up = "🖧%speed %ip"
+    #format_down = "🖧🛇"
+    format_down = ""
+}
+
+battery 1 {
+    #format = "%status %percentage %remaining %emptytime"
+    format = "%status %percentage"
+    format_down = "No battery"
+    status_chr = "⚡"
+    status_bat = "🔋"
+    status_unk = "🔋"
+    status_full = "🔋"
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    low_threshold = 10
+}
+
+battery 0 {
+    format = "%status %percentage %remaining" # %emptytime"
+    #hide_seconds = true                           #*gives error when uncommented**
+    format_down = "No Battery"
+    last_full_capacity = true
+    integer_battery_capacity = true		  #battery percentage is shown without decimals
+    status_chr = "⚇ CHR"                          ##gives error......**
+    status_bat = "⚡ BAT"                         #**gives error....**
+    #status_unk = ""                              #**gives error....**
+    status_unk = "🔋"
+    status_full = "☻ FULL"                        #*gives error....**
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    low_threshold = 20
+    threshold_type = time
+    separator = true
+    separator_block_width = 10
+}
+
+run_watch DHCP {
+    pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPNC {
+    # file containing the PID of a vpnc process
+    #pidfile = "/var/run/vpnc/pid"
+    pidfile = "/var/run/ppp0.pid"
+    format_down = ""
+    separator = true
+    separator_block_width = 10
+}
+
+run_watch VPNPPP {
+    # file containing the PID of a vpnc process
+    #pidfile = "/var/run/vpnc/pid"
+    pidfile = "/var/run/ppp0.pid"
+    format_down = ""
+    separator = true
+    separator_block_width = 10
+}
+path_exists VPN {
+    # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+    path = "/proc/sys/net/ipv4/conf/tun0"
+    separator = true
+    separator_block_width = 10
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M"
+    separator = true
+    separator_block_width = 50
+}
+
+load {
+    format = "%5min"
+    separator = true
+    separator_block_width = 10
+}
+
+cpu_temperature 0 {
+    format = "T: %degrees °C"
+    path = "/sys/devices/platform/coretemp.0/temp1_input"
+}
+
+disk "/" {
+    format = "%free"
+    separator = true
+    separator_block_width = 10
+}
+

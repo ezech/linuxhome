@@ -1,0 +1,208 @@
+2020-01-01 17:12:19	-->	ezech (~arek@2a02:a314:8145:6480:c6d9:87ff:fe7a:f760) has joined #android
+2020-01-01 17:12:19	--	Topic for #android is "Welcome to the official Android platform IRC channel! | AOSP review at https://r.android.com/ | Android 10 released https://android.com/android-10/ | Root? Modded ROMs? Head to #android-root | App development questions? See #android-dev | Not talking Android? Head to #android-offtopic | Swearing, threatening, name-calling, etc. will not be tolerated"
+2020-01-01 17:12:19	--	Topic set by TheSchaf (~foobar@unaffiliated/theschaf) on Wed, 25 Sep 2019 17:16:08
+2020-01-01 17:12:20	--	Channel #android: 395 nicks (2 ops, 0 voices, 393 normals)
+2020-01-01 17:12:20	--	PvNotice(ChanServ): Welcome to #android! No bots, no publicly-accessible logging, and no bridging Android apps to this channel, please. Please show good IRC etiquette: don't send private messages without asking first.
+2020-01-01 17:12:21	--	Channel created on Mon, 05 Nov 2007 18:48:37
+2020-01-01 17:18:07	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #android
+2020-01-01 17:19:49	-->	dojmin (~mars@unaffiliated/dojmin) has joined #android
+2020-01-01 17:33:30	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined #android
+2020-01-01 17:35:15	r4pr0n	is there a sshfs app which is free software that supports mounting the device (without root) like a nextcloud webdav account is mounted?
+2020-01-01 17:43:52	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-01-01 17:44:24	ezech	hi guys, I'm looking for a tutorial for an paranoid android user
+2020-01-01 17:45:03	<--	R8ns0m (~Thunderbi@2601:18a:c401:307c:f66d:60ee:6cf9:101a) has quit (Remote host closed the connection)
+2020-01-01 17:45:04	ezech	I'm trying to get my phone to be more responsive and use less battery, I figure it lags because of all those phone-home features
+2020-01-01 17:51:55	-->	davispuh (~quassel@87.110.32.91) has joined #android
+2020-01-01 18:03:14	<--	timahvo1 (~rogue@41.80.252.213) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:03:49	-->	timahvo1 (~rogue@41.80.252.213) has joined #android
+2020-01-01 18:04:00	<--	timahvo1 (~rogue@41.80.252.213) has quit (Remote host closed the connection)
+2020-01-01 18:04:43	<--	dubiago (~dubiago@50-81-30-183.client.mchsi.com) has quit (Remote host closed the connection)
+2020-01-01 18:10:47	Bitterblue	Who can say?
+2020-01-01 18:11:48	Khaytsus	ezech: Unlikely, but do whatever you want.  #android-root is where you want to be, although really, just look up your device on XDA.
+2020-01-01 18:15:36	-->	SimonNL (~SimonNL@62-145-201-10.cable.dynamic.v4.ziggo.nl) has joined #android
+2020-01-01 18:15:54	<--	trekkie1701c (~trekkie17@ec2-52-15-173-116.us-east-2.compute.amazonaws.com) has quit (Quit: :P)
+2020-01-01 18:16:12	-->	learning1 (~pi@43.240.22.44) has joined #android
+2020-01-01 18:16:26	ezech	Khaytsus: I don't want to lose proprietary firmware for camera and audio though
+2020-01-01 18:17:26	ezech	I did replace some google apps with f-droid replacements, it's already snappier
+2020-01-01 18:18:08	<--	learningc (~pi@43.240.22.32) has quit (Ping timeout: 260 seconds)
+2020-01-01 18:18:23	Khaytsus	Sure it is.
+2020-01-01 18:19:33	ezech	if I feel it's better, it's all that matters, I'm a huge fan of placebo effect :)
+2020-01-01 18:19:40	Khaytsus	Apparently
+2020-01-01 18:21:47	ezech	on a serious note, ditching gboard for ask and google launcher for lawnchair makes quite measurable improvement, especially keyboard
+2020-01-01 18:22:42	Khaytsus	I didn't like gboard because it's typo correction abilities suck, but it wasn't slower (except...  that it didn't work as well as my normal keyboard)
+2020-01-01 18:23:04	Khaytsus	AnySoftKeyboard ?  really?  It sucks balls
+2020-01-01 18:23:13	Khaytsus	I mean I haven't used it in maybe 2 years..  perhaps more, so maybe not as bad
+2020-01-01 18:23:16	Khaytsus	But it's pretty useless
+2020-01-01 18:23:32	-->	infernix (nix@unaffiliated/infernix) has joined #android
+2020-01-01 18:23:33	ezech	Khaytsus: I got it from reddit, didn't know anything else
+2020-01-01 18:23:55	Khaytsus	Do whatever you want
+2020-01-01 18:27:19	<--	S4r3n (~S4ren@host86-154-25-3.range86-154.btcentralplus.com) has quit (Remote host closed the connection)
+2020-01-01 18:27:32	<--	Atque (~Atque@unaffiliated/atque) has quit (Quit: ...)
+2020-01-01 18:29:25	-->	S4ren (~S4ren@host86-154-25-3.range86-154.btcentralplus.com) has joined #android
+2020-01-01 18:29:40	-->	rnDPrc (~rnDPrc@170-82-76-129.thefiberinternetbandalarga.net.br) has joined #android
+2020-01-01 18:30:25	rnDPrc	Hello, anybody wants to chat with a 33yo brazilian salesman?
+2020-01-01 18:32:09	Khaytsus	No thanks.
+2020-01-01 18:34:16	-->	Brainium (~brainium@unaffiliated/brainium) has joined #android
+2020-01-01 18:46:35	-->	trekkie1701c (~trekkie17@ec2-52-15-173-116.us-east-2.compute.amazonaws.com) has joined #android
+2020-01-01 18:51:37	-->	kappa1 (~kappa1@unaffiliated/kappa1) has joined #android
+2020-01-01 18:52:27	<--	Lunatrius (~Lunatrius@77.38.22.40) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:52:56	-->	Lunatrius (~Lunatrius@77.38.22.40) has joined #android
+2020-01-01 18:54:13	-->	Lunatrius` (~Lunatrius@77.38.22.40) has joined #android
+2020-01-01 18:55:56	<--	Brainium (~brainium@unaffiliated/brainium) has quit (Read error: Connection reset by peer)
+2020-01-01 18:57:19	<--	Lunatrius (~Lunatrius@77.38.22.40) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:57:19	--	Lunatrius` is now known as Lunatrius
+2020-01-01 18:57:35	-->	dubiago (~dubiago@50-81-30-183.client.mchsi.com) has joined #android
+2020-01-01 19:01:03	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Ping timeout: 240 seconds)
+2020-01-01 19:01:22	-->	BitEvil (~quassel@tor/regular/SpeedEvil) has joined #android
+2020-01-01 19:01:22	--	SpeedEvil is now known as Guest72098
+2020-01-01 19:02:24	<--	Guest72098 (~quassel@tor/regular/SpeedEvil) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:04:21	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined #android
+2020-01-01 19:04:28	-->	SebastianFlyte (~sebf@pool-108-48-111-124.washdc.fios.verizon.net) has joined #android
+2020-01-01 19:05:27	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Client Quit)
+2020-01-01 19:06:43	-->	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has joined #android
+2020-01-01 19:25:38	<--	tinwhiskers (~tinwhiske@unaffiliated/tinwhiskers) has left #android ("later")
+2020-01-01 19:27:20	<--	rnDPrc (~rnDPrc@170-82-76-129.thefiberinternetbandalarga.net.br) has quit (Quit: Leaving)
+2020-01-01 19:30:42	-->	Lucas_Gray (~Wryhder@197.210.226.86) has joined #android
+2020-01-01 19:36:16	-->	Wryhder (~Wryhder@197.210.29.114) has joined #android
+2020-01-01 19:36:19	<--	Lucas_Gray (~Wryhder@197.210.226.86) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:36:44	<--	utack (~utack@2a02:810d:1380:a24:34fa:7f3c:9bf7:8407) has quit (Remote host closed the connection)
+2020-01-01 19:37:16	--	Wryhder is now known as Lucas_Gray
+2020-01-01 19:37:27	<--	alexeyneud (~alex@ppp-124-120-118-96.revip2.asianet.co.th) has quit (Quit: Leaving)
+2020-01-01 19:38:10	<--	BrianG61UK (~BrianG61U@2a00:23c5:6e2c:613:5dfc:32c5:cb37:fb56) has quit (Read error: Connection reset by peer)
+2020-01-01 19:45:38	-->	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has joined #android
+2020-01-01 19:45:39	<--	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has quit (Client Quit)
+2020-01-01 19:45:47	<--	cacoalat (~cacoalat@114.red-81-44-32.dynamicip.rima-tde.net) has quit
+2020-01-01 19:46:40	-->	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has joined #android
+2020-01-01 19:48:32	<--	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-01-01 19:54:03	-->	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has joined #android
+2020-01-01 20:01:21	<--	Vercas (~Vercas@unaffiliated/vercas) has quit (Quit: Farewell.)
+2020-01-01 20:03:17	-->	ephemer0l_ (~ephemer0l@pentoo/user/ephemer0l) has joined #android
+2020-01-01 20:09:25	-->	Vercas (~Vercas@unaffiliated/vercas) has joined #android
+2020-01-01 20:24:43	<--	Lucas_Gray (~Wryhder@197.210.29.114) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:30:55	-->	Lucas_Gray (~Wryhder@197.210.53.252) has joined #android
+2020-01-01 20:32:57	-->	isomari (~isomari@197.210.243.51) has joined #android
+2020-01-01 20:36:24	<--	Lucas_Gray (~Wryhder@197.210.53.252) has quit (Read error: Connection reset by peer)
+2020-01-01 20:38:02	<--	akem (~akem@82.102.19.217) has quit (Quit: Leaving)
+2020-01-01 20:38:47	<--	Mattiaslndstrm (~Mattiasln@c-136be555.018-449-6e6b701.bbcust.telenor.se) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-01-01 20:44:32	<--	bvdw (~bas@5.9.139.181) has quit (Read error: Connection reset by peer)
+2020-01-01 20:45:18	-->	bvdw (~bas@5.9.139.181) has joined #android
+2020-01-01 20:50:00	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined #android
+2020-01-01 20:53:24	-->	shadow98 (uid236862@gateway/web/irccloud.com/x-iyxiwqblukyydqvo) has joined #android
+2020-01-01 20:53:36	-->	tracks_droid (~androirc@2600:100d:b157:f5fa:0:54:43f8:fa01) has joined #android
+2020-01-01 21:01:37	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Read error: Connection reset by peer)
+2020-01-01 21:01:57	<--	Aoyagi (~yags@unaffiliated/aoyagi) has quit (Ping timeout: 265 seconds)
+2020-01-01 21:11:00	-->	PowaBanga_ (~PowaBanga@unaffiliated/powabanga) has joined #android
+2020-01-01 21:11:58	<--	PowaBanga (~PowaBanga@unaffiliated/powabanga) has quit (Ping timeout: 260 seconds)
+2020-01-01 21:12:01	-->	kreyren[m] (~kreyrenm]@ip-62-245-98-101.net.upcbroadband.cz) has joined #android
+2020-01-01 21:12:06	--	PowaBanga_ is now known as PowaBanga
+2020-01-01 21:12:13	-->	DrBrownBear (~DrBrownbe@2601:40f:c100:ddd0:21b9:87cd:17b7:cc8c) has joined #android
+2020-01-01 21:21:41	-->	pmart (4fb8ffd7@gateway/web/cgi-irc/kiwiirc.com/ip.79.184.255.215) has joined #android
+2020-01-01 21:26:16	gordonfish	Happy New Year and decade :)
+2020-01-01 21:27:35	-->	purplex88 (AdiIRC@unaffiliated/purplex88) has joined #android
+2020-01-01 21:28:09	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined #android
+2020-01-01 21:32:39	<--	trekkie1701c (~trekkie17@ec2-52-15-173-116.us-east-2.compute.amazonaws.com) has quit (Quit: :P)
+2020-01-01 21:33:28	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Quit: %nickname% has gone offline)
+2020-01-01 21:35:22	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined #android
+2020-01-01 21:39:53	-->	trekkie1701c (~trekkie17@ec2-52-15-173-116.us-east-2.compute.amazonaws.com) has joined #android
+2020-01-01 21:40:05	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Read error: Connection reset by peer)
+2020-01-01 21:44:00	-->	Lucas_Gray (~Wryhder@197.210.226.171) has joined #android
+2020-01-01 21:46:40	-->	FnorZ (~FnorZ@unaffiliated/fnorz) has joined #android
+2020-01-01 21:46:49	<--	FnorZ (~FnorZ@unaffiliated/fnorz) has quit (Read error: Connection reset by peer)
+2020-01-01 21:47:01	-->	FnorZ (~FnorZ@unaffiliated/fnorz) has joined #android
+2020-01-01 21:58:14	ezech	gordonfish: a decade - an optimist :)
+2020-01-01 21:58:51	<--	pmart (4fb8ffd7@gateway/web/cgi-irc/kiwiirc.com/ip.79.184.255.215) has quit (Remote host closed the connection)
+2020-01-01 21:59:19	-->	filipdevuan_ (~filip@public-gprs385238.centertel.pl) has joined #android
+2020-01-01 21:59:48	filipdevuan_	hey i will be unlocking xiaomi redmi note 7 bootloader in 6 days what can i do later to get rid of Gapps from this device????
+2020-01-01 22:04:03	-->	akemhp (~akem@62.112.10.121) has joined #android
+2020-01-01 22:09:34	-->	Nick_ (~Nick@unaffiliated/death916) has joined #android
+2020-01-01 22:10:27	<--	ivanich (~ivanich@host-176-36-233-131.la.net.ua) has quit (Quit: Konversation terminated!)
+2020-01-01 22:12:27	<--	Death916 (~Nick@unaffiliated/death916) has quit (Ping timeout: 240 seconds)
+2020-01-01 22:12:36	--	Nick_ is now known as Death916
+2020-01-01 22:22:14	eelstrebor	anyone know why i can't get audio from a univision satellite feed when using an android tv box or dreamdroid?
+2020-01-01 22:25:15	ezech	filipdevuan_: you could put some custom rom on it, with no gapps
+2020-01-01 22:25:39	<--	ImQ009 (~ImQ009@unaffiliated/imq009) has quit (Quit: Leaving)
+2020-01-01 22:25:43	filipdevuan_	ezech: is it really worth it???
+2020-01-01 22:27:25	ezech	filipdevuan_: perhaps some app that removes anything you point it at
+2020-01-01 22:27:48	ezech	filipdevuan_: from my experience it's not worth to remove app just so it's removed
+2020-01-01 22:28:08	filipdevuan_	what do you really mean by an app???
+2020-01-01 22:28:13	<--	Lucas_Gray (~Wryhder@197.210.226.171) has quit (Read error: Connection reset by peer)
+2020-01-01 22:28:45	ezech	filipdevuan_: there are apps that remove those "builtin" apps you can't remove normaly
+2020-01-01 22:28:55	filipdevuan_	like google play services??
+2020-01-01 22:30:12	ezech	I think so
+2020-01-01 22:30:27	ezech	what are you trying to achieve though?
+2020-01-01 22:30:55	filipdevuan_	id like to achieve having some privacy without having proprietary google software
+2020-01-01 22:30:58	-->	Lucas_Gray (~Wryhder@197.210.227.247) has joined #android
+2020-01-01 22:31:28	filipdevuan_	installed
+2020-01-01 22:32:41	filipdevuan_	but then i am not sure if it's worth it to be fair....
+2020-01-01 22:33:02	filipdevuan_	i have bought smartphone just to be able get internet connection on laptop via usb tethering
+2020-01-01 22:33:08	<--	SimonNL (~SimonNL@62-145-201-10.cable.dynamic.v4.ziggo.nl) has quit (Quit: Leaving (Close)___If I have said something clever. my apologies \o)
+2020-01-01 22:33:20	filipdevuan_	but all smartphone capabilities r wasting i have got f-droid for android though... i am not sure though
+2020-01-01 22:34:41	filipdevuan_	but i suppose i just want to learn something new because i have never installed different rom on the smartphone
+2020-01-01 22:36:03	<--	Lucas_Gray (~Wryhder@197.210.227.247) has quit (Read error: Connection reset by peer)
+2020-01-01 22:39:35	<--	Bitterblue (~jackoneil@unaffiliated/jackoneill) has quit (Ping timeout: 265 seconds)
+2020-01-01 22:40:53	-->	orbyt_ (~orbyt@172.92.5.20) has joined #android
+2020-01-01 22:42:46	<--	dojmin (~mars@unaffiliated/dojmin) has quit (Quit: Rage)
+2020-01-01 22:46:42	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined #android
+2020-01-01 22:49:53	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Client Quit)
+2020-01-01 22:52:41	-->	BrianG61UK (~BrianG61U@2a00:23c5:6e2c:4d13:d480:4694:68f:d844) has joined #android
+2020-01-01 22:52:53	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined #android
+2020-01-01 22:53:39	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 22:56:18	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined #android
+2020-01-01 22:59:27	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 23:01:20	-->	Martchus (~martchus@dslb-084-057-119-044.084.057.pools.vodafone-ip.de) has joined #android
+2020-01-01 23:01:30	<--	Martchus_ (~martchus@ipservice-092-217-060-049.092.217.pools.vodafone-ip.de) has quit (Ping timeout: 258 seconds)
+2020-01-01 23:03:14	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined #android
+2020-01-01 23:04:13	-->	devster (~devster@host15-129-dynamic.46-79-r.retail.telecomitalia.it) has joined #android
+2020-01-01 23:04:43	-->	SpeedEvil (~quassel@tor/regular/SpeedEvil) has joined #android
+2020-01-01 23:04:46	-->	Nick_ (~Nick@unaffiliated/death916) has joined #android
+2020-01-01 23:04:51	<--	BitEvil (~quassel@tor/regular/SpeedEvil) has quit (Ping timeout: 240 seconds)
+2020-01-01 23:05:09	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 23:05:22	<--	devster31 (~devster@host254-92-dynamic.53-79-r.retail.telecomitalia.it) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:08:27	<--	Death916 (~Nick@unaffiliated/death916) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:08:28	--	Nick_ is now known as Death916
+2020-01-01 23:09:54	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined #android
+2020-01-01 23:26:13	<--	purplex88 (AdiIRC@unaffiliated/purplex88) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2020-01-01 23:28:48	<--	filipdevuan_ (~filip@public-gprs385238.centertel.pl) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:28:51	-->	utack (~utack@95.91.251.206) has joined #android
+2020-01-01 23:29:04	-->	EdgyMC_69 (5319a5e1@83.25.165.225.ipv4.supernova.orange.pl) has joined #android
+2020-01-01 23:29:25	<--	squirrel (~mj@unaffiliated/squirrel) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:30:59	EdgyMC_69	Hi. I haven't had an android phone in years. Would the pixels be visible on a 6 inch phone with (~1440)x720px res display? I wanted to read on it and watch videos.
+2020-01-01 23:31:34	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 23:32:05	ezech	EdgyMC_69: I think for videos it doesn't matter at all, and for reading pixel densiti is less important than visibility
+2020-01-01 23:32:54	EdgyMC_69	Visibility as in contrast or lightness?
+2020-01-01 23:33:12	EdgyMC_69	Or do you mean in-app visibility?
+2020-01-01 23:33:22	ezech	I've read quite a few books printed on shitty quality moldy paper, with poor quality print as well
+2020-01-01 23:33:45	ezech	720p would be a huge upgrade over those paper books
+2020-01-01 23:34:07	ezech	visibility as in all factors combined, so if you read in a bus even how well screen reflects light from windows
+2020-01-01 23:34:31	EdgyMC_69	I remember reading a lot on a 480px phone but the display was smaller. I think I'll at least compare the pixel densities.
+2020-01-01 23:34:49	ezech	screen size would make a difference 
+2020-01-01 23:35:10	EdgyMC_69	I'm on the fence with the Moto G7 Power. I really like the 5000mAh battery but the resolution compared to the screen size sounds scary.
+2020-01-01 23:35:46	ezech	it's easy to measure Ah, hard to measure what it means
+2020-01-01 23:36:15	-->	Aoyagi (~yags@unaffiliated/aoyagi) has joined #android
+2020-01-01 23:36:29	EdgyMC_69	hm... some users on a forum said that they used it for 2 days and they still had half of the battery
+2020-01-01 23:36:35	ezech	if 5Ah in your Moto G7 means 28h of service it's less than 3Ah of some other if it means 32h of service
+2020-01-01 23:37:24	EdgyMC_69	some reviewers said that it's 14.5h of watching youtube using wifi with the display on full brightness
+2020-01-01 23:37:42	ezech	I'd say this is overkill then
+2020-01-01 23:37:55	ezech	unless it can double as a powerbank
+2020-01-01 23:38:21	EdgyMC_69	I don't think so, I think it's a low range device.
+2020-01-01 23:38:43	ezech	if it could charge your cordless headset and watch, then it would be interesting
+2020-01-01 23:39:07	ezech	half of your flight you watch youtube, other half you're asleep charging your other devices
+2020-01-01 23:39:46	ezech	I'm not a huge fan of low end devices, half the price, twice as many problems
+2020-01-01 23:40:32	ezech	harder to find quality accesories, harder to service if you need to
+2020-01-01 23:41:14	-->	squirrel (~mj@unaffiliated/squirrel) has joined #android
+2020-01-01 23:41:56	EdgyMC_69	well yeah, I get that with a premium device you get a premium service but I don't like buying... things
+2020-01-01 23:42:13	-->	Pragma (~kvirc@kvirc/developer/Pragma) has joined #android
+2020-01-01 23:42:16	EdgyMC_69	so it's easier for me to swallow if its cheaper
+2020-01-01 23:43:17	Khaytsus	I'd rather charge my phone daily and it not be shit.
+2020-01-01 23:44:36	-->	purplex88 (AdiIRC@unaffiliated/purplex88) has joined #android
+2020-01-01 23:45:29	ezech	EdgyMC_69: maybe search for something premium-ish
+2020-01-01 23:46:25	ezech	I went for xperia Z5 compact, kind of premium insides but significantly lower price
+2020-01-01 23:46:35	EdgyMC_69	Are there premiumish things for $180 with tax?
+2020-01-01 23:47:58	ezech	EdgyMC_69: that's kind of low for anything these days
+2020-01-01 23:55:02	<--	DrBrownBear (~DrBrownbe@2601:40f:c100:ddd0:21b9:87cd:17b7:cc8c) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:59:26	tonyt	anyone get android 10 for the note 9 yet?
+2020-01-02 00:00:57	-->	Mattiaslndstrm (~Mattiasln@c-136be555.018-449-6e6b701.bbcust.telenor.se) has joined #android
+2020-01-02 00:01:55	<--	Mattiaslndstrm (~Mattiasln@c-136be555.018-449-6e6b701.bbcust.telenor.se) has quit (Remote host closed the connection)
+2020-01-02 00:02:37	-->	Mattiaslndstrm (~Mattiasln@c-136be555.018-449-6e6b701.bbcust.telenor.se) has joined #android
+2020-01-02 00:03:01	<--	Mattiaslndstrm (~Mattiasln@c-136be555.018-449-6e6b701.bbcust.telenor.se) has quit (Client Quit)
+2020-01-02 00:03:33	-->	filipdevuan_ (~filip@public-gprs385238.centertel.pl) has joined #android

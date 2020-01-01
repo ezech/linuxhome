@@ -1,0 +1,1986 @@
+2020-01-01 17:10:59	-->	ezech (~arek@2a02:a314:8145:6480:c6d9:87ff:fe7a:f760) has joined ##linux
+2020-01-01 17:10:59	--	Topic for ##linux is "Channel website: https://freenode.linux.community | Pastebin: https://paste.linux.community | Need an op? Join ##linux-ops | CoC? ##linux-offtopic, please."
+2020-01-01 17:10:59	--	Topic set by sauvin on Tue, 18 Sep 2018 21:14:08
+2020-01-01 17:10:59	--	Channel ##linux: 1800 nicks (0 ops, 0 voices, 1800 normals)
+2020-01-01 17:10:59	--	PvNotice(ChanServ): Please see https://freenode.linux.community/how-to-connect/ on how to register or identify your nick. By joining this channel you agree to abide by the channel rules and guidelines laid out at https://freenode.linux.community/channel-rules/.
+2020-01-01 17:10:59	--	URL for ##linux: https://freenode.linux.community
+2020-01-01 17:10:59	<--	grumpey (~grumpey@mobile-166-171-59-233.mycingular.net) has quit (Quit: WeeChat 2.4)
+2020-01-01 17:11:01	--	Channel created on Sat, 10 Feb 2001 00:16:24
+2020-01-01 17:11:37	SrPx	slondr: thanks for the suggestion!
+2020-01-01 17:12:40	apep11	So, anyone knows of ncurses C++ binding?
+2020-01-01 17:13:24	Night_Elf	So what would be a reason to use irsii instead of weechat ?
+2020-01-01 17:13:35	-->	vuoto (~vuoto@80.71.142.174) has joined ##linux
+2020-01-01 17:13:51	Night_Elf	I would think weechat to be more flexible and modern
+2020-01-01 17:13:57	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Quit: WeeChat 2.7)
+2020-01-01 17:14:30	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 17:14:35	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 258 seconds)
+2020-01-01 17:15:18	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:15:43	<--	gonewrong (~d4rknot@45.132.137.14) has quit (Ping timeout: 260 seconds)
+2020-01-01 17:15:47	<--	fatpointer (fatpointer@fedora/wadadli) has quit (Remote host closed the connection)
+2020-01-01 17:16:06	bipul	apep11, http://www.cs.ukzn.ac.za/~hughm/os/notes/ncurses.html
+2020-01-01 17:16:12	-->	wadadli (fatpointer@fedora/wadadli) has joined ##linux
+2020-01-01 17:16:24	gunix	Night_Elf: if you feel fine with weechat, there is no reason to switch
+2020-01-01 17:16:44	iflema	man 3 ncurses
+2020-01-01 17:16:46	akk	apep11: There's certainly a C binding which you can use from C++.
+2020-01-01 17:17:11	apep11	akk: You mean with extern "C"?
+2020-01-01 17:17:12	ezech	Night_Elf: not going through config migration?
+2020-01-01 17:17:18	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Client Quit)
+2020-01-01 17:17:35	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 17:18:04	akk	apep11: yes
+2020-01-01 17:18:07	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined ##linux
+2020-01-01 17:18:20	-->	MEODALT (~david@garza.riseup.net) has joined ##linux
+2020-01-01 17:18:28	apep11	akk: Well is there an actual binding, just like gtk has gtkmm?
+2020-01-01 17:18:46	bipul	Like API
+2020-01-01 17:18:51	apep11	Yeah.
+2020-01-01 17:19:13	-->	Naglfar (znc@thunix.net) has joined ##linux
+2020-01-01 17:19:17	-->	kriger (~norge@unaffiliated/kriger) has joined ##linux
+2020-01-01 17:19:22	akk	apep11: Not  that I know of, but I've never looked, I'd just use the native C.
+2020-01-01 17:20:02	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 17:20:29	apep11	akk: I want to practice BOTH ncurses and C++ so... easier to do it as one project.
+2020-01-01 17:20:56	akk	apep11: In that case, writing a C++ O-O binding sounds like a good exercise.
+2020-01-01 17:20:56	-->	B|ack0p (~M@unaffiliated/blackop) has joined ##linux
+2020-01-01 17:21:06	-->	udni (~Thunderbi@88-149-143-209.dyn.eolo.it) has joined ##linux
+2020-01-01 17:21:33	apep11	akk: You are right but I already decided what I want to make. Maybe next time.
+2020-01-01 17:21:38	-->	zavoski (~user@unaffiliated/sky901) has joined ##linux
+2020-01-01 17:21:44	-->	Quigly (~quigly@24.224.222.106) has joined ##linux
+2020-01-01 17:21:49	<--	paulcarroty (~paul@93.75.232.249) has quit (Remote host closed the connection)
+2020-01-01 17:21:53	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:22:31	-->	paulcarroty (~paul@93.75.232.249) has joined ##linux
+2020-01-01 17:22:41	-->	modlin (~modlin@unaffiliated/modlin) has joined ##linux
+2020-01-01 17:23:20	apep11	I have found something called ncurses++, but can't find anything about it. Just this: https://reversed.top/2016-04-24/ncurses-for-cpp/
+2020-01-01 17:23:43	-->	AT-x310 (~AT-x310@abordeaux-651-1-75-183.w90-5.abo.wanadoo.fr) has joined ##linux
+2020-01-01 17:24:03	<--	AT-x310 (~AT-x310@abordeaux-651-1-75-183.w90-5.abo.wanadoo.fr) has quit (Client Quit)
+2020-01-01 17:24:39	bipul	What's your goal? You must ask in  ##c
+2020-01-01 17:25:09	apep11	I guess that's enough actually.
+2020-01-01 17:26:03	akk	Bindings that are poorly documented and little used usually cause more frustration than they cure, but it's your choice.
+2020-01-01 17:26:03	<--	tsujp (~tsujp@194-223-77-4.tpgi.com.au) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2020-01-01 17:26:05	<--	kriger (~norge@unaffiliated/kriger) has quit (Ping timeout: 258 seconds)
+2020-01-01 17:26:28	-->	atrament666 (~atrament@cpc95006-newt38-2-0-cust73.19-3.cable.virginm.net) has joined ##linux
+2020-01-01 17:26:33	twainwek	he'll get banned within 2 seconds from ##c if he asks there
+2020-01-01 17:26:48	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 17:26:54	<--	Northstrider (~Northstri@unaffiliated/northstrider) has quit (Quit: Leaving)
+2020-01-01 17:27:24	-->	ScottHDev (53c728af@lfbn-ren-1-1856-175.w83-199.abo.wanadoo.fr) has joined ##linux
+2020-01-01 17:28:03	<--	AK5Z (~goatman@unaffiliated/goatman) has quit (Ping timeout: 268 seconds)
+2020-01-01 17:28:35	Pentode	lol
+2020-01-01 17:29:24	Pentode	might even get death threats for that. :-O
+2020-01-01 17:29:24	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Quit: WeeChat 2.7)
+2020-01-01 17:30:03	-->	emmanuelux (~emmanuelu@2a01cb0000f3930085a180d71e1335c2.ipv6.abo.wanadoo.fr) has joined ##linux
+2020-01-01 17:30:27	-->	innovati (~innovati@206-188-83-209.cpe.distributel.net) has joined ##linux
+2020-01-01 17:30:36	<--	vuoto (~vuoto@80.71.142.174) has quit (Quit: vuoto)
+2020-01-01 17:30:37	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 17:31:13	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Client Quit)
+2020-01-01 17:31:15	-->	vuoto (~vuoto@80.71.142.174) has joined ##linux
+2020-01-01 17:31:21	-->	Mikasi (~mikasi@96-35-106-68.dhcp.bycy.mi.charter.com) has joined ##linux
+2020-01-01 17:31:21	<--	Mikasi (~mikasi@96-35-106-68.dhcp.bycy.mi.charter.com) has quit (Client Quit)
+2020-01-01 17:31:43	apep11	akk: Not saying you are wrong :[
+2020-01-01 17:31:56	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:32:13	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 17:32:33	apep11	But I'm more afraid of them being outdated.
+2020-01-01 17:32:39	Pentode	apep11: just curious, why are you looking for ncurses wrappers for c++?
+2020-01-01 17:32:42	Pentode	ooh that old bag
+2020-01-01 17:33:07	apep11	Because I want to use C++ and if possible it's better to use ncurses bindings if they exist.
+2020-01-01 17:33:44	-->	dino82 (~deeno@unaffiliated/dino82) has joined ##linux
+2020-01-01 17:34:19	<--	ScottHDev (53c728af@lfbn-ren-1-1856-175.w83-199.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2020-01-01 17:34:31	Pentode	fair enough i wouldn't be that worried about being "outdated" just using regular old ncurses, though.
+2020-01-01 17:34:42	<--	jkwnki (~jkwnki@p200300CD471A78001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-01-01 17:34:50	Pentode	im not trying to be smart.. but is it an OCD-type thing or something? (i have plenty of those too)
+2020-01-01 17:35:02	-->	`coma (~smokem@142.169.78.202) has joined ##linux
+2020-01-01 17:35:21	apep11	Judging from the source file comments, the last update was in 2008.
+2020-01-01 17:35:28	latenite	Hi folks, I am using 'screenkey' and would like to set a custom color. But I fail at getting the right format for the color value. Only words seem to work: https://controlc.com/ab6aa5e3
+2020-01-01 17:35:37	<--	Quigly (~quigly@24.224.222.106) has quit (Read error: Connection reset by peer)
+2020-01-01 17:35:46	latenite	How can I find out what the right format is?
+2020-01-01 17:36:04	-->	bittin_ (~Luna@unaffiliated/bittin) has joined ##linux
+2020-01-01 17:36:22	-->	Quigly (~quigly@24.224.222.106) has joined ##linux
+2020-01-01 17:36:37	Pentode	latenite: have you tried hex triplets?
+2020-01-01 17:36:49	<--	PretendMatter (~username@185.21.217.81) has quit (Ping timeout: 265 seconds)
+2020-01-01 17:36:50	Pentode	or it may use rgb
+2020-01-01 17:36:52	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 17:37:55	latenite	Pentode, I tried rgb
+2020-01-01 17:37:56	Pentode	gdk typically uses rgba, since it's using gdk you may want to try that...
+2020-01-01 17:38:00	-->	chasmo77 (~chas77@69.62.183.158) has joined ##linux
+2020-01-01 17:38:13	latenite	what syntax for hex triplets would you use?
+2020-01-01 17:38:28	apep11	latenite: screenkey uses this function to parse color: https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#gdk-color-parse1
+2020-01-01 17:38:33	apep11	So there's your answer.
+2020-01-01 17:39:03	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:39:08	Pentode	beat me to it
+2020-01-01 17:39:51	apep11	latenite: Did it work? Try something like "#000"
+2020-01-01 17:39:59	Pentode	it should work with triplets too, did you use quotes?
+2020-01-01 17:40:03	-->	fanta1 (~fanta1@p200300F76BC3DC00CCE4B0BBFDE24DA5.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 17:40:15	zavoski	Hello, my laptop keyboard got stopped after 'Interrupt took too long' message. Any idea how to restart only the keyboard module ?
+2020-01-01 17:40:45	-->	BrianMiller (~BrianMill@195.24.57.147) has joined ##linux
+2020-01-01 17:40:47	BrianMiller	 msg nickserv identify 1qaz2wsx
+2020-01-01 17:40:52	BrianMiller	crap
+2020-01-01 17:40:58	apep11	BrianMiller: HAHAHA
+2020-01-01 17:40:59	BrianMiller	can someone delete this fast pls
+2020-01-01 17:41:18	ezech	BrianMiller: no
+2020-01-01 17:41:18	esselfe	BrianMiller: change your password
+2020-01-01 17:41:19	apep11	BrianMiller: I don't think IRC posts can be deleted
+2020-01-01 17:41:20	akik	BrianMiller: change it yourself
+2020-01-01 17:41:37	BrianMiller	juuuuust kidding
+2020-01-01 17:41:41	BrianMiller	happy new year
+2020-01-01 17:41:43	<--	modlin (~modlin@unaffiliated/modlin) has quit (Remote host closed the connection)
+2020-01-01 17:41:46	akik	wtf
+2020-01-01 17:41:50	apep11	HAPPY NEW YEAR TOO
+2020-01-01 17:41:52	Pentode	nobody would probably care, anyway.. lol
+2020-01-01 17:41:58	akik	BrianMiller: happy troll year
+2020-01-01 17:42:20	bipul	Then you must not care what he type. :D
+2020-01-01 17:42:47	-->	phebus (~phebus@fsf/member/phebus) has joined ##linux
+2020-01-01 17:42:51	<--	xy3_ (~xy2_@37.166.241.125) has quit (Remote host closed the connection)
+2020-01-01 17:42:53	Pentode	zavoski: you could try restarting the key mapper module or something but linux keyboard input events are done within the kernel itself
+2020-01-01 17:43:18	-->	xy3_ (~xy2_@37.166.241.125) has joined ##linux
+2020-01-01 17:43:21	-->	PretendMatter (~username@185.21.217.81) has joined ##linux
+2020-01-01 17:43:24	apep11	I was wrong, the last update is from 2017 :)
+2020-01-01 17:43:30	<--	vuoto (~vuoto@80.71.142.174) has quit (Quit: vuoto)
+2020-01-01 17:43:39	<--	StathisA (~StathisA@unaffiliated/stathisa) has quit (Ping timeout: 240 seconds)
+2020-01-01 17:43:39	Pentode	problem solved
+2020-01-01 17:43:40	Pentode	lol
+2020-01-01 17:43:52	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-01-01 17:44:05	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 17:44:05	latenite	apep11, Pentode it did work https://developer.gnome.org/gdk3/stable/gdk3-Colors.html#gdk-color-parse sais it all.
+2020-01-01 17:44:18	apep11	latenite: Nice.
+2020-01-01 17:44:23	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:44:24	Pentode	cool
+2020-01-01 17:44:29	<--	enriooooooo (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 258 seconds)
+2020-01-01 17:45:19	<--	zavoski (~user@unaffiliated/sky901) has quit (Remote host closed the connection)
+2020-01-01 17:45:39	<--	_ghoul (~ghoul@197.156.190.160) has quit (Ping timeout: 240 seconds)
+2020-01-01 17:45:49	-->	dijitol (~Thunderbi@p200300D477217400B0D91EDFDC5770F8.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 17:46:44	-->	StathisA (~StathisA@unaffiliated/stathisa) has joined ##linux
+2020-01-01 17:46:47	<--	hikrpzs (~hikrpzs@65.18.114.100) has quit (Ping timeout: 258 seconds)
+2020-01-01 17:47:48	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Quit: WeeChat 2.7)
+2020-01-01 17:47:59	<--	dnull (dnull@autonomicpilot.org) has quit (Quit: .)
+2020-01-01 17:48:19	-->	dnull (dnull@autonomicpilot.org) has joined ##linux
+2020-01-01 17:48:58	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 17:49:28	-->	mowcat (~mowcat@cpc105070-sgyl40-2-0-cust722.18-2.cable.virginm.net) has joined ##linux
+2020-01-01 17:49:50	-->	seven-eleven (~seven-ele@unaffiliated/seven-eleven) has joined ##linux
+2020-01-01 17:50:29	seven-eleven	is it possible to completely turn off a GPU inserted in a PCI slot without physicially removing it?
+2020-01-01 17:50:58	bipul	Try and let's do know :D
+2020-01-01 17:50:58	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 17:51:01	apep11	seven-eleven: Should be in BIOS.
+2020-01-01 17:51:17	latenite	apep11, indeed. Thank you for helping :D
+2020-01-01 17:51:24	seven-eleven	apep11, disabling PCI in bios doesn't power the card completely off, i was hoping there's another way
+2020-01-01 17:51:38	apep11	latenite: You're welcome, I glad I helped someone :)
+2020-01-01 17:51:52	seven-eleven	idle power on the GPU is 50W which I want to save when leaving the PC 24 hours on for a month when I'm away from home
+2020-01-01 17:51:55	-->	davispuh (~quassel@87.110.32.91) has joined ##linux
+2020-01-01 17:51:56	Pentode	bodge in some transistors on the voltage lines and add a button to the front / or back of the case?
+2020-01-01 17:52:21	apep11	seven-eleven: Hmm as I remember I could completely turn off GPU on my old PC...
+2020-01-01 17:52:44	apep11	Idk about yours unfortunately, but it's probably possible so maybe you missed that option?
+2020-01-01 17:52:49	Pentode	theres usually a bios option for disabling on board video -- but a card in a PCI slot?
+2020-01-01 17:53:05	<--	notepad (~notepad@c-71-198-44-200.hsd1.ca.comcast.net) has quit (Quit: Bye bye)
+2020-01-01 17:53:18	apep11	Can't remember, sorry.
+2020-01-01 17:53:28	-->	notepad (~notepad@c-71-198-44-200.hsd1.ca.comcast.net) has joined ##linux
+2020-01-01 17:54:26	<--	tehr4n (~user@unaffiliated/simpl-e/x-3049283) has quit (Quit: ERC (IRC client for Emacs 26.3))
+2020-01-01 17:54:41	<--	ckur13 (~ckur13@c-73-101-255-51.hsd1.pa.comcast.net) has quit (Quit: Leaving)
+2020-01-01 17:54:53	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 17:55:28	-->	Kelzorz (~Kelzorz@67.6.83.103) has joined ##linux
+2020-01-01 17:56:08	seven-eleven	Pentode, i think I will just pull the card out, its the simpliest solution
+2020-01-01 17:56:30	seven-eleven	saves me 15€ for leaving the PC running 24 hours for a month
+2020-01-01 17:56:55	<--	ijens (~ijens@unaffiliated/ijens) has quit (Remote host closed the connection)
+2020-01-01 17:57:16	Pentode	lol
+2020-01-01 17:57:17	latenite	apep11, Now I am out to find this file: https://www.astrouw.edu.pl/~jskowron/colors-x11/rgb.html
+2020-01-01 17:57:27	latenite	my system does not have it... weirdly
+2020-01-01 17:57:59	<--	syrex (~deamon@185.35.208.211) has quit (Quit: syrex)
+2020-01-01 17:58:10	-->	gemclip (~lydatech@unaffiliated/gemclip) has joined ##linux
+2020-01-01 17:58:16	<--	rindolf (~rindolf@IGLD-84-229-96-136.inter.net.il) has quit (Ping timeout: 268 seconds)
+2020-01-01 17:59:01	Pentode	mine is in /usr/share/X11
+2020-01-01 17:59:09	<--	cosimone (~cosimone@2001:b07:ae5:db26:73a:8101:bd0:2ff9) has quit (Quit: Terminated!)
+2020-01-01 17:59:30	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 18:00:24	<--	tsaka__ (~torstein@94.66.69.172) has quit (Read error: Connection reset by peer)
+2020-01-01 18:01:09	ayecee	seven-eleven: power is 40p/kWh there?
+2020-01-01 18:01:53	<--	`coma (~smokem@142.169.78.202) has quit (Remote host closed the connection)
+2020-01-01 18:01:58	<--	Naglfar (znc@thunix.net) has left ##linux
+2020-01-01 18:02:01	gemclip	in my /sys/class/leds/input1::scrolllock/brightness file contains 0. is there a way to permanently change it to 1? it seems to reset to 0 every boot. it controls my KB Backlight.
+2020-01-01 18:02:01	seven-eleven	ayecee, 32c/kwh; i'm actually away 40d in spring so it will be roughly 14/15€
+2020-01-01 18:02:14	ayecee	yikes
+2020-01-01 18:02:32	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:02:37	-->	simpl_e (~user@unaffiliated/simpl-e/x-3049283) has joined ##linux
+2020-01-01 18:02:53	seven-eleven	initially i wanted to purchase the ryzen 2700x, but I'm favoring the slower 3400g now because it has 15w lower idle power
+2020-01-01 18:03:46	ayecee	somewhere around 1/4 of that here. i can see how that would become a consideration.
+2020-01-01 18:04:43	<--	dubiago (~dubiago@50-81-30-183.client.mchsi.com) has quit (Remote host closed the connection)
+2020-01-01 18:04:46	seven-eleven	yeah in the US the prices are fairer, although I heard that in NYC it's also big expensive
+2020-01-01 18:04:58	seven-eleven	also a bit*
+2020-01-01 18:05:50	ayecee	dunno if fairer, but lower in many places, yeah.
+2020-01-01 18:06:17	ayecee	probably about the same in some.
+2020-01-01 18:06:34	-->	bestinket (~useri@unaffiliated/hortiel) has joined ##linux
+2020-01-01 18:06:59	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2020-01-01 18:07:00	-->	TheFuzzball (~TheFuzzba@82.129.98.164) has joined ##linux
+2020-01-01 18:07:01	seven-eleven	the 2700x is quite powerful, but I think i won't have issues with 3400g either. i thought with the ryzen 2700x i got better compiling performance
+2020-01-01 18:07:06	<--	mrAZ (~studio@ip-94-112-182-12.net.upcbroadband.cz) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:08:08	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:08:12	<--	Taoki (~MirceaKit@93.113.162.37) has quit (Quit: http://www.furaffinity.net/user/mircea/)
+2020-01-01 18:08:14	<--	SwiftMatt (~Objective@c-73-153-250-135.hsd1.co.comcast.net) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-01-01 18:09:26	-->	Barones (~Barones@2804:14c:6581:15::6) has joined ##linux
+2020-01-01 18:09:29	seven-eleven	compared to 3400g the 2700x is 34% faster using its 8 cores, 16% faster using 4 cores, 5% using 2 cores; but make -j 8 might be effectively just 20% faster
+2020-01-01 18:10:25	-->	Northstrider (~Northstri@unaffiliated/northstrider) has joined ##linux
+2020-01-01 18:10:47	Barones	Guys, any content/channel/book recommendation to learn about system packages?
+2020-01-01 18:11:07	ayecee	what's a system package
+2020-01-01 18:11:22	-->	^elf^ (~elf@unaffiliated/elf) has joined ##linux
+2020-01-01 18:11:48	akk	What about them?
+2020-01-01 18:12:17	Barones	sorry, package in general, how to handle them, get info, etc
+2020-01-01 18:12:22	-->	Taoki (~MirceaKit@93.113.162.37) has joined ##linux
+2020-01-01 18:12:27	ayecee	what kind of package
+2020-01-01 18:12:53	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 18:13:19	ayecee	rpm, deb, other?
+2020-01-01 18:13:22	esselfe	Barones: LinuxFromScratch gather nice info about them
+2020-01-01 18:13:41	<--	`7hr34t_hvntr (~ThePortWh@unaffiliated/theportwhisperer) has quit (Ping timeout: 268 seconds)
+2020-01-01 18:13:43	Barones	I want to handle packages better, learn more about the package manager
+2020-01-01 18:13:53	ayecee	which package manager :P
+2020-01-01 18:13:56	esselfe	Barones: which distro?
+2020-01-01 18:13:58	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:14:16	Barones	I'm using manjaro esselfe
+2020-01-01 18:14:17	redsh	The manpage for your package manager might help.
+2020-01-01 18:14:32	ayecee	which package manager does manjaro use
+2020-01-01 18:14:41	Barones	pacman
+2020-01-01 18:14:41	<--	self (~elf@unaffiliated/elf) has quit (Ping timeout: 264 seconds)
+2020-01-01 18:15:06	ayecee	ok
+2020-01-01 18:15:35	independent	what do you guys think about visual studio's remote ssh cross-compiling feature ?
+2020-01-01 18:15:40	<--	Jmabsd (~jmabsd@unaffiliated/jmabsd) has quit (Quit: Leaving)
+2020-01-01 18:15:55	-->	learning1 (~pi@43.240.22.44) has joined ##linux
+2020-01-01 18:16:01	Northstrider	independent: cross compiling feature?
+2020-01-01 18:16:12	Northstrider	What's that? I'm aware of remote ssh, no idea what cross compiling is in relation to it
+2020-01-01 18:16:20	<--	bittin_ (~Luna@unaffiliated/bittin) has quit (Ping timeout: 248 seconds)
+2020-01-01 18:16:28	Barones	I'm looking for a overall package intro/study
+2020-01-01 18:16:32	Barones	if there is any of that
+2020-01-01 18:16:33	-->	AlbeiEdward (~Thunderbi@188.25.109.239) has joined ##linux
+2020-01-01 18:16:45	independent	well you can build remotely from windows to linux ssh
+2020-01-01 18:16:48	tester	i guess he means use ssh to remotely compile something for another distro
+2020-01-01 18:16:59	Northstrider	Ah
+2020-01-01 18:17:08	Northstrider	I mean that's not intrinsically linked to remote ssh
+2020-01-01 18:17:08	bestinket	cal -h shows error?
+2020-01-01 18:17:12	tester	i think you'd normally use a vm for that but idk
+2020-01-01 18:18:08	<--	learningc (~pi@43.240.22.32) has quit (Ping timeout: 260 seconds)
+2020-01-01 18:18:14	independent	well I call it cross-compiling becaue its windows building stuff for linux
+2020-01-01 18:18:37	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 18:18:39	-->	rgr (~user@p200300E417058D66812D06229FFF956C.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 18:19:02	<--	wingsorc (~wingsorc@unaffiliated/wingsorc) has quit (Quit: Leaving)
+2020-01-01 18:19:03	redsh	It's not though if it's telling a Linux system to compile it.
+2020-01-01 18:19:17	independent	yea u right
+2020-01-01 18:19:27	-->	Jmabsd (~jmabsd@unaffiliated/jmabsd) has joined ##linux
+2020-01-01 18:19:32	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:19:35	ayecee	Barones: haven't seen something like that myself
+2020-01-01 18:19:50	independent	who wants to see my project on github ?
+2020-01-01 18:19:57	<--	an3223 (~an3223@72.9.100.158) has quit (Quit: WeeChat 2.7)
+2020-01-01 18:20:02	Jmabsd	how do you debug when Debian, upgraded two reboots ago and just did console settings to set console font, dies at the kernel's switch to framebuffer console, at boot?
+2020-01-01 18:20:14	-->	wingsorc (~wingsorc@unaffiliated/wingsorc) has joined ##linux
+2020-01-01 18:20:31	ayecee	Jmabsd: with logs, i guess
+2020-01-01 18:20:42	Jmabsd	ayecee: well there is no monitor
+2020-01-01 18:20:44	Jmabsd	so there's no logs
+2020-01-01 18:20:50	Jmabsd	it's still kernel boot time
+2020-01-01 18:20:57	ayecee	no monitor?
+2020-01-01 18:21:39	-->	enriooooooo (~nanoz@unaffiliated/nanoz) has joined ##linux
+2020-01-01 18:21:58	ayecee	how do you mean?
+2020-01-01 18:22:53	-->	rindolf (~rindolf@IGLD-84-229-96-136.inter.net.il) has joined ##linux
+2020-01-01 18:23:23	<--	rajpra (~Thunderbi@203.129.246.222) has quit (Ping timeout: 260 seconds)
+2020-01-01 18:23:32	Jmabsd	ayecee: when Linux goes into the framebuffer mode at kernel boot time for the console, the monitor goes blank
+2020-01-01 18:23:39	Jmabsd	looks likea crash or something
+2020-01-01 18:23:44	Barones	thanks for recommendation esselfe , LinuxFromScratch is a good material
+2020-01-01 18:23:45	ayecee	fortunately the logs aren't stored on the monitor
+2020-01-01 18:23:58	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 18:24:22	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Quit: WeeChat 2.7)
+2020-01-01 18:24:41	-->	|Psych0| (~mr_robot@181.94.54.209) has joined ##linux
+2020-01-01 18:24:45	ayecee	but maybe you can boot with the nomodeset boot argument?
+2020-01-01 18:24:52	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:25:53	-->	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has joined ##linux
+2020-01-01 18:26:38	<--	rgr (~user@p200300E417058D66812D06229FFF956C.dip0.t-ipconnect.de) has quit (Read error: Connection reset by peer)
+2020-01-01 18:27:19	<--	S4r3n (~S4ren@host86-154-25-3.range86-154.btcentralplus.com) has quit (Remote host closed the connection)
+2020-01-01 18:27:20	-->	ackpacket (~ackpacket@unaffiliated/ackpacket) has joined ##linux
+2020-01-01 18:27:32	<--	Atque (~Atque@unaffiliated/atque) has quit (Quit: ...)
+2020-01-01 18:27:35	-->	geekPanther (~harsath@unaffiliated/geekpanther) has joined ##linux
+2020-01-01 18:27:45	-->	yelof (~yelof@2601:283:8003:a920:5139:dd8e:7e87:50ab) has joined ##linux
+2020-01-01 18:27:51	Dagmar	...or just pump a can of Fix-A-Flat in it
+2020-01-01 18:27:53	Dagmar	#$%#
+2020-01-01 18:27:56	Jmabsd	can i force legacy 80x25 console somehow? (booting to the older kernel works)
+2020-01-01 18:27:57	-->	rooftopjoe (5678a199@unaffiliated/rooftopjoe) has joined ##linux
+2020-01-01 18:28:07	Dagmar	Jmabsd: 'nomodeset'
+2020-01-01 18:29:20	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:29:25	-->	S4ren (~S4ren@host86-154-25-3.range86-154.btcentralplus.com) has joined ##linux
+2020-01-01 18:29:57	-->	TimeTrap (~TimeTrap@2601:44:c280:def:1827:7f36:59a7:e309) has joined ##linux
+2020-01-01 18:30:06	<--	Quigly (~quigly@24.224.222.106) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:30:21	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:30:36	rooftopjoe	hi. i'm doing an exercise. wrote a bundle.sh which gets passed files and/or directories and outputs another shell script that would unpack all the files mentioned, including from all the directories. it's only expected to work with text files. it works but can anyone review it?
+2020-01-01 18:30:39	rooftopjoe	https://pastebin.com/ygRKkuyU
+2020-01-01 18:31:24	rooftopjoe	would use like this: bundle.sh file1.txt file2.txt somedir1 somedir2 >unpack.sh
+2020-01-01 18:31:25	<--	tieinv (~username@unaffiliated/tieinv) has quit (Remote host closed the connection)
+2020-01-01 18:31:39	rooftopjoe	and then unpack.sh should be a standalone script that creates these files and the directory structure
+2020-01-01 18:32:06	Jmabsd	Dagmar: will try, cool
+2020-01-01 18:32:10	rooftopjoe	the only downside is that files cannot contain a line saying "End of <FILENAME>" but we will learn how to do that soon
+2020-01-01 18:32:19	rooftopjoe	for now this is acceptable
+2020-01-01 18:32:23	rooftopjoe	what about the rest?
+2020-01-01 18:32:27	<--	knifehands (~user@unaffiliated/flashpoint) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:34:16	-->	Brainium (~brainium@unaffiliated/brainium) has joined ##linux
+2020-01-01 18:34:38	<--	TheFuzzball (~TheFuzzba@82.129.98.164) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-01-01 18:34:45	Dagmar	You should just use shar-tools
+2020-01-01 18:35:01	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2020-01-01 18:35:05	<--	manhnt9 (~zer0x@42.112.110.91) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:35:33	-->	Elon_Satoshi (~elon@unaffiliated/elon-satoshi/x-2794555) has joined ##linux
+2020-01-01 18:35:33	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:35:36	rooftopjoe	no
+2020-01-01 18:35:40	rooftopjoe	it's an exercise in shell scripting
+2020-01-01 18:35:52	Elon_Satoshi	hello
+2020-01-01 18:35:55	rooftopjoe	not developing a tool or solving a problem
+2020-01-01 18:36:05	Elon_Satoshi	i have gigabytes in /var/log, can i delete it to clear space?
+2020-01-01 18:36:13	Dagmar	Sure
+2020-01-01 18:36:26	Elon_Satoshi	yay
+2020-01-01 18:36:35	geekPanther	Oh, GBs on the logs? Yes, you can rm them
+2020-01-01 18:36:37	-->	plazia (~plazia@cpc111855-pete12-2-0-cust41.4-4.cable.virginm.net) has joined ##linux
+2020-01-01 18:36:45	redsh	Not the directory itself.
+2020-01-01 18:36:53	redsh	Or directories in it, preferably.
+2020-01-01 18:36:58	rooftopjoe	it's an exercise from a book
+2020-01-01 18:37:02	rooftopjoe	anyway
+2020-01-01 18:37:20	-->	wildtrees (~wildtrees@unaffiliated/wildtrees) has joined ##linux
+2020-01-01 18:37:39	<--	apep11 (~umom11@93-86-182-140.dynamic.isp.telekom.rs) has quit (Quit: leaving)
+2020-01-01 18:37:47	redsh	Might end up with a bunch of daemons going "/var/log/foo/foo.log: file or directory not found" when trying to open that.
+2020-01-01 18:37:56	redsh	And dying.
+2020-01-01 18:38:14	|Psych0|	safer to echo > /var/log/your.log
+2020-01-01 18:38:14	Dagmar	Unlikely
+2020-01-01 18:38:15	joepublic	rooftopjoe, I find 'shellcheck' helpful when doing that
+2020-01-01 18:38:26	rooftopjoe	for doing what?
+2020-01-01 18:38:32	Dagmar	opening in append mode doesn't return an error if a file doesn't exist
+2020-01-01 18:38:34	joepublic	for shell scripting exercises
+2020-01-01 18:38:51	redsh	Dagmar: I mean if /var/log/foo/ or /var/log/ doesn't exit.
+2020-01-01 18:38:57	redsh	It'd fail if those don't.
+2020-01-01 18:39:03	joepublic	logs get rotated out all the time, nothing complains.  the directories yeah do need to exist.
+2020-01-01 18:39:13	rooftopjoe	joepublic: i doubt i have any spelling errors :)
+2020-01-01 18:39:22	rooftopjoe	i just want to see if there is a better way of doing it
+2020-01-01 18:39:42	joepublic	shellcheck looks at your syntax, points out errors, makes suggestions.
+2020-01-01 18:39:57	rooftopjoe	but i don't have any syntax errors
+2020-01-01 18:39:59	rooftopjoe	the script works
+2020-01-01 18:40:05	Dagmar	The better way is to just use shar
+2020-01-01 18:40:07	rooftopjoe	i just want feedback on my solution
+2020-01-01 18:40:12	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 18:40:12	-->	G3nka1 (~hubatrix@unaffiliated/hubatrix) has joined ##linux
+2020-01-01 18:40:13	rooftopjoe	Dagmar: then i learn nothing
+2020-01-01 18:40:47	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:40:51	Dagmar	You've not really learned anything if you've got that bug still in there
+2020-01-01 18:41:02	rooftopjoe	what bug?
+2020-01-01 18:41:04	<--	Barones (~Barones@2804:14c:6581:15::6) has quit (Remote host closed the connection)
+2020-01-01 18:41:06	rindolf	Hi all! After the remote nfs share went down "ls /mnt/music" , "umount /mnt/music" and "lsof" (as root) just hang . how can i remount it again? i use fedora 31 x64 here
+2020-01-01 18:41:08	rooftopjoe	my testing did not reveal a bug
+2020-01-01 18:41:20	rooftopjoe	but if you find one, i'd be interested in learning about it
+2020-01-01 18:41:23	<--	|Psych0| (~mr_robot@181.94.54.209) has quit (Changing host)
+2020-01-01 18:41:23	-->	|Psych0| (~mr_robot@unaffiliated/psych0/x-8437841) has joined ##linux
+2020-01-01 18:41:25	G3nka1	Can I move root directory "/" to a secondary storage without having to reinstall linux? Currently / has 370 gb but I have another drive with 1 TB that I want / to be on. What can I do here?
+2020-01-01 18:41:33	Dagmar	So you don't see a line containing "End of whatever.yxy
+2020-01-01 18:41:44	Dagmar	breaking things being a problem?
+2020-01-01 18:41:52	rooftopjoe	that's not a bug. it's part of the accepted requirements for now
+2020-01-01 18:42:25	rooftopjoe	we've been told we will learn a good solution about that soon
+2020-01-01 18:42:32	rooftopjoe	and not to worry about it for now
+2020-01-01 18:42:36	Dagmar	Well here's some learning for you.  In-band signaling has been a failure of design in publicly-used systems since before the 70's.  Stop doing it
+2020-01-01 18:42:39	rooftopjoe	so i'm focused on the rest
+2020-01-01 18:43:12	<--	dftxbs3e (~dftxbs3e@unaffiliated/dftxbs3e) has quit (Remote host closed the connection)
+2020-01-01 18:43:13	rooftopjoe	you're confused that this is a general-purpose solution for all files. it's not. it's a special-case exercise with specific requirements
+2020-01-01 18:43:27	rooftopjoe	you don't write production code the first time you start doing something
+2020-01-01 18:43:29	Dagmar	G3nka1: You can copy it with rsync (telling rsync to not copy psuedo-filesystems or cross filesystem boundares)
+2020-01-01 18:43:49	maxzor	Hello, what is wrong with this bachism? 'echo "echo hi" | xargs eval'
+2020-01-01 18:43:52	Dagmar	Right, I'm not a professional programmer or anything
+2020-01-01 18:43:54	<--	forgon (~forgon@unaffiliated/commander-cody/x-9618197) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:44:19	rooftopjoe	yes but when you first started programming, the first thing you did was to learn what the hell you were doing, not to write production code
+2020-01-01 18:44:29	rindolf	maxzor: hi
+2020-01-01 18:44:37	maxzor	rindolf, hi :D
+2020-01-01 18:44:39	rooftopjoe	i am trying to do my homework and you are being extremely rude and unhelpful
+2020-01-01 18:44:42	rindolf	maxzor: eval is a built in
+2020-01-01 18:44:43	-->	ScottHDev (c02839e5@192.40.57.229) has joined ##linux
+2020-01-01 18:44:43	Dagmar	I learned -on- production code, and I didn't argue with people who knew what they were doing
+2020-01-01 18:44:50	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:44:54	rooftopjoe	i have specific requirements
+2020-01-01 18:44:55	Dagmar	You are going into the ignore list for being an ass
+2020-01-01 18:45:10	rooftopjoe	you're just saying the requirements i have you don't like
+2020-01-01 18:45:11	rindolf	maxzor: and a pipe uses sub processes
+2020-01-01 18:45:21	rooftopjoe	ok well good. you're an idiot anyway, no wonder people always argue with you
+2020-01-01 18:45:21	<--	Hunterkll (~hunterkll@remote.kisaracorporation.com) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:45:22	<--	Carp (~rue@1-162-51-219.dynamic-ip.hinet.net) has quit (Quit: WeeChat 2.7)
+2020-01-01 18:46:00	ScottHDev	Hello, i'm running an iptable module as root, the issue is when I try to send some dbus commands to session bus from this module
+2020-01-01 18:46:11	maxzor	rindolf, so you are not a bash virtual env? :< :D I might figure some meaning out of it thanks
+2020-01-01 18:46:44	G3nka1	Dagmar: but before that should I mount this storage to / ? Is that even possible
+2020-01-01 18:46:54	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 18:47:12	rindolf	maxzor: what?
+2020-01-01 18:47:25	Dagmar	G3nka1: Oh no, just format the new filesystem and mount it anywhere (/mnt is probably fine) and then copy the files, edit your /etc/fstab to use the new location (and possibly adjust grub) and then reboot
+2020-01-01 18:47:34	<--	James_T_Kirk (NCC-1701@82-64-86-226.subs.proxad.net) has quit (Quit: 愛と平和です)
+2020-01-01 18:48:14	maxzor	rindolf, I expected as a result the shell to output "hi". Does that mean xargs and eval do not go together?
+2020-01-01 18:48:15	G3nka1	Dagmar: I figured everything out except adjust grub part
+2020-01-01 18:48:27	Dagmar	G3nka1: So long as you check the manpage for the options to keep rsync from descending into other filesystems or pseudo-filesystems you can point it at / and have it copy into /mnt without it becoming a recursive nightmare
+2020-01-01 18:48:28	-->	forgon (~forgon@unaffiliated/commander-cody/x-9618197) has joined ##linux
+2020-01-01 18:48:42	-->	Hunterkll (~hunterkll@2001:470:8b06:400:215:5dff:fefb:c04) has joined ##linux
+2020-01-01 18:48:49	rindolf	maxzor: there is no executable called "eval"
+2020-01-01 18:48:53	Chaekyung	https://lkml.org/lkml/2019/12/31/146  [ANNOUNCE] Reiser5 (Format Release 5.X.Y) .. am I the only one who questions why they don't call it something not named after a murderer?
+2020-01-01 18:49:05	Chaekyung	KillYourFamilyFS is basically how I read that
+2020-01-01 18:49:11	rindolf	maxzor: so xargs cannot use it
+2020-01-01 18:49:20	maxzor	rindolf, I do not really get it, the pipe subprocess will also launch a shell isn't it
+2020-01-01 18:49:40	rindolf	maxzor: xargs runs an exe
+2020-01-01 18:49:45	Dagmar	xargs runs binaries.  eval isn't a binary
+2020-01-01 18:49:49	maxzor	ah ok ty
+2020-01-01 18:50:14	-->	CrazyH (~hakachuka@cpe-174-108-99-182.carolina.res.rr.com) has joined ##linux
+2020-01-01 18:50:34	maxzor	how can I run the tail of a .sh ?
+2020-01-01 18:50:48	<--	remage (~remage@47.187.146.37) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:50:55	<--	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-01-01 18:50:59	Dagmar	pipe it _into_ another bash?
+2020-01-01 18:51:01	CrazyH	maxzor, do you mean: ./myscript.sh | tail -f    ?
+2020-01-01 18:51:05	rindolf	re my nfs issue - it fixed itself after a while
+2020-01-01 18:51:36	CrazyH	maxzor, sorry forget the -f
+2020-01-01 18:51:39	Dagmar	This just rather suspiciously resembles a bad idea
+2020-01-01 18:52:07	ezech	Chaekyung: Reiser received punishment for what bad things he did, why can't he get recognition for what god things he did?
+2020-01-01 18:52:27	<--	Lunatrius (~Lunatrius@77.38.22.40) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:52:43	maxzor	right, thanks!
+2020-01-01 18:52:56	-->	Lunatrius (~Lunatrius@77.38.22.40) has joined ##linux
+2020-01-01 18:52:56	Jmabsd	with "virsh" how do I see which "hypervisor connect URI" is used?
+2020-01-01 18:52:57	<--	Necktwi (~necktwi@157.48.35.247) has quit (Read error: Connection reset by peer)
+2020-01-01 18:53:01	<--	TBotNik (~quassel@66.209.42.181) has quit (Remote host closed the connection)
+2020-01-01 18:53:04	-->	Aryan (~ubun2@2.178.190.1) has joined ##linux
+2020-01-01 18:53:08	maxzor	I am doing absolutely garbage config scripts well
+2020-01-01 18:53:10	CrazyH	If I want to make programs that run in Linux under all possible graphical environments... what do I use for that? Is there any one graphics / Desktop UI system that is 100% portable in Linux?
+2020-01-01 18:53:11	Dagmar	OKay so they'll call it "CarefullySprayedCarInteriorFS"
+2020-01-01 18:53:33	lupine	tk, I guess
+2020-01-01 18:53:37	ezech	CrazyH: you should be safe with gtk
+2020-01-01 18:53:38	Dagmar	CrazyH: Sure.  Plain X widgets
+2020-01-01 18:53:47	maxzor	but for my defense, qmake is a pain in the ***
+2020-01-01 18:54:00	-->	faisch (~faisch@194-96-117-4.adsl.highway.telekom.at) has joined ##linux
+2020-01-01 18:54:12	-->	Lunatrius` (~Lunatrius@77.38.22.40) has joined ##linux
+2020-01-01 18:54:23	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 18:54:33	Dagmar	They'll be crude and most-importantly, very ugly, but they'll work on everything that runs Xorg
+2020-01-01 18:54:54	lupine	which is a diminishing set
+2020-01-01 18:54:58	ezech	Dagmar: there is this wayland thing now though
+2020-01-01 18:55:00	CrazyH	What is the difference between X widgets and GTK?  I'm sure that there will be some
+2020-01-01 18:55:05	Dagmar	...which has those same libs
+2020-01-01 18:55:14	-->	xy__ (~xy2_@94.239.177.175) has joined ##linux
+2020-01-01 18:55:18	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 18:55:21	ScottHDev	The question is so far  : How can I access dbus session from root processus
+2020-01-01 18:55:22	ScottHDev	?
+2020-01-01 18:55:23	Dagmar	CrazyH: Mainly that X widgets are as old as X
+2020-01-01 18:55:27	lupine	as xwayland, which I've been trying to turn off
+2020-01-01 18:55:28	<--	dullin (~dullin@219.ip-144-217-83.net) has quit (Quit: The Lounge - https://thelounge.github.io)
+2020-01-01 18:55:45	ezech	CrazyH: others are playing with you, GTK or QT, but GTK has better licensing I think
+2020-01-01 18:55:45	-->	remage (~remage@47.187.146.37) has joined ##linux
+2020-01-01 18:55:56	<--	Brainium (~brainium@unaffiliated/brainium) has quit (Read error: Connection reset by peer)
+2020-01-01 18:56:08	Dagmar	ezech: Excuse me?
+2020-01-01 18:56:21	-->	dullin (~dullin@219.ip-144-217-83.net) has joined ##linux
+2020-01-01 18:56:57	CrazyH	ezech, that brings up another good point. Licensing. I'd want to use something that basically has a 100% open license.
+2020-01-01 18:57:06	<--	Aryan (~ubun2@2.178.190.1) has quit (Client Quit)
+2020-01-01 18:57:13	redsh	WTFPL
+2020-01-01 18:57:19	<--	Lunatrius (~Lunatrius@77.38.22.40) has quit (Ping timeout: 258 seconds)
+2020-01-01 18:57:19	--	Lunatrius` is now known as Lunatrius
+2020-01-01 18:57:24	-->	spare_ (~user@unaffiliated/spareproject) has joined ##linux
+2020-01-01 18:57:35	-->	dubiago (~dubiago@50-81-30-183.client.mchsi.com) has joined ##linux
+2020-01-01 18:57:46	Dagmar	https://en.wikipedia.org/wiki/X_Athena_Widgets
+2020-01-01 18:57:57	joepublic	WTDHPL
+2020-01-01 18:57:58	redsh	Or just stick it in the public domain if you want to be a stick in the mud.
+2020-01-01 18:58:10	-->	Necktwi (~necktwi@157.48.35.247) has joined ##linux
+2020-01-01 18:58:20	redsh	joepublic: WTFPL is a real existing license though.
+2020-01-01 18:58:26	Dagmar	If you need Unicode you'll have to use Motif instead
+2020-01-01 18:58:27	<--	xy3_ (~xy2_@37.166.241.125) has quit (Ping timeout: 240 seconds)
+2020-01-01 18:58:35	joepublic	i am pretty sure both exist
+2020-01-01 18:58:40	<--	horseface (~horseface@unaffiliated/horseface) has quit (Quit: Leaving.)
+2020-01-01 18:58:46	<--	independent (Enabled@unaffiliated/independent) has quit (Excess Flood)
+2020-01-01 18:58:55	-->	horseface (~horseface@unaffiliated/horseface) has joined ##linux
+2020-01-01 18:59:42	-->	nokia3210 (nokia3210@unaffiliated/nokia3210) has joined ##linux
+2020-01-01 18:59:45	hexnewbie	I wish some day I will forget how I wrote a program using Xaw. It was horrible.
+2020-01-01 18:59:54	redsh	Oh. I've only seen projects under WTFPL.
+2020-01-01 18:59:58	Dagmar	I did warm him the result would be homely
+2020-01-01 19:00:14	-->	pnbeast (~pnbeast@2601:140:4200:6670::1) has joined ##linux
+2020-01-01 19:00:30	Dagmar	...but it'll darned well be able to compile for anything that uses X
+2020-01-01 19:00:33	<--	spare (~user@unaffiliated/spareproject) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:01:16	-->	TheFuzzball (~TheFuzzba@82.129.98.164) has joined ##linux
+2020-01-01 19:01:18	<--	b10n1k (~b10n1k@94.142.239.79) has quit (Ping timeout: 260 seconds)
+2020-01-01 19:01:26	-->	antonaid (~Thunderbi@217-208-141-113-no2620.tbcn.telia.com) has joined ##linux
+2020-01-01 19:01:36	<--	ackpacket (~ackpacket@unaffiliated/ackpacket) has quit (Quit: My puter has gone to sleep. ZZZzzz…)
+2020-01-01 19:01:56	CrazyH	Thanks for the info! It'll take me a while to look into all of this. Basically I'll probably end up using the highest level GUI API / lib that I can find that has a 100% open license.
+2020-01-01 19:02:02	nokia3210	hi, quick question, i installed lubuntu on an older pc but unfortunately i couldnt get neither bluetooth or hdmi sound output to work so i decided to switch xp..loaded the iso into a usb with easy2boot and couldnt get it work, I always get a message saying disk error press ctrl alt del, tried with rufus setting it as mbr but i still get the same error
+2020-01-01 19:02:06	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Quit: WeeChat 2.7)
+2020-01-01 19:02:29	nokia3210	is it possible traces of the linux partition are still in there causing this error? cause i formatted the drive separately on a windows machine and it's showing as active and healthy (no bad sectors)
+2020-01-01 19:02:32	<--	NetTerminalGene (~NetTermin@unaffiliated/dontknow) has quit (Quit: Leaving)
+2020-01-01 19:02:33	CrazyH	Because once I put in the work to develope all my apps, I want to be able to do whatever I want with them.
+2020-01-01 19:02:37	ScottHDev	Or another solution is to run the iptable module as non root
+2020-01-01 19:02:39	Dagmar	nokia3210: So how is your failure to install Windows XP our problem?
+2020-01-01 19:02:53	nokia3210	im asking if linux could cause this issue
+2020-01-01 19:02:57	Dagmar	Nope
+2020-01-01 19:03:00	nokia3210	the partition being all messed up
+2020-01-01 19:03:10	Dagmar	So just delete the partitions
+2020-01-01 19:03:19	nokia3210	also this is a help chan, I asked in the main, if you don't know or care to answer maybe someone else will
+2020-01-01 19:03:33	Dagmar	This is a _LInux_ channel, not a Windows channel.
+2020-01-01 19:03:34	<--	latenite (~latenite@88.130.218.247) has quit (Quit: Leaving)
+2020-01-01 19:03:41	nokia3210	yeah and i asked about the linux partition
+2020-01-01 19:03:42	nokia3210	are you blind?
+2020-01-01 19:03:51	nokia3210	or just a jerk for free
+2020-01-01 19:03:52	joepublic	fwiw "delete the partitions" was a pretty good answer.
+2020-01-01 19:03:58	lopid	if mswin can't install itself, that's its problem
+2020-01-01 19:03:59	Dagmar	If you've deleted the LInux partitions they can no longer be interfering.
+2020-01-01 19:04:06	<--	TheFuzzball (~TheFuzzba@82.129.98.164) has quit (Client Quit)
+2020-01-01 19:04:08	Dagmar	You have a Windows problem.  Ask in ##Windows
+2020-01-01 19:04:38	-->	SebastianFlyte (~sebf@pool-108-48-111-124.washdc.fios.verizon.net) has joined ##linux
+2020-01-01 19:04:51	ScottHDev	Do you even know if this is possible?
+2020-01-01 19:05:01	-->	b10n1k (~b10n1k@94.142.239.79) has joined ##linux
+2020-01-01 19:05:19	Dagmar	ScottHDev: You realize you're now talking about running the kernel as non-root, right?
+2020-01-01 19:05:24	nokia3210	Dagmar my question is regarding the linux partition, if linux could have possibly damaged the ssd
+2020-01-01 19:05:40	Dagmar	nokia3210: You were given an answer.  Being a jerk about it will not get you a different one.
+2020-01-01 19:05:43	ezech	nokia3210: you have received some good answers though
+2020-01-01 19:06:28	ScottHDev	Dagmar Is a iptables module part of the kernel?
+2020-01-01 19:06:43	nokia3210	Dagmar word of advice, drop the douchy atittude
+2020-01-01 19:06:43	-->	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has joined ##linux
+2020-01-01 19:06:47	Dagmar	ScottHDev: As are pretty much each and every kernel module
+2020-01-01 19:06:48	ScottHDev	I didn't use modprobe to run it
+2020-01-01 19:06:52	-->	Emma_Gination (~Emma_Gina@xd520f228.cust.hiper.dk) has joined ##linux
+2020-01-01 19:06:53	-->	howdydudi (~howdydudi@141.98.102.235) has joined ##linux
+2020-01-01 19:07:17	<--	faisch (~faisch@194-96-117-4.adsl.highway.telekom.at) has quit (Ping timeout: 258 seconds)
+2020-01-01 19:07:20	-->	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has joined ##linux
+2020-01-01 19:07:26	redsh	How do you "run" a kernel module in any way that doesn't involve loading it into a kernel?
+2020-01-01 19:07:34	Dagmar	nokia3210: Here's one for you.  This is channel with a topic and a focus and that focus is not MIcrosoft Windows.  If you don't like it, complain in ##Windows.  We don't care.
+2020-01-01 19:07:41	ScottHDev	So this is not possible, then how could I sens calls to the session bus from this module?
+2020-01-01 19:08:06	Dagmar	ScottHDev: dbus has to believe root is allowed to send messages
+2020-01-01 19:08:06	nokia3210	if the linux partitions are indeed gone how come i still get a gnu message when booting from the ssd
+2020-01-01 19:08:17	ScottHDev	Because I think there is a misunderstanding
+2020-01-01 19:08:22	nokia3210	specifically a gnu recovery message
+2020-01-01 19:08:26	Dagmar	nokia3210: Because you've failed horribly and that's not our problem either
+2020-01-01 19:08:39	-->	konrados (~konrados@unaffiliated/konrados) has joined ##linux
+2020-01-01 19:08:55	ScottHDev	A iptables module is just a processus that you run like all other programs
+2020-01-01 19:08:56	-->	James_T_Kirk (NCC-1701@82-64-86-226.subs.proxad.net) has joined ##linux
+2020-01-01 19:08:58	Dagmar	Go download DBAN or something and wipe the drive completely
+2020-01-01 19:09:06	<--	xlx (~xlx@unaffiliated/xlx) has quit (Ping timeout: 246 seconds)
+2020-01-01 19:09:08	<--	|Psych0| (~mr_robot@unaffiliated/psych0/x-8437841) has quit (Quit: |Psych0|)
+2020-01-01 19:09:12	Dagmar	ScottHDev: No, it is not
+2020-01-01 19:09:32	<--	James_T_Kirk (NCC-1701@82-64-86-226.subs.proxad.net) has left ##linux
+2020-01-01 19:09:36	Dagmar	ScottHDev: It's part of the freakin' kernel, man.  It's not a separate process one can kill
+2020-01-01 19:09:44	ezech	nokia3210: it's efi thing I think, I have never bothered to learn about it
+2020-01-01 19:09:54	Dagmar	As a reuslt, everything it does is going to be in the context of the root uid
+2020-01-01 19:09:56	-->	P1RATEZ (piratez@unaffiliated/p1ratez) has joined ##linux
+2020-01-01 19:10:02	ezech	nokia3210: if a disk tool sees no partition, there are no parition
+2020-01-01 19:10:03	-->	an3223 (~an3223@96.47.226.21) has joined ##linux
+2020-01-01 19:10:06	ScottHDev	Maybe I'm using the wrong terminlogy, what I'm talking about is a handler that receives queued packets from iptables rules
+2020-01-01 19:10:24	Dagmar	Yes, sending packets to a userspace process vie netfilter rules
+2020-01-01 19:10:26	ScottHDev	how would you call that?
+2020-01-01 19:10:33	Dagmar	That was added in like, 2004 or something
+2020-01-01 19:10:40	ScottHDev	yes
+2020-01-01 19:10:46	Dagmar	It's still going to be coming from root
+2020-01-01 19:10:48	-->	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has joined ##linux
+2020-01-01 19:10:51	nokia3210	ezech im running a sectors scan now, but yeah i've run a few disk tools and the entire disk shows as one single partition
+2020-01-01 19:10:52	konrados	Hey, I have a weird issue. When I start a tty (with e.g. ctrl+alt+f1), it says: 'konrad login:' - I enter my username, then it shows 'password:' but... it doesn't wait for me, it says after two seconds 'password incorrect' even when I did not press any key. How can I see what is happening?
+2020-01-01 19:10:53	ScottHDev	ok
+2020-01-01 19:10:59	akik	Dagmar: why are you so anti-user?
+2020-01-01 19:11:04	ScottHDev	I'm not
+2020-01-01 19:11:09	Dagmar	akik: Why are you angling to be eaten
+2020-01-01 19:11:11	-->	|Psych0| (~mr_robot@unaffiliated/psych0/x-8437841) has joined ##linux
+2020-01-01 19:11:17	<--	mrig (~mrig@unaffiliated/mrig) has quit (Quit: WeeChat 2.7)
+2020-01-01 19:11:26	ScottHDev	I just need to do stuff with dbus-session in this handler
+2020-01-01 19:11:47	<--	paulcarroty (~paul@93.75.232.249) has quit (Quit: Leaving)
+2020-01-01 19:11:48	<--	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 19:12:11	ScottHDev	which is not allowed with root
+2020-01-01 19:12:23	Dagmar	*sigh*
+2020-01-01 19:12:34	Dagmar	Root is allowed to do pretty much anything it pleases
+2020-01-01 19:12:51	nokia3210	akik some people are simply miserable and they can't help exporting their misery even when uncalled for...
+2020-01-01 19:13:02	Dagmar	Your problem is that dbus thinks only certain users should be allowed to send messages to certain processes
+2020-01-01 19:13:04	cyberpunx	i am composed primarily of feces
+2020-01-01 19:13:08	Dagmar	You need to convince it _otherwise_
+2020-01-01 19:13:22	akik	nokia3210: yea it's a bit weird since he has talked about his extensive knowledge
+2020-01-01 19:13:26	hexnewbie	cyberpunx: At least they were once dinosaur's
+2020-01-01 19:13:37	Dagmar	How about all you newbs that don't know your butts from a hole in the ground go complain to your parents for not raising you properly?
+2020-01-01 19:13:42	ScottHDev	It's been 2h since I'm trying to "convince" it
+2020-01-01 19:13:50	nokia3210	ezech thanks for the help bud, so efi?
+2020-01-01 19:13:55	akik	wisdom and knowledge don't go hand in hand
+2020-01-01 19:14:01	Dagmar	ScottHDev: Have you consulted _any_ of the dbus documentation in those two hours?
+2020-01-01 19:14:09	Dagmar	akik: In this case they do
+2020-01-01 19:14:14	ezech	nokia3210: it's just some metadata leftover from previous install - it won't interfere with anything
+2020-01-01 19:14:15	akik	doubt it
+2020-01-01 19:14:19	ScottHDev	no
+2020-01-01 19:14:27	<--	Emma_Gination (~Emma_Gina@xd520f228.cust.hiper.dk) has quit (Read error: Connection timed out)
+2020-01-01 19:14:28	Dagmar	...and ther'es no way in hell Windows XP is booting via UEFI
+2020-01-01 19:15:18	Dagmar	Actually, screw it.  I've had enough of self-important newbery today.  Ya'll can just suffer in ignorance
+2020-01-01 19:16:01	<--	BluesKaj (Blues@gateway/vpn/privateinternetaccess/blueskaj) has quit (Quit: Konversation terminated!)
+2020-01-01 19:16:09	Dagmar	Just know that _ignorance_ isn't what built the chat network you're using right now
+2020-01-01 19:16:25	ayecee	it was Dagmar. Dagmar built it.
+2020-01-01 19:16:26	ezech	Dagmar: ignorance is bliss though
+2020-01-01 19:16:41	Dagmar	ayecee: Well I did smash it more than a few times
+2020-01-01 19:16:49	hexnewbie	I doubt even Windows literate folks would be interested in providing much support for the install of something EOL and outdated like XP (one *shouldn't* do that), especially on a disk likely formatted with a GPT partition table.
+2020-01-01 19:16:50	<--	AlbeiEdward (~Thunderbi@188.25.109.239) has quit (Ping timeout: 240 seconds)
+2020-01-01 19:16:51	ayecee	eh, almost the same thing
+2020-01-01 19:17:17	Dagmar	Hmmm... Efnet... 90's... It checks out.
+2020-01-01 19:17:44	ezech	nokia3210: on another note, hexnewbie is right, you'll be better off with 10
+2020-01-01 19:18:10	hexnewbie	Then again, I recommend GNU/Linux, and wipefs. Wipes any filesystem, partition table, RAID or any other silly thing. I always like to recommend wipefs. It sounds dangerous (and is).
+2020-01-01 19:18:20	<--	vforb` (~kiad@unaffiliated/vforb/x-8401877) has quit
+2020-01-01 19:18:25	nokia3210	ezech i may give another 'lite' distro a chance provided I can make the bluetooth radio and hdmi output to work
+2020-01-01 19:18:26	ScottHDev	I didn't read the documentation of dbus during my research, but didn't say I've never read it
+2020-01-01 19:18:30	Dagmar	DBAN takes no prisoners
+2020-01-01 19:18:49	nokia3210	I thought maybe install linux and make it a home server project on an older desktop with upgraded ram and ssd as well.
+2020-01-01 19:19:22	hexnewbie	ScottHDev: OK, that's a modern Hollywood twist. You say you didn't read the docs in part 1, then say you just meant you hadn't read it *that day* in the sequel.
+2020-01-01 19:19:28	ezech	nokia3210: hardware works or not by how well it's supported by kernel, distro choice shouldn't matter that much
+2020-01-01 19:19:46	wildtrees	binary blobs
+2020-01-01 19:20:11	-->	tieinv (~username@unaffiliated/tieinv) has joined ##linux
+2020-01-01 19:20:27	Dagmar	ScottHDev: Well, i'm telling you unequivocally that you're going to have to read the dev documentation for dbus, because you are absolutely not going to get anywhere trying to make netfilter use some other uid
+2020-01-01 19:20:47	Dagmar	You might as well be trying to learn to fly by waving paper plates around.
+2020-01-01 19:20:57	Dagmar	No amount of insisting that it seems reasonable is going to make it so.
+2020-01-01 19:21:29	-->	Samizdat (~ambassado@75.141.230.217) has joined ##linux
+2020-01-01 19:21:43	ScottHDev	Ok, so I've managed to run the dbus call successfully in root session with this : /bin/sudo -u scott-hamilton -E <cmd>
+2020-01-01 19:21:44	--	wadadli is now known as fatpointer
+2020-01-01 19:22:02	ScottHDev	Next need to see if it works in the iptables module
+2020-01-01 19:23:20	Dagmar	This... this is why we can't put "Free Key Cleaning Service" stickers on wall-outlets, even as a joke
+2020-01-01 19:24:18	Dagmar	ScottHDev: If it were going to be that easy, we'd have said so
+2020-01-01 19:24:48	<--	ScottHDev (c02839e5@192.40.57.229) has quit (Quit: Ping timeout (120 seconds))
+2020-01-01 19:24:57	mawk	what is he trying to do
+2020-01-01 19:25:04	hexnewbie	ScottHDev: You can make your software pair use something other for IPC, e.g. a UNIX socket, or if you're writing a kernel module, a character device.
+2020-01-01 19:25:25	Dagmar	_Probably_ trying to make notification popups happen when some firewall event triggers.  He's not been very specific
+2020-01-01 19:25:39	<--	forgon (~forgon@unaffiliated/commander-cody/x-9618197) has quit (Ping timeout: 240 seconds)
+2020-01-01 19:25:58	Dagmar	Mainly getting netfilter to send packets to userspace and then through dbus to parts unknown
+2020-01-01 19:26:17	-->	compdoc (~me@unaffiliated/compdoc) has joined ##linux
+2020-01-01 19:26:21	Dagmar	...which is already being done by other things and is not particularly complex, _when the relevant ACLs have been supplied_
+2020-01-01 19:27:52	-->	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has joined ##linux
+2020-01-01 19:28:15	-->	ScottHDev (c02839e6@192.40.57.230) has joined ##linux
+2020-01-01 19:28:24	-->	nullheroes (~danielvu@168.235.66.22) has joined ##linux
+2020-01-01 19:28:30	ScottHDev	Sorry, got vpn issues
+2020-01-01 19:28:35	-->	overyander (~overyande@209.141.208.197) has joined ##linux
+2020-01-01 19:29:13	hexnewbie	Are you testing the Rube Goldberg machine on the VPN? ;)
+2020-01-01 19:29:20	-->	AK5Z (~goatman@unaffiliated/goatman) has joined ##linux
+2020-01-01 19:29:26	ScottHDev	nope
+2020-01-01 19:29:51	Dagmar	What he's described doesn't seem unreasonable to me
+2020-01-01 19:29:53	mawk	use wireguard ScottHDev
+2020-01-01 19:30:24	mawk	I'd use the netfilter netlink socket stuff
+2020-01-01 19:30:30	mawk	great learning opportunity
+2020-01-01 19:30:34	hexnewbie	NFQUEUE!
+2020-01-01 19:30:37	mawk	and I'd definitely not use nfqueue
+2020-01-01 19:30:39	mawk	lol
+2020-01-01 19:30:42	-->	Lucas_Gray (~Wryhder@197.210.226.86) has joined ##linux
+2020-01-01 19:30:53	ScottHDev	Is it obsolete
+2020-01-01 19:30:56	mawk	no
+2020-01-01 19:30:59	ScottHDev	?
+2020-01-01 19:31:06	mawk	¿
+2020-01-01 19:31:20	ScottHDev	Why would you avoid using it?
+2020-01-01 19:31:57	mawk	because I have high moral standards
+2020-01-01 19:31:58	Dagmar	He should definitely use Linux
+2020-01-01 19:32:01	hexnewbie	If it's only for notification purposes, one can use NFLOG (and then even use a userspace counterpart like uflog, if the needed sink is supported by uflog)
+2020-01-01 19:32:02	mawk	lol
+2020-01-01 19:32:15	hexnewbie	er, ulogd, sorry
+2020-01-01 19:32:17	mawk	yes nflog would be cool
+2020-01-01 19:32:28	-->	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has joined ##linux
+2020-01-01 19:32:30	ScottHDev	ok NFLOG, will check out that, thanks
+2020-01-01 19:32:43	ScottHDev	By the way, is wireguard free?
+2020-01-01 19:32:48	mawk	yes
+2020-01-01 19:32:52	<--	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has quit (Remote host closed the connection)
+2020-01-01 19:32:54	mawk	some commercial vpn providers provide it
+2020-01-01 19:32:58	-->	bildramer (~bildramer@p200300CF370E77006DFFA083B9824247.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 19:33:00	mawk	alongside with the cloudflare stuff, they modified it
+2020-01-01 19:33:03	mawk	and rebranded
+2020-01-01 19:33:54	ScottHDev	Isn't this a pretty huge RAM consuming solution ?
+2020-01-01 19:34:06	ScottHDev	Ok, no sorry
+2020-01-01 19:34:06	Dagmar	Well yes
+2020-01-01 19:35:14	<--	D-melanogaster (~D-melanog@212.90.58.216) has quit (Write error: Connection reset by peer)
+2020-01-01 19:35:50	-->	D-melanogaster (~D-melanog@212.90.58.216) has joined ##linux
+2020-01-01 19:36:16	-->	Wryhder (~Wryhder@197.210.29.114) has joined ##linux
+2020-01-01 19:36:19	<--	Lucas_Gray (~Wryhder@197.210.226.86) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:36:22	-->	AbedB (~AbedBhuty@bzq-79-177-38-100.red.bezeqint.net) has joined ##linux
+2020-01-01 19:36:44	<--	utack (~utack@2a02:810d:1380:a24:34fa:7f3c:9bf7:8407) has quit (Remote host closed the connection)
+2020-01-01 19:37:09	Dagmar	nflog or nfqueue, either of these mechanism will get information flowing in the right direction, but its still all going to be root
+2020-01-01 19:37:16	--	Wryhder is now known as Lucas_Gray
+2020-01-01 19:37:27	<--	alexeyneud (~alex@ppp-124-120-118-96.revip2.asianet.co.th) has quit (Quit: Leaving)
+2020-01-01 19:37:28	-->	dmzpub (~dmzone@186.red-83-39-225.dynamicip.rima-tde.net) has joined ##linux
+2020-01-01 19:38:10	<--	BrianG61UK (~BrianG61U@2a00:23c5:6e2c:613:5dfc:32c5:cb37:fb56) has quit (Read error: Connection reset by peer)
+2020-01-01 19:40:14	<--	an3223 (~an3223@96.47.226.21) has quit (Quit: WeeChat 2.7)
+2020-01-01 19:42:59	-->	moniker- (~mon@unaffiliated/moniker-) has joined ##linux
+2020-01-01 19:43:58	-->	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has joined ##linux
+2020-01-01 19:44:20	<--	Ceber (~cerberus@b9168f95.cgn.dg-w.de) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:44:29	Samizdat	Ох, Дагмар - горячее имя.
+2020-01-01 19:45:38	-->	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has joined ##linux
+2020-01-01 19:45:39	<--	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has quit (Client Quit)
+2020-01-01 19:45:43	<--	howdydudi (~howdydudi@141.98.102.235) has quit (Quit: Leaving)
+2020-01-01 19:46:03	-->	kerframil (kerframil@gentoo/user/kerframil) has joined ##linux
+2020-01-01 19:46:05	Samizdat	https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Dagmar_1958.JPG/320px-Dagmar_1958.JPG
+2020-01-01 19:46:40	-->	marcurling (~marcurlin@2a01:e0a:1a2:7c50:a4b7:c4e7:b114:9029) has joined ##linux
+2020-01-01 19:48:32	<--	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has quit (Quit: Ex-Chat)
+2020-01-01 19:49:08	ayecee	what a handsome lady
+2020-01-01 19:50:18	<--	tachoknight_ (~tachoknig@2600:1700:3060:3ee0:6c1d:aad7:d59:5e27) has quit (Quit: Happy trails to you)
+2020-01-01 19:50:30	-->	Ceber (~cerberus@b9168f95.cgn.dg-w.de) has joined ##linux
+2020-01-01 19:51:03	mawk	wow it's my boy Samizdat striking agian
+2020-01-01 19:51:20	mawk	my little politicized frenchie
+2020-01-01 19:51:21	<--	Northstrider (~Northstri@unaffiliated/northstrider) has quit (Quit: Leaving)
+2020-01-01 19:51:36	-->	nobo (~nobo@APN-123-247-174-gprs.simobil.net) has joined ##linux
+2020-01-01 19:51:38	<--	MEODALT (~david@garza.riseup.net) has quit (Ping timeout: 240 seconds)
+2020-01-01 19:51:56	Samizdat	Allo, mawkish
+2020-01-01 19:52:04	mawk	bonne année
+2020-01-01 19:52:58	joepublic	Feliz año nuevo.
+2020-01-01 19:53:05	<--	tieinv (~username@unaffiliated/tieinv) has quit (Quit: Leaving)
+2020-01-01 19:53:55	Dagmar	Yeah clearly I must be female and 99 years old
+2020-01-01 19:54:03	-->	eelstrebor (~eelstrebo@216-75-116-100.scb.ne.static.allophone.net) has joined ##linux
+2020-01-01 19:54:09	joepublic	Mi aerodeslizador está llena de anguilas.
+2020-01-01 19:54:12	mawk	don't reject your true self
+2020-01-01 19:54:25	ayecee	you don't look a day over 80
+2020-01-01 19:54:26	<--	gemclip (~lydatech@unaffiliated/gemclip) has quit
+2020-01-01 19:54:37	-->	ijens (~ijens@unaffiliated/ijens) has joined ##linux
+2020-01-01 19:55:56	Samizdat	We are internacionale today!
+2020-01-01 19:56:12	triceratux	https://www.youtube.com/watch?v=eYTdI4MDNyY
+2020-01-01 19:56:46	-->	TheFuzzball (~TheFuzzba@82.129.98.164) has joined ##linux
+2020-01-01 19:57:41	<--	pingfloyd (~pingfloyd@unaffiliated/pingfloyd) has quit (Quit: WeeChat 1.6)
+2020-01-01 19:59:08	<--	SpeakerToMeat (~SpeakerTo@prgmr/customer/SpeakerToMeat) has quit (Ping timeout: 268 seconds)
+2020-01-01 19:59:38	<--	AK5Z (~goatman@unaffiliated/goatman) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:01:15	triceratux	shes good but im into that uzbekistani zydeco :)
+2020-01-01 20:01:19	-->	xlx (~xlx@unaffiliated/xlx) has joined ##linux
+2020-01-01 20:01:30	<--	xhci (~lag@xhci.io) has left ##linux
+2020-01-01 20:01:44	-->	kfrench (~kfrench@2601:142:4201:730:b5d6:d954:eb9a:26cd) has joined ##linux
+2020-01-01 20:02:26	-->	SpeakerToMeat (~SpeakerTo@prgmr/customer/SpeakerToMeat) has joined ##linux
+2020-01-01 20:03:17	-->	ephemer0l_ (~ephemer0l@pentoo/user/ephemer0l) has joined ##linux
+2020-01-01 20:03:18	-->	Uncas (~brad@c-69-255-143-148.hsd1.md.comcast.net) has joined ##linux
+2020-01-01 20:03:22	<--	conyers (~conyers@c-73-114-163-201.hsd1.ma.comcast.net) has quit (Quit: ZZZzzz…)
+2020-01-01 20:03:57	<--	Chunkyz (~Chunkyz@unaffiliated/chunkzz) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:04:33	<--	rendar (~rendar@unaffiliated/rendar) has quit
+2020-01-01 20:04:35	-->	AK5Z (~goatman@unaffiliated/goatman) has joined ##linux
+2020-01-01 20:05:35	-->	LiftLeft (~LiftLeft@2001:19f0:5c01:755:5400:2ff:fe62:b1d9) has joined ##linux
+2020-01-01 20:05:41	<--	rkleef (~rolfscrib@oberth.vankleef.me) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:06:24	<--	led_belly (~led_belly@192.40.57.239) has quit (Quit: zen)
+2020-01-01 20:07:26	-->	walnut_burl (~oak@104.129.28.250) has joined ##linux
+2020-01-01 20:07:29	<--	Uncas (~brad@c-69-255-143-148.hsd1.md.comcast.net) has quit (Remote host closed the connection)
+2020-01-01 20:07:36	ScottHDev	Vous êtes français mamk?
+2020-01-01 20:07:48	-->	amrfrsh (~Thunderbi@134.19.189.92) has joined ##linux
+2020-01-01 20:09:03	-->	xrogaan (~xrogaan@unaffiliated/xrogaan) has joined ##linux
+2020-01-01 20:09:30	-->	czesmir (~stefan@eko42.neoplus.adsl.tpnet.pl) has joined ##linux
+2020-01-01 20:09:57	-->	rkleef (~rolfscrib@oberth.vankleef.me) has joined ##linux
+2020-01-01 20:10:14	<--	padraigd (~padraigd@c-73-48-132-102.hsd1.ca.comcast.net) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:10:21	<--	xlx (~xlx@unaffiliated/xlx) has quit (Quit: Leaving...)
+2020-01-01 20:10:36	<--	fanta1 (~fanta1@p200300F76BC3DC00CCE4B0BBFDE24DA5.dip0.t-ipconnect.de) has quit (Quit: fanta1)
+2020-01-01 20:10:53	<--	TheFuzzball (~TheFuzzba@82.129.98.164) has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+2020-01-01 20:11:28	<--	bestinket (~useri@unaffiliated/hortiel) has quit (Ping timeout: 268 seconds)
+2020-01-01 20:13:36	<--	cmj (~c@2603:3023:30a:f300::c0ff:ee) has quit (Ping timeout: 252 seconds)
+2020-01-01 20:14:07	-->	xlx (~xlx@unaffiliated/xlx) has joined ##linux
+2020-01-01 20:14:38	ezech	do you guys use self hosted cloud services? like nextcloud or something?
+2020-01-01 20:15:00	<--	Dan_au (~Dan@syd.danscomp.net) has quit (Ping timeout: 256 seconds)
+2020-01-01 20:15:13	-->	jkwnki (~jkwnki@p200300CD471A78001E1BB5FFFE7A47F7.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 20:15:20	while	I also am wondering what VPS services y'all recommend
+2020-01-01 20:15:42	GNU\colossus	I self-host email (smtp + imap), my website, a carddav/caldav server, and an xmpp-server
+2020-01-01 20:15:42	Dagmar	As long as the standard is "VPS" then "anything cheap"
+2020-01-01 20:15:43	iodev	while: Raspberry Pi at SelfServer.DIY
+2020-01-01 20:15:51	onla	cat test.html | pup 'p:parent-of([href="lomake/lomake.php"])' | xargs sed -i 's/<p>/<!--<p>/g'   <- sed: can't read <p>: No such file or directory ... and many other similar is in output. How to replace
+2020-01-01 20:15:54	while	iodev: no, it needs to be off of US soil
+2020-01-01 20:16:09	iodev	ahhhhh, you want to hide yourself from the NSA
+2020-01-01 20:16:19	rascul	most people don't put servers on the soil
+2020-01-01 20:16:25	iodev	well, well, well, we're only onto you :D while
+2020-01-01 20:16:26	rascul	racks are common
+2020-01-01 20:16:27	G3nka1	dd if=/dev/zero of=/home/cc/swapfile count=1000000 bs=1MiB Is there a way to make this parallel or faster?
+2020-01-01 20:16:28	wildtrees	I have used linode and digital ocean before, nothing serious just putzing around though, digital ocean seems cheaper usually , linode will accept prepaid "credit/debit" cards from a drug store though, digital ocean doesn't anymore though
+2020-01-01 20:16:29	while	iodev: no, it has to do with outside data regulations of what the server will be involved with
+2020-01-01 20:16:30	GNU\colossus	while, maybe check out www.edis.at, the have decent service around the globe
+2020-01-01 20:16:32	ezech	GNU\colossus: and photos?
+2020-01-01 20:16:45	Dagmar	onla: You apparently need to escape the special characters > and probably < with backslashes if that's the error you're getting
+2020-01-01 20:16:53	GNU\colossus	ezech, you mean, a web-accessible gallery? I counted that under "website"
+2020-01-01 20:17:07	-->	rtfm (rtfm@unaffiliated/rtfm) has joined ##linux
+2020-01-01 20:17:14	wildtrees	vultr looks interesting from what I remember as a vps, iirc they offered alot of different options for Os's
+2020-01-01 20:17:16	while	edis.it is down :(
+2020-01-01 20:17:17	ezech	GNU\colossus: I mean that you take picture and it goes off-phone to your server
+2020-01-01 20:17:19	GNU\colossus	G3nka1, look at fallocate instead of dd
+2020-01-01 20:17:36	rascul	onla 'sed -i' requires a file
+2020-01-01 20:17:40	GNU\colossus	ezech, nope, no such thing - but I am considering owncloud
+2020-01-01 20:17:41	-->	led_belly (~led_belly@192.40.57.238) has joined ##linux
+2020-01-01 20:17:47	GNU\colossus	while, edis.at
+2020-01-01 20:17:59	<--	ScottHDev (c02839e6@192.40.57.230) has quit (Quit: Ping timeout (120 seconds))
+2020-01-01 20:18:07	while	oops
+2020-01-01 20:18:28	while	I need a new IRC client, hexchat's clipboard doesn't work
+2020-01-01 20:18:30	G3nka1	GNU\colossus: I did allocate but faced issues with swapon, many forums suggested to use dd instead. But its super slow. I am on centos7
+2020-01-01 20:18:31	onla	rascul: file to output the change?
+2020-01-01 20:18:41	rascul	onla input file
+2020-01-01 20:18:43	ezech	google photos is fine but reduce quality, not always a good thing
+2020-01-01 20:18:49	rascul	it doesn't make seen if it's operating on a stream
+2020-01-01 20:19:08	rascul	perhaps just remove -i
+2020-01-01 20:19:14	-->	panikovsky_ (~panikovsk@31.23.182.96) has joined ##linux
+2020-01-01 20:19:15	Samizdat	None of you looks three sheets to the wind today -- well, maybe two.
+2020-01-01 20:19:48	rascul	onla -i means modify in place, it will take the existing file, do the operations, then write the result to that same file
+2020-01-01 20:19:57	rascul	approximately
+2020-01-01 20:20:03	onla	rascul: still same problem though without -i
+2020-01-01 20:20:10	rascul	what problem?
+2020-01-01 20:20:27	<--	krizoek (krizoek@gateway/vpn/privateinternetaccess/krizoek) has quit (Quit: You come to us young people, for hope? How dare you. Greta thunberg)
+2020-01-01 20:20:58	-->	ackpacket (~ackpacket@unaffiliated/ackpacket) has joined ##linux
+2020-01-01 20:21:01	onla	http://dpaste.com/3A42JXT
+2020-01-01 20:21:06	-->	conyers (~conyers@c-73-114-163-201.hsd1.ma.comcast.net) has joined ##linux
+2020-01-01 20:21:45	rascul	onla that's not the same command line you had earlier
+2020-01-01 20:21:51	rascul	this one has out.html at the end
+2020-01-01 20:21:52	G3nka1	GNU\colossus: ?
+2020-01-01 20:22:24	Dagmar	fallocate isn't going to be any faster than dd for a thick-provisioned file
+2020-01-01 20:22:26	onla	rascul: scroll half way, there's another one
+2020-01-01 20:22:27	GNU\colossus	G3nka1, if "bs=1M" is slow, there's little you can do to speed it up
+2020-01-01 20:22:42	rascul	onla oh i didn't see it at first
+2020-01-01 20:22:44	-->	Dan_au (~Dan@syd.danscomp.net) has joined ##linux
+2020-01-01 20:22:44	Dagmar	GNU\colossus: yeah you can. You can not pick a completely unreasonable block size, for one thing
+2020-01-01 20:22:48	<--	panikovsky (~panikovsk@5.139.155.39) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:23:15	-->	leshaste (~lesshaste@82-69-126-43.dsl.in-addr.zen.co.uk) has joined ##linux
+2020-01-01 20:23:24	rascul	onla maybe something to do with the interaction with xargs, i dunno much about xargs
+2020-01-01 20:23:29	GNU\colossus	Dagmar, yeah, but 1M is pretty reasonable
+2020-01-01 20:23:33	Dagmar	Some small multiple of 512 like 4096 is going to generally give the best performance
+2020-01-01 20:23:33	leshaste	how can I automate trying to ssh into computers? I have a few hundred I need to test
+2020-01-01 20:23:57	Dagmar	leshaste: Distribute an ssh pubkey in advance
+2020-01-01 20:24:03	<--	led_belly (~led_belly@192.40.57.238) has quit (Ping timeout: 240 seconds)
+2020-01-01 20:24:11	onla	rascul: this is the output without xargs and sed. I just want to comment that all out so I am trying first to add the <!-- at the begin: http://dpaste.com/1K7Y2D5
+2020-01-01 20:24:11	Dagmar	This will be less hassle than trying to figure out expect scripting
+2020-01-01 20:24:41	rascul	onla why are you using xargs? i don't think it fits here
+2020-01-01 20:24:43	<--	Lucas_Gray (~Wryhder@197.210.29.114) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:24:49	leshaste	Dagmar, I don't think this will work here as they don't all share a filesystem. The thing being tested is if they accidentally will let me log in
+2020-01-01 20:24:52	while	leshaste: you can use sshpass
+2020-01-01 20:24:59	leshaste	while, can you explain more ?
+2020-01-01 20:25:19	onla	rascul: yeah I don't know. I tried to use plain sed too but maybe I used it wrong
+2020-01-01 20:25:22	while	it allows you to supply the password to ssh in multiple different ways
+2020-01-01 20:25:29	while	it at least works with GNU ssh
+2020-01-01 20:25:45	rascul	onla what is this pup command?
+2020-01-01 20:25:48	Dagmar	There's a GNU ssh now?
+2020-01-01 20:25:49	while	I think most distributions just have it available as a package from your package maintainer
+2020-01-01 20:25:58	rascul	while openssh you mean?
+2020-01-01 20:26:03	leshaste	sshpass -p 'my_pass_here' ssh aaronkilik@10.42.0.1 'df -h'
+2020-01-01 20:26:06	leshaste	looks interesting
+2020-01-01 20:26:07	rascul	very much not gnu ;)
+2020-01-01 20:26:14	while	no openssh and sshpass are different
+2020-01-01 20:26:26	rascul	you said gnu ssh though
+2020-01-01 20:26:30	Dagmar	rascul: That's what I was thinking.  THey'd be a little pissed to hear it suggested they were GNU
+2020-01-01 20:26:31	rascul	that's what i was referring to
+2020-01-01 20:26:33	onla	rascul: I tried earlier to use grep, but people here on #linux said that because markup language files are so messy that grep and sed etc gets confused by it that I should use something else like pup
+2020-01-01 20:26:36	while	rascul: oh, yes
+2020-01-01 20:26:46	onla	https://github.com/ericchiang/pup
+2020-01-01 20:27:14	Dagmar	onla: They should have said that using regexps on HTML is a shortcut to mental breakdowns
+2020-01-01 20:27:26	-->	dftxbs3e (~dftxbs3e@unaffiliated/dftxbs3e) has joined ##linux
+2020-01-01 20:27:28	rascul	onla you just want that output to be commented?
+2020-01-01 20:27:30	<--	palasso (~palasso@unaffiliated/palasso) has quit (Ping timeout: 246 seconds)
+2020-01-01 20:27:30	Dagmar	The problem has nothing to do with grep/sed, per se
+2020-01-01 20:27:38	<--	geekPanther (~harsath@unaffiliated/geekpanther) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:27:56	onla	rascul: yeah
+2020-01-01 20:28:04	rascul	echo "<!--"; cat out.html | pup whatever; echo "-->"
+2020-01-01 20:28:10	-->	tofran (~tofran@247.129.63.94.rev.vodafone.pt) has joined ##linux
+2020-01-01 20:28:36	rascul	or even echo "<!--" $(cat out.html | pup whatever) "-->"
+2020-01-01 20:28:48	<--	bakuzan (~bakuzan@laubervilliers-657-1-64-163.w90-63.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:29:19	while	also another way around ssh asking for a password is to run it in a pty, there is a good api for doing that in Perl
+2020-01-01 20:29:28	-->	forgon (~forgon@unaffiliated/commander-cody/x-9618197) has joined ##linux
+2020-01-01 20:29:46	onla	then I get a file out.html that has that output with the comments? But this is a lot of other text in the html file and the comments wont go at the begin of file
+2020-01-01 20:29:58	while	basically just like how your favorite terminal emulator spawns a pty every time you open a tab, you can do that as well
+2020-01-01 20:30:10	rascul	onla you can write that to a file
+2020-01-01 20:30:16	rascul	or even echo "<!--" $(cat out.html | pup whatever) "-->" > some_file.html
+2020-01-01 20:30:26	rascul	don't write it to the same one you're reading from though
+2020-01-01 20:30:41	rascul	do a mv afterwards if you want
+2020-01-01 20:30:43	onla	doesnt that write the begin of comment to the begin of the out.html?
+2020-01-01 20:30:47	<--	conyers (~conyers@c-73-114-163-201.hsd1.ma.comcast.net) has quit (Quit: ZZZzzz…)
+2020-01-01 20:30:55	-->	Lucas_Gray (~Wryhder@197.210.53.252) has joined ##linux
+2020-01-01 20:30:55	rascul	it doesn't touch out.html
+2020-01-01 20:31:12	onla	well to begin of some_file.html?
+2020-01-01 20:31:14	-->	fanta1 (~fanta1@p200300F76BC3DC00CCE4B0BBFDE24DA5.dip0.t-ipconnect.de) has joined ##linux
+2020-01-01 20:31:16	-->	led_belly (~led_belly@192.40.57.239) has joined ##linux
+2020-01-01 20:31:20	rascul	what?
+2020-01-01 20:31:35	onla	the file I am reading has lots of html, then on line 160 there is the stuff the pup extracts
+2020-01-01 20:31:58	rascul	you want out.html to have that specific block commented?
+2020-01-01 20:32:06	rascul	with all the rest intact?
+2020-01-01 20:32:09	onla	yeah
+2020-01-01 20:32:18	rascul	then you either need to do it manually or use python and beautifulsoup
+2020-01-01 20:32:27	-->	isomari (~isomari@197.210.243.51) has joined ##linux
+2020-01-01 20:32:39	-->	palasso (~palasso@unaffiliated/palasso) has joined ##linux
+2020-01-01 20:32:47	onla	wonder why I was suggested the pup
+2020-01-01 20:33:16	rascul	pup doesn't appear useful at first glance for modifying html files in the way you want
+2020-01-01 20:33:21	<--	Tornevall (~thorne@ircbox.tornevall.net) has quit (Ping timeout: 240 seconds)
+2020-01-01 20:33:51	-->	Phruis (~phruis@unaffiliated/phruis) has joined ##linux
+2020-01-01 20:34:03	Dagmar	NOt even close
+2020-01-01 20:34:13	rascul	what you want to do isn't so easy with the typical command line tools, and you'll easily get into broken regex xml matching
+2020-01-01 20:34:19	-->	silverwhitefish (~hidden@47.203.208.202) has joined ##linux
+2020-01-01 20:34:43	Dagmar	This is sort of a tool for a "real" programming language that has an XHTML parser
+2020-01-01 20:34:46	onla	what is the binary of the beautifulsoup, it seems I have it installed o.O
+2020-01-01 20:34:49	rascul	unless there's some method that is not coming to mind right now, anyway
+2020-01-01 20:34:57	rascul	beautifulsoup is a python module
+2020-01-01 20:35:01	Dagmar	Otherwise, you're just kinda winging it and hoping your regexp isn't going to break
+2020-01-01 20:35:04	rascul	and is an excellent html parser
+2020-01-01 20:35:21	<--	rfnerd (~rfnerd@skynet.rfnerd.com) has quit (Quit: Bye!)
+2020-01-01 20:35:23	onla	ok, I guess I have to search for some tutorials
+2020-01-01 20:35:30	rascul	if you don't want to do it manually, you'll need to know some programming language that has some worthwhile html parser
+2020-01-01 20:36:01	onla	well it's only some 15 files, maybe I do it manually. I thought I wanna learn a new trick but not sure if this trick is a complex one
+2020-01-01 20:36:05	-->	saudiquan (~androirc@46.30.139.122) has joined ##linux
+2020-01-01 20:36:12	-->	rfnerd (~rfnerd@skynet.rfnerd.com) has joined ##linux
+2020-01-01 20:36:22	-->	cads (~cads@ip98-167-37-40.lv.lv.cox.net) has joined ##linux
+2020-01-01 20:36:24	onla	+too
+2020-01-01 20:36:24	<--	Lucas_Gray (~Wryhder@197.210.53.252) has quit (Read error: Connection reset by peer)
+2020-01-01 20:36:27	rascul	this trick is indeed complex, html isn't easy to work with using traditional tools
+2020-01-01 20:36:30	saudiquan	$uno rm -rm /*
+2020-01-01 20:36:37	Dagmar	Oh there's no way you'll find this time-profitable with just fiftten files
+2020-01-01 20:36:40	saudiquan	if does
+2020-01-01 20:36:49	<--	maxzor (~maxzor@amontsouris-653-1-176-116.w92-128.abo.wanadoo.fr) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:36:53	rascul	saudiquan don't post that stuff here
+2020-01-01 20:37:08	Dagmar	If you had thousands there'd be no doubt, but for just fifteen you might as well do it manually
+2020-01-01 20:37:25	sauvin	saudiquan, what are you doing?
+2020-01-01 20:37:28	onla	Dagmar: hehe ye. I knew the pup wouldnt be time-profitable either, but I might be faced with a similar task but with some 200 files
+2020-01-01 20:37:37	<--	rfnerd (~rfnerd@skynet.rfnerd.com) has quit (Remote host closed the connection)
+2020-01-01 20:37:38	Dagmar	It is not without reason that the code in browsers that parses HTML is many thousands of lines long
+2020-01-01 20:37:47	-->	Tornevall (~thorne@ircbox.tornevall.net) has joined ##linux
+2020-01-01 20:38:02	<--	akem (~akem@82.102.19.217) has quit (Quit: Leaving)
+2020-01-01 20:38:18	Dagmar	If it's the _exact same string_ in all the files, this is tractable
+2020-01-01 20:38:22	-->	rfnerd (~rfnerd@skynet.rfnerd.com) has joined ##linux
+2020-01-01 20:38:51	-->	vforb` (~infer@unaffiliated/vforb/x-8401877) has joined ##linux
+2020-01-01 20:38:53	Dagmar	If it's not and you're looking to remove a particular type of element from the HTML, you are screwed because that's a virtually intractable problem using only regular expressions
+2020-01-01 20:39:03	Jmabsd	 oh dear, I see now that in my dmesg, actually the amdgpu driver *crashes* on boot
+2020-01-01 20:39:09	Jmabsd	this is likely the reason for why my amdgpu framebuffer will not launch :-}
+2020-01-01 20:39:17	<--	nickodd (~nickodd@unaffiliated/nickodd) has left ##linux
+2020-01-01 20:39:31	onla	with pup I can output the string I want to edit and it's same in all
+2020-01-01 20:40:21	Dagmar	Well, then you can try and stick use that as a _literal match_
+2020-01-01 20:40:26	Dagmar	s/stick/
+2020-01-01 20:40:53	onla	I tried but there were some errors and people here started saying same things you say about *ML being hard to parse
+2020-01-01 20:41:24	onla	or not errors but some unexpected output I guess
+2020-01-01 20:41:24	<--	saudiquan (~androirc@46.30.139.122) has quit (Remote host closed the connection)
+2020-01-01 20:41:33	Samizdat	Prospero Ano Felicidad!
+2020-01-01 20:41:47	<--	ackpacket (~ackpacket@unaffiliated/ackpacket) has quit (Quit: My puter has gone to sleep. ZZZzzz…)
+2020-01-01 20:41:59	onla	but ok, I do manually now then thanks
+2020-01-01 20:42:06	-->	slopey (~slopey@47-208-128-166.erkacmtk03.res.dyn.suddenlink.net) has joined ##linux
+2020-01-01 20:43:23	pnbeast	onla, HTML is not a "regular language".  Regular expressions only work correctly on "regular languages".  So, you can try to use regular expressions on HTML, but it may not work.  In particular, if you have nested things, regular expressions cannot be guaranteed to extract them correctly.
+2020-01-01 20:43:35	-->	yamii (~yamii@ip4d15f8a8.dynamic.kabel-deutschland.de) has joined ##linux
+2020-01-01 20:43:56	ryouma	time to read chomsky i guess
+2020-01-01 20:44:04	pnbeast	onla, on the other hand, if your HTML is simple and your regular expressions are written carefully enough (or you are lucky...), then they might work.
+2020-01-01 20:44:44	sauvin	Kindly note pnbeast said *might*.
+2020-01-01 20:44:47	pnbeast	onla, so:  if you want to be *sure* that your tools will work, you will need tools designed to work with things like HTML (or XML, etc.)
+2020-01-01 20:45:02	<--	xy__ (~xy2_@94.239.177.175) has quit (Ping timeout: 265 seconds)
+2020-01-01 20:45:37	onla	it's just over my head that I can't just read the file as chars after one another and then just simply search and replace strings, no idea how some language or nests had anything to do with it
+2020-01-01 20:46:14	pnbeast	onla, you might be able to try.  Did you?  I saw working on this last night, but it's not clear to me that you even know how to use sed (or whatever else).
+2020-01-01 20:46:19	linext	are there linux distros that can turn a spare PC into a NAS?
+2020-01-01 20:46:23	ryouma	i find that the xml2 package has great tools.  you have html2 that is then usable by traditional shell tools then you can pipe it to 2html to produce html again.
+2020-01-01 20:46:23	linext	i like synology
+2020-01-01 20:46:31	ayecee	onla: you can, but not with the tool you're using
+2020-01-01 20:47:16	rascul	obligatory reading before attempting to parse xml or html with regex:  https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454
+2020-01-01 20:47:17	onla	I have used xargs and sed to search and replace stuff on php files earlier a lot, but this is first time I can't get it to work, but it's .html instead of .php now (although there is html in the php files)
+2020-01-01 20:48:22	ayecee	it must be that the file isn't constructed quite the way it appears to the eyeball
+2020-01-01 20:48:41	<--	rfnerd (~rfnerd@skynet.rfnerd.com) has quit (Quit: Bye!)
+2020-01-01 20:48:57	ayecee	may be worthwhile looking at a hexdump of it to see what's going on
+2020-01-01 20:49:12	pnbeast	xargs has nothing to do with this part of the conversation.  The real question is whether you understand how sed works and how to write regexes for it.
+2020-01-01 20:49:13	<--	enriooooooo (~nanoz@unaffiliated/nanoz) has quit (Ping timeout: 260 seconds)
+2020-01-01 20:49:28	-->	rfnerd (~rfnerd@skynet.rfnerd.com) has joined ##linux
+2020-01-01 20:49:57	pnbeast	rascul, has he ever explained exactly what he's doing?  Last night I felt like he hadn't, but I wasn't sure, even then, more just that he kept saying "it doesn't work".
+2020-01-01 20:50:00	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined ##linux
+2020-01-01 20:50:15	rascul	who?
+2020-01-01 20:50:20	rascul	onla?
+2020-01-01 20:50:27	rascul	trying to comment out specific bits of html files
+2020-01-01 20:50:30	<--	fanta1 (~fanta1@p200300F76BC3DC00CCE4B0BBFDE24DA5.dip0.t-ipconnect.de) has quit (Quit: fanta1)
+2020-01-01 20:50:33	pnbeast	Yeah.
+2020-01-01 20:50:51	rascul	multi line bits
+2020-01-01 20:50:52	pnbeast	Sure, I got that, but I mean exactly.  Last night he kept talking about a specific line.
+2020-01-01 20:50:54	kerframil	onla: regarding the over my head remark, keep in mind that standard utilities such as sed are heavily line-oriented. it takes a lot of effort to make them handle content across a line-break. that is one of several characteristics that makes them bad for parsing HTML, XML and the like.
+2020-01-01 20:51:01	pnbeast	Oh, multi-line?
+2020-01-01 20:51:07	rascul	yes
+2020-01-01 20:51:31	Dagmar	using sed multi-line is just _begging_ to find massively inefficient search methods
+2020-01-01 20:51:32	pnbeast	onla, learn one of the other tools that someone told you to use.
+2020-01-01 20:51:42	onla	I am fine with just one line too. I have constructed a command to output one simple line that I failed to edit
+2020-01-01 20:51:47	<--	rfnerd (~rfnerd@skynet.rfnerd.com) has quit (Client Quit)
+2020-01-01 20:51:54	-->	AT-x310 (~AT-x310@abordeaux-651-1-75-183.w90-5.abo.wanadoo.fr) has joined ##linux
+2020-01-01 20:52:40	-->	al3xprey (~al3xprey@52.177.200.147) has joined ##linux
+2020-01-01 20:53:13	onla	http://dpaste.com/16YEESB
+2020-01-01 20:53:26	-->	trusch (~trusch@mue-88-130-48-193.dsl.tropolys.de) has joined ##linux
+2020-01-01 20:53:32	onla	Here I can get the line I want to put the begin of the comment
+2020-01-01 20:53:35	-->	tracks_droid (~androirc@2600:100d:b157:f5fa:0:54:43f8:fa01) has joined ##linux
+2020-01-01 20:53:45	ryouma	again, if you raelly awnt to use traditional tools (wna who wants to have to figure out some new syntax for some new partser for some fparticular format") xml2 is amazing
+2020-01-01 20:53:54	rascul	onla quit with all the xargs
+2020-01-01 20:54:51	<--	Kelzorz (~Kelzorz@67.6.83.103) has quit (Ping timeout: 240 seconds)
+2020-01-01 20:55:13	rascul	also if you're passing the output of grep to sed, sed will not be able to modify a file in place and it will not be able to put the modifications back at the proper place in the file
+2020-01-01 20:55:28	ayecee	onla: break down this pipeline and see what each grep is actually returning
+2020-01-01 20:55:42	<--	al3xprey (~al3xprey@52.177.200.147) has quit (Client Quit)
+2020-01-01 20:56:01	<--	mackal (~mike@141.154.54.5) has quit (Quit: BE VIGILANT.)
+2020-01-01 20:56:03	onla	without -v there are two <p>'s one with a string nbsp in it, so I strip it away
+2020-01-01 20:56:11	-->	rfnerd (~rfnerd@skynet.rfnerd.com) has joined ##linux
+2020-01-01 20:56:19	ayecee	onla: let's see the output
+2020-01-01 20:56:20	onla	after the 2nd grep the output looks good to go
+2020-01-01 20:56:58	-->	tomgray (~Thunderbi@145.120.24.136.in-addr.arpa) has joined ##linux
+2020-01-01 20:57:09	<--	panikovsky_ (~panikovsk@31.23.182.96) has quit (Quit: Leaving)
+2020-01-01 20:57:14	-->	bakuzan (~bakuzan@laubervilliers-657-1-64-163.w90-63.abo.wanadoo.fr) has joined ##linux
+2020-01-01 20:57:14	onla	http://dpaste.com/0JAKHRC
+2020-01-01 20:57:49	ayecee	onla: this would pass 167: and <p> as filenames to sed
+2020-01-01 20:58:09	onla	file opetus.html outputs: opetus.html: HTML document, UTF-8 Unicode text, with very long lines
+2020-01-01 20:58:17	-->	mackal (~mike@141.154.54.5) has joined ##linux
+2020-01-01 20:58:37	onla	ah
+2020-01-01 20:58:49	rascul	you're combining commands in such a way to make it impossible to get the results you want
+2020-01-01 20:58:55	rascul	you need to use sed without grep, xargs, or anything else
+2020-01-01 20:59:34	rascul	which means you need a proper regex, and if you're doing that on html, you're going to summon tony the pony
+2020-01-01 20:59:49	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 21:00:03	ayecee	what was the goal of getting the line number with grep -n?
+2020-01-01 21:00:24	onla	both flags are useless for the operation I know
+2020-01-01 21:00:27	rascul	there might be a way to pull the line number though and tell sed that specific line to operate on, i don't remember if sed has such a functionality
+2020-01-01 21:00:45	ryouma	it does
+2020-01-01 21:00:58	ryouma	like awk
+2020-01-01 21:01:06	rascul	in that case, use grep to grab the line number, save it in a variable, and use that in the sed command
+2020-01-01 21:01:21	Dagmar	You can.  It's just not really helping matters much
+2020-01-01 21:01:22	<--	BrianMiller (~BrianMill@195.24.57.147) has quit (Remote host closed the connection)
+2020-01-01 21:01:36	ayecee	something closer to: sed -i '/   <p>/{/nbsp/n;s/    /    <!--/g}'
+2020-01-01 21:01:37	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Read error: Connection reset by peer)
+2020-01-01 21:01:58	ayecee	finds the first string, skips line with the second string, and applies the replace
+2020-01-01 21:02:22	ayecee	probably not an exact command, i don't know which parts would have to be escaped.
+2020-01-01 21:02:36	c705	awk would probably be a quicker/easier solution to whatever you're doing, if you don;t mind reading a couple man pages
+2020-01-01 21:02:54	rascul	by passing grep's output to sed, sed has no idea what the rest of the file is, or what the file is, so it can't modify the file and you're left with a modified string that's effectively useless
+2020-01-01 21:03:11	Dagmar	IF one could rely on the targeted string being the entire line one could skip worrying about escaping anything
+2020-01-01 21:03:16	<--	led_belly (~led_belly@192.40.57.239) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:03:38	ayecee	c705: sure, many ways to skin this cat
+2020-01-01 21:03:39	Dagmar	...sed -i 'linenumber/\(.*\)/\1/;'
+2020-01-01 21:03:56	Dagmar	All of these methods involve a lot of gore, tho
+2020-01-01 21:03:59	<--	leshaste (~lesshaste@82-69-126-43.dsl.in-addr.zen.co.uk) has quit (Quit: Leaving)
+2020-01-01 21:04:03	ayecee	cat skinning often does
+2020-01-01 21:04:30	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:04:33	rascul	i still recommend just doing it by hand or using python+beautifulsoup or something
+2020-01-01 21:05:18	onla	seems like ayecee's method at least works
+2020-01-01 21:05:25	-->	cmj (~c@2603:3023:30a:f300::c0ff:ee) has joined ##linux
+2020-01-01 21:06:20	ayecee	sed, not just for s/// !
+2020-01-01 21:06:23	-->	Tazmainian (~Tazmain@unaffiliated/tazmain) has joined ##linux
+2020-01-01 21:06:32	onla	I don't get what you mean "finds the first string, skips line with the 2nd string and applies the replace"
+2020-01-01 21:06:42	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 21:06:57	onla	ahh
+2020-01-01 21:07:00	onla	got it sorry
+2020-01-01 21:07:03	ayecee	:)
+2020-01-01 21:07:32	onla	was confused as to the line it skips is before that line but you were talking about these what goes in s/
+2020-01-01 21:08:43	onla	that was only the opening of the comment. Let's see if I get the end of the comment
+2020-01-01 21:10:20	ayecee	that's going to be trickier if it's multiple lines
+2020-01-01 21:10:23	<--	frmus (~frmus@unaffiliated/frmus) has quit (Quit: Leaving)
+2020-01-01 21:10:51	<--	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2020-01-01 21:11:08	twainwek	the apycalpyse countdown has begun
+2020-01-01 21:11:13	ayecee	not impossible, but you'd end up doing some stunts with the hold space
+2020-01-01 21:12:01	-->	kreyren[m] (~kreyrenm]@ip-62-245-98-101.net.upcbroadband.cz) has joined ##linux
+2020-01-01 21:12:13	-->	DrBrownBear (~DrBrownbe@2601:40f:c100:ddd0:21b9:87cd:17b7:cc8c) has joined ##linux
+2020-01-01 21:12:31	onla	it's simpler maybe. This grep gives all the lines I want to modify by adding --> after </p> and no other lines grep 'png" /></a></p>' *.html
+2020-01-01 21:12:31	<--	diogenese (~diogenese@diogenese.velotech.net) has quit (Quit: Has anybody seen the bridge?)
+2020-01-01 21:12:32	pnbeast	apycalpyse?
+2020-01-01 21:12:33	<--	toinux (~3lch4p0@rtr01-blx1-home.toinux.tk) has quit (Read error: Connection reset by peer)
+2020-01-01 21:12:39	-->	`7hr34t_hvntr (~ThePortWh@unaffiliated/theportwhisperer) has joined ##linux
+2020-01-01 21:13:01	-->	diogenese (~diogenese@diogenese.velotech.net) has joined ##linux
+2020-01-01 21:13:02	<--	`7hr34t_hvntr (~ThePortWh@unaffiliated/theportwhisperer) has quit (Remote host closed the connection)
+2020-01-01 21:13:20	ayecee	okay, but use sed's pattern match to find the lines, don't use grep.
+2020-01-01 21:13:28	-->	`7hr34t_hvntr (~ThePortWh@unaffiliated/theportwhisperer) has joined ##linux
+2020-01-01 21:13:31	twainwek	python2 EOLin in march
+2020-01-01 21:13:44	Dagmar	...of 2038
+2020-01-01 21:14:01	pnbeast	That's when all languages stop working.
+2020-01-01 21:14:05	Dagmar	They're never going to be able to completely get rid of python2
+2020-01-01 21:14:15	Dagmar	pnbeats++
+2020-01-01 21:14:31	ayecee	they never completely got rid of cobol either
+2020-01-01 21:14:38	c705	twainwek: they've pushed back 2.7 EOL so many times now, it's hard to take them seriously
+2020-01-01 21:14:44	twainwek	Dagmar: ive already received email notifications of some services that they'll be pulling python2 support soon
+2020-01-01 21:14:51	Dagmar	Tell me about it.  I'm working with a particularly cancerous variant of it
+2020-01-01 21:15:02	pnbeast	And every year there'll be another round of fluffy articles claiming that you can make a bazillion dollars by becoming a COBOL dev.
+2020-01-01 21:15:02	c705	Dagmar: 2.6?
+2020-01-01 21:15:18	rascul	I think I saw a python 2 fork recently
+2020-01-01 21:15:22	ayecee	sure, just have to wait for one of the current ones to die
+2020-01-01 21:15:23	Dagmar	You can make a lot of money being a professional bottom, too
+2020-01-01 21:15:26	<--	Grayson (~Grayson@unaffiliated/grayson) has quit (Read error: Connection reset by peer)
+2020-01-01 21:15:27	Dagmar	Doesn't mean people want to do it
+2020-01-01 21:15:51	redsh	Dagmar: Really? Sounds fascinating.
+2020-01-01 21:15:56	redsh	Do you know where I could apply?
+2020-01-01 21:16:08	Dagmar	Maybe start by setting up an account on Grindr
+2020-01-01 21:16:09	rascul	Can make lots of money doing almost anything
+2020-01-01 21:16:11	-->	Damni (~daniele@host13-226-dynamic.248-95-r.retail.telecomitalia.it) has joined ##linux
+2020-01-01 21:16:12	i9zO5AP	how can I concatenate line by line in this file with url mpv http://192.168.0.1/`cat metal.radio`
+2020-01-01 21:16:35	redsh	For practice, you mean?
+2020-01-01 21:16:39	-->	christopherburg (~christoph@173-165-240-153-minnesota.hfc.comcastbusiness.net) has joined ##linux
+2020-01-01 21:16:51	konrados	Hello, is there a space here for my question? :) You seem to talk and talk, and I've been waiting for an hour for a pause :)
+2020-01-01 21:17:04	c705	konrados: ask away
+2020-01-01 21:17:07	i9zO5AP	redsh: is it for me ?
+2020-01-01 21:17:10	][_R_][	i9zO5AP: You want to add http://192.168.0.1/ to the begining of each line?
+2020-01-01 21:17:13	konrados	thanks c705 :)
+2020-01-01 21:17:14	redsh	i9zO5AP: No.
+2020-01-01 21:17:15	<--	trusch (~trusch@mue-88-130-48-193.dsl.tropolys.de) has quit (Ping timeout: 240 seconds)
+2020-01-01 21:17:16	onla	hehe I tried the pattern match with sed, but it outputted me the contents of all files :s sed '/png" \/\>\</a\>\</p\>/p' *.html
+2020-01-01 21:17:21	konrados	I symlinked my entire /var dir to a different drive. MySql stopped working, with messages about permissions. I did set (afaik) the perms correctly, but it still complained. Today I learned about AppArmor - it seems to be a problem. Mysql data originally is in '/var/lib/mysql/' - but... can I configure apparmor to allow the whole /var ? like - `alias /var/ -> /mnt/someotherdrive/`? Does it work recursively?
+2020-01-01 21:17:28	i9zO5AP	][_R_][: yes
+2020-01-01 21:17:37	twainwek	konrados: but you were told not to do that last night iirc
+2020-01-01 21:17:39	Dagmar	You should not _symlink_ directories like /var
+2020-01-01 21:17:52	konrados	twainwek, nothing about apparmor, no
+2020-01-01 21:17:57	konrados	ah, that
+2020-01-01 21:17:59	Dagmar	If you're going to do that just mount the other filesystem at /var
+2020-01-01 21:18:00	-->	rajpra (~Thunderbi@203.129.246.222) has joined ##linux
+2020-01-01 21:18:01	][_R_][	i9zO5AP: sed 's,.*,http://192.168.0.1/&,' metal.radio
+2020-01-01 21:18:15	<--	akk (~akk@75-161-90-59.albq.qwest.net) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:18:26	i9zO5AP	][_R_][: thanks a lot
+2020-01-01 21:18:28	redsh	I like using |
+2020-01-01 21:18:49	redsh	When / is a pain to use for sed.
+2020-01-01 21:18:50	c705	konrados: you can modify the apparmor profile for mysql, but probably not a great idea to symlink var
+2020-01-01 21:18:52	<--	TheWild (~Thunderbi@apn-46-169-62-221.dynamic.gprs.plus.pl) has quit (Ping timeout: 265 seconds)
+2020-01-01 21:18:52	konrados	yeah, Dagmar - but when I did it with my home dir, it just did not work. The system was repeateadly redirecting me to the login screen.
+2020-01-01 21:19:12	Dagmar	konrados: A great many things will refuse to follow symlinks
+2020-01-01 21:19:23	ryouma	or follow them when they should not
+2020-01-01 21:19:28	konrados	hmmm, so, will you help me again with mount bind? Because last night I had problems with it?
+2020-01-01 21:19:36	-->	CoolerX (~coolerext@14.139.38.136) has joined ##linux
+2020-01-01 21:19:40	ryouma	do a normal mount with the bind option
+2020-01-01 21:19:48	ryouma	and pretend the dir is the device
+2020-01-01 21:20:01	Dagmar	konrados: I can "help" by suggesting that a bind mount isn't a very good solution either
+2020-01-01 21:20:08	-->	yelhamer (~yelhamer@41.96.50.27) has joined ##linux
+2020-01-01 21:20:08	-->	CrazySam (~sammyg@unaffiliated/sammyg) has joined ##linux
+2020-01-01 21:20:18	ryouma	note that you migth have issues there too, however, as this is a new linux feature
+2020-01-01 21:20:31	<--	BOKALDO (~BOKALDO@81.198.20.180) has quit (Quit: Leaving)
+2020-01-01 21:20:33	konrados	I will try again with `mount --bind` with the var dir, but it just didn't work last time :( I have read that it might be a timing issue, i.e. I first in fstab mount a device, then I mount --bind the dir on the device, but it just didn't work :(
+2020-01-01 21:20:40	<--	yelhamer (~yelhamer@41.96.50.27) has quit (Max SendQ exceeded)
+2020-01-01 21:20:51	Dagmar	Make separate filesystems on this external device, and pray to god it never becomes unplugged while the system is in use
+2020-01-01 21:20:57	konrados	Dagmar, so... what is the good solution?
+2020-01-01 21:21:04	onla	oh ok, escaping < and > fails, had to remove those
+2020-01-01 21:21:11	konrados	it is always connected, Dagmar
+2020-01-01 21:21:16	ryouma	Dagmar: why did you bring this up?  i noticed thst that can be an i9ssue
+2020-01-01 21:21:20	Dagmar	Until it isn't
+2020-01-01 21:21:26	<--	emmanuelux (~emmanuelu@2a01cb0000f3930085a180d71e1335c2.ipv6.abo.wanadoo.fr) has quit (Ping timeout: 252 seconds)
+2020-01-01 21:21:32	-->	yelhamer (~yelhamer@41.96.50.27) has joined ##linux
+2020-01-01 21:21:35	Dagmar	...and then your everything breaks,
+2020-01-01 21:21:41	<--	yelhamer (~yelhamer@41.96.50.27) has quit (Max SendQ exceeded)
+2020-01-01 21:22:01	Dagmar	ryouma: The "...and then your everything breaks" is the reason I'm mentioning it
+2020-01-01 21:22:05	ryouma	konrados: why not repeat the problem precisely?
+2020-01-01 21:22:15	konrados	ehhh.... I really thought it would be simple...
+2020-01-01 21:22:23	<--	Dan39 (~dan@unaffiliated/dan39) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:22:30	Dagmar	konrados: It would be simple if you were doing it in a more reasonable manner
+2020-01-01 21:22:39	<--	rfnerd (~rfnerd@skynet.rfnerd.com) has quit (Quit: Bye!)
+2020-01-01 21:22:40	konrados	ryouma, I did try the mount --bind a few times.
+2020-01-01 21:22:52	konrados	Dagmar, I'm trying!
+2020-01-01 21:23:00	ryouma	xy problem?
+2020-01-01 21:23:00	Dagmar	Having /var and /home be their own filesystem separate from / is fairly common, actually
+2020-01-01 21:23:08	konrados	ryouma, it is possible, yes.
+2020-01-01 21:23:19	Dagmar	Trying to do them as a _bind mount_ is fairly questionablke
+2020-01-01 21:23:27	-->	rfnerd (~rfnerd@skynet.rfnerd.com) has joined ##linux
+2020-01-01 21:23:27	onla	http://dpaste.com/2ADKV2K  sed's not looking good yet
+2020-01-01 21:23:40	Dagmar	Trying to do them via a symlink is _deeply_ questionable
+2020-01-01 21:23:42	konrados	Dagmar, but if not symlinking, and not bing mount, then what?
+2020-01-01 21:23:53	konrados	*bind
+2020-01-01 21:23:54	-->	CupOfCoffee (~CupOfCoff@unaffiliated/cupofcoffee) has joined ##linux
+2020-01-01 21:23:55	Dagmar	konrados: Normal filesystem mounts
+2020-01-01 21:24:08	Dagmar	konrados: Is this storage device formatted with vfat or something silly?
+2020-01-01 21:25:08	onla	got it, had not escaped two / characters
+2020-01-01 21:25:18	<--	longxia (~irc@unaffiliated/longxia) has quit (Quit: leaving)
+2020-01-01 21:25:35	konrados	Dagmar, it's ext4 by kde partition manager. Two partitions, including one for swap. I want to *somehow* "link" home and var dirs there, but not to an entire device/partition, but to certain dirs.
+2020-01-01 21:25:44	gordonfish	Happy New Year and decade :)
+2020-01-01 21:26:21	Dagmar	konrados: That's part of your problem.  Why the arbitrary demand to use the same partition for both?
+2020-01-01 21:26:45	ryouma	that is what bind mount is made for but why can't you partition so that you have one man one vote?
+2020-01-01 21:27:03	Dagmar	_Reasonable_ people would have just made a filesystem for /home and a filesystem for /var and would not have had these issues
+2020-01-01 21:27:13	konrados	Dagmar, ryouma  ok, so... you're telling me to create partitions like 'home' and 'var' on the disk?
+2020-01-01 21:27:20	ryouma	yes
+2020-01-01 21:27:27	konrados	ah....
+2020-01-01 21:27:44	-->	Dan39 (~dan@unaffiliated/dan39) has joined ##linux
+2020-01-01 21:27:57	Dagmar	konrados: yeah, or just change the partition type to 8e, bless it as an LVM physical volume, create a volume group, and use logical volumes like it's actually 2020
+2020-01-01 21:28:09	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined ##linux
+2020-01-01 21:28:14	-->	purplex88 (AdiIRC@unaffiliated/purplex88) has joined ##linux
+2020-01-01 21:28:24	ryouma	i will disagree with my esteeemed colleague.  don't overthink it.
+2020-01-01 21:28:33	konrados	ryouma, Dagmar - THANK YOU. I'll report back. BTW, does repartinioning delete data? I know, it's a silly question, and I should know the answer, but I don't :(
+2020-01-01 21:28:47	ryouma	basically in practice yes
+2020-01-01 21:29:01	Dagmar	it's been _a while_ since I've had more than three "real" partitions on any machine.  It would be two if it weren't for UEFI
+2020-01-01 21:29:14	konrados	ok, so a lot of job is waiting for me. Thanks again!
+2020-01-01 21:29:18	-->	yelhamer (~yelhamer@41.96.50.27) has joined ##linux
+2020-01-01 21:29:26	Dagmar	konrados: Generally yes it will render data pretty mangled
+2020-01-01 21:29:59	<--	alkyone (~alkyone@unaffiliated/alkyone) has quit (Quit: WeeChat 2.7)
+2020-01-01 21:30:04	<--	yelhamer (~yelhamer@41.96.50.27) has quit (Max SendQ exceeded)
+2020-01-01 21:30:06	konrados	ok, I am prepared for that, backups in so many places that I'm not sure which is the current one :)
+2020-01-01 21:30:19	ryouma	then youa re not prepared
+2020-01-01 21:30:23	Dagmar	Boot disks wind up with the ESP and /boot, and a LVM PV.  Non-boot disks get an LVM PV.
+2020-01-01 21:30:23	-->	ice99 (~ice9@unaffiliated/ice9) has joined ##linux
+2020-01-01 21:30:40	<--	ice99 (~ice9@unaffiliated/ice9) has quit (Max SendQ exceeded)
+2020-01-01 21:30:48	-->	yelhamer (~yelhamer@41.96.50.27) has joined ##linux
+2020-01-01 21:31:10	-->	ice99 (~ice9@unaffiliated/ice9) has joined ##linux
+2020-01-01 21:31:21	ryouma	invest in learning rsync
+2020-01-01 21:31:24	-->	riff-IRC (~riff2@2607:fb90:d77:659c:4f8e:3dd0:1439:4c5e) has joined ##linux
+2020-01-01 21:31:27	konrados	ryouma, correct :) But - I did not do anything important in the last two weeks, so it's not that important, and even the oldest backup is no older than 1 week, so I guess I'll be fine
+2020-01-01 21:31:27	-->	LissajousPattern (~Lissajous@unaffiliated/lissajouspattern) has joined ##linux
+2020-01-01 21:31:33	pnbeast	gordonfish, I think it's probably the last year of the current decade.  Most "human" numbering systems start with 1.
+2020-01-01 21:31:33	gordonfish	rsync++
+2020-01-01 21:31:46	Dagmar	If you just make stupid old partitions and you run into one of the ways in which you _can't_ modify those in place, it's way too late to say "why oh why didn't I just use LVM"
+2020-01-01 21:31:52	ryouma	but ignore the filter patterns stuf if youwant to keep your sanity
+2020-01-01 21:31:55	konrados	ryouma, yeah, I use it to make the backups on two disks once per week or two.
+2020-01-01 21:32:12	-->	led_belly (led_belly@gateway/vpn/protonvpn/ledbelly/x-06903193) has joined ##linux
+2020-01-01 21:32:15	<--	ice9 (~ice9@unaffiliated/ice9) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:32:25	konrados	I did learn rsync enough to make the backups correctly, it is working fine, and it did saved my life a few times :)
+2020-01-01 21:32:38	konrados	ok, going back to the paritioning, thanks again!
+2020-01-01 21:33:05	gordonfish	pnbeast: Perhaps, but I've also seen good arguments the other way, such aren't one year old until we complete the first year. I know you're correct when it comes to mellenia and century counting.
+2020-01-01 21:33:16	Dagmar	Per example, if you have a disk with two partitions, and you decide the first one is too large and want to shift things so it takes up less space and you want to grant that space to the second partition, your options are "Back everything up and reformat"
+2020-01-01 21:33:28	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Quit: %nickname% has gone offline)
+2020-01-01 21:33:33	gordonfish	s/such aren't/such as we aren't/
+2020-01-01 21:33:40	Dagmar	...or at the very least sit there spending some quality time with gparted on the screen while the system is otehrwise useless
+2020-01-01 21:34:01	Dagmar	The same scenario with LVM?  Four or five commands and you're just done and no downtime was involved
+2020-01-01 21:34:15	-->	ice999 (~ice9@unaffiliated/ice9) has joined ##linux
+2020-01-01 21:34:16	Dagmar	...although you might need to reboot for the shrink operation
+2020-01-01 21:34:20	konrados	but wait.... according to this: https://www.digitalocean.com/community/tutorials/how-to-change-a-mysql-data-directory-to-a-new-location-using-a-symlink - when a file system is changed, I'll still need to configure apparmor? I know it's about symlinks, but they are saying it's about filesystem?
+2020-01-01 21:34:29	konrados	Dagmar, ryouma  ^
+2020-01-01 21:34:41	--	Bushmaster is now known as Cat-Away
+2020-01-01 21:34:52	<--	Dan39 (~dan@unaffiliated/dan39) has quit (Ping timeout: 258 seconds)
+2020-01-01 21:34:52	<--	idontneedanick (~idontneed@192.36.155.35) has quit (Ping timeout: 258 seconds)
+2020-01-01 21:34:57	ryouma	idk mysql
+2020-01-01 21:34:59	Dagmar	konrados: So what
+2020-01-01 21:35:09	Dagmar	konrados: That's mysql's data directory, _not /var_
+2020-01-01 21:35:10	-->	justanotheruser (~justanoth@unaffiliated/justanotheruser) has joined ##linux
+2020-01-01 21:35:22	-->	Lucas_Gray (~Wryhder@197.210.227.96) has joined ##linux
+2020-01-01 21:35:33	<--	Damni (~daniele@host13-226-dynamic.248-95-r.retail.telecomitalia.it) has quit (Quit: WeeChat 2.7)
+2020-01-01 21:35:36	pnbeast	gordonfish, I think the best counterargument to me is "Oh, you're one of those?  Well, you're not invited to this year's party."
+2020-01-01 21:35:38	<--	christopherburg (~christoph@173-165-240-153-minnesota.hfc.comcastbusiness.net) has quit (Quit: christopherburg)
+2020-01-01 21:35:43	CoolerX	how do I resolve symbolic links?
+2020-01-01 21:35:45	ryouma	you don't need a separate var dir pr....obably?  maybe you do if you are running a server.
+2020-01-01 21:35:47	CoolerX	to their source
+2020-01-01 21:36:03	Dagmar	konrados: Either way you have to do what they're saying with apparmor becuase it operates on the _real_ locations of files
+2020-01-01 21:36:09	konrados	Dagmar, well, if I'll have to fight again with this, then .... I'm just tired :( You said I'll get rid of all the issues if I'll simply mount it :(
+2020-01-01 21:36:13	ryouma	CoolerX: realpath, or an obscure shell hack
+2020-01-01 21:36:19	c705	konrados: if you decide to move mysql's default directory, you will likely have to configure app armor
+2020-01-01 21:36:27	konrados	geeez
+2020-01-01 21:36:38	ryouma	CoolerX: in lisp they are called truenames
+2020-01-01 21:36:39	CoolerX	ryouma, what?
+2020-01-01 21:36:47	Dagmar	konrados: If, on the other hand, you simply made a separate filesystem for mysql's data files and didn't involve a freakin symlink, you would have no conflict with apparmor
+2020-01-01 21:36:50	c705	konrados: or take the security hit and disable apparmor, but I wouldn't reccomend that in production
+2020-01-01 21:37:03	konrados	c705, my problem is not only mysql, but - will I have more issues likes this with other software? Because if so, then I'll let it go.
+2020-01-01 21:37:06	CoolerX	ls -l /usr/bin/python points to python2.7
+2020-01-01 21:37:11	<--	ice99 (~ice9@unaffiliated/ice9) has quit (Ping timeout: 268 seconds)
+2020-01-01 21:37:17	CoolerX	how do I resolve that?
+2020-01-01 21:37:33	c705	konrados: depends on how many profiles you have active. You can check with aa-status i believe the command is
+2020-01-01 21:37:36	ayecee	what should it point to instead
+2020-01-01 21:38:02	konrados	Dagmar - ok, I dropped the idea of symlinks, but will I have (other) issues when I'll make a separate filesystems?
+2020-01-01 21:38:16	konrados	I didn't know it's so complicated :(
+2020-01-01 21:38:55	konrados	If I knew, I would just ... install the whole thing on the new device, but apparently it's not easy either .....
+2020-01-01 21:39:44	ryouma	if you are going to be a sysadmin, then do as dagmar says but if not, this is all normal (unless you are using zfs).  even in windows it would be normal i imagine.
+2020-01-01 21:40:01	-->	padraigd (~padraigd@c-73-48-132-102.hsd1.ca.comcast.net) has joined ##linux
+2020-01-01 21:40:05	<--	Lucas_Gray (~Wryhder@197.210.227.96) has quit (Read error: Connection reset by peer)
+2020-01-01 21:41:07	ryouma	spinning rust ... partition ... fs ... mounts
+2020-01-01 21:41:09	konrados	ryouma, no, I'm not going to be sysadmin :) I really thought I'll just buy a new cool fast disk and symlink things. Now it appears that I spent an enormous amount of hours on this. I did not expect that o.O
+2020-01-01 21:41:22	CoolerX	how do you show column headers in ls?
+2020-01-01 21:42:31	konrados	I'm just tired of this, maybe I'll take a break and watch some movie or something....
+2020-01-01 21:42:46	-->	wasutton3 (~wasutton3@75-46-236-127.lightspeed.tukrga.sbcglobal.net) has joined ##linux
+2020-01-01 21:43:12	-->	Dan39 (~dan@unaffiliated/dan39) has joined ##linux
+2020-01-01 21:43:15	onla	sed -i '/   <p>/{/nbsp/n;s/    /    <!--/g}' *.html   and  sed -i -e 's/png" \/><\/a><\/p>/png" \/><\/a><\/p>-->/g' *.html   was all it took in the end to get it all right :)  ..I'm still not sure about how the first one came to be there is 5 different elements in there, first is the matching line, then 4 rest are wrapped in {} but why.. first of those 4 is the one to ignore, then n;s that I guess I could
+2020-01-01 21:43:16	onla	search what thos regexp are, then spaces on 3rd, and 4th has what I want in the begin
+2020-01-01 21:43:28	CoolerX	how do you show column headers in ls?
+2020-01-01 21:43:40	Dagmar	konrados: No, if you just use separate filesystems for that you'll be dealing with _real_ paths so you won't have a problem
+2020-01-01 21:44:00	-->	Lucas_Gray (~Wryhder@197.210.226.171) has joined ##linux
+2020-01-01 21:44:04	ghostboarder	guys, im using Pop OS 19.10 on multiple machines. I was sure that gnome-tweaks allowed me to change to multiple resolutions, but i have the package installed on all of my pcs, and my big screen gaming pc in particular wont allow any res except for 4k and 1080p. What am i missing? Games stutter a bit at 4k, so id like to run them at 1440p
+2020-01-01 21:44:49	konrados	Dagmar, ok... so I'll just do it!!!! Still this apparmor worries me, that I'll have to deal with more issues that only mysql, but I will handle that, with you guys! :) Thanks again!
+2020-01-01 21:44:51	-->	yelof1 (~yelof@c-73-153-172-191.hsd1.co.comcast.net) has joined ##linux
+2020-01-01 21:44:58	konrados	I am so brave :)
+2020-01-01 21:45:07	kerframil	CoolerX: there are no headers in ls.
+2020-01-01 21:46:06	CoolerX	kerframil, ik
+2020-01-01 21:46:13	CoolerX	how do I show column headers?
+2020-01-01 21:46:22	<--	LissajousPattern (~Lissajous@unaffiliated/lissajouspattern) has quit (Quit: Leaving)
+2020-01-01 21:46:29	CoolerX	ls -l just prints some info without saying what is what
+2020-01-01 21:46:33	kerframil	good luck then.
+2020-01-01 21:46:36	pnbeast	CoolerX, what are column headers?
+2020-01-01 21:46:40	-->	FnorZ (~FnorZ@unaffiliated/fnorz) has joined ##linux
+2020-01-01 21:46:47	-->	pf100_ (~pf100@104.171.210.103.dynm.fpunet.com) has joined ##linux
+2020-01-01 21:46:47	--	pf100 is now known as Guest88720
+2020-01-01 21:46:48	<--	Guest88720 (~pf100@104.171.210.103.dynm.fpunet.com) has quit (Killed (tolkien.freenode.net (Nickname regained by services)))
+2020-01-01 21:46:48	--	pf100_ is now known as pf100
+2020-01-01 21:46:49	<--	FnorZ (~FnorZ@unaffiliated/fnorz) has quit (Read error: Connection reset by peer)
+2020-01-01 21:46:49	CoolerX	pnbeast, ls -l prints some info in columns
+2020-01-01 21:46:58	pnbeast	CoolerX, yep.  Has for decades...
+2020-01-01 21:46:58	CoolerX	but it doesn't say what those columns are
+2020-01-01 21:47:01	-->	FnorZ (~FnorZ@unaffiliated/fnorz) has joined ##linux
+2020-01-01 21:47:05	Dagmar	The man page does that
+2020-01-01 21:47:08	CoolerX	column title?
+2020-01-01 21:47:12	pnbeast	CoolerX, nope, it doesn't.  Manuals tell you that.
+2020-01-01 21:47:17	<--	yelof (~yelof@2601:283:8003:a920:5139:dd8e:7e87:50ab) has quit (Ping timeout: 260 seconds)
+2020-01-01 21:47:24	CoolerX	pnbeast, ok why?
+2020-01-01 21:47:44	ryouma	nobody thought it was needed
+2020-01-01 21:47:50	pnbeast	CoolerX, yes, why would you print something that everyone knows?  It's pointless.  And if you read just a bit, you will know, too.
+2020-01-01 21:47:51	CoolerX	so I have to remember the column headers every time I do ls -l ?
+2020-01-01 21:47:51	c705	CoolerX: because who the hell needs extra crap when we all know what data the columns represent
+2020-01-01 21:47:56	konrados	CoolerX, what about the first result in google - https://stackoverflow.com/questions/35061499/how-to-display-column-headers-for-ls-l-command-in-unix-linux\
+2020-01-01 21:48:18	CoolerX	konrados, they did not give a good answer
+2020-01-01 21:48:37	konrados	ok, understood, going back to my task, and hope I'll survive :)
+2020-01-01 21:48:42	CoolerX	konrados, they tell you to stop using ls
+2020-01-01 21:48:54	-->	TESTED123 (~abc@bl8-158-27.dsl.telepac.pt) has joined ##linux
+2020-01-01 21:48:55	CoolerX	and use exa and other programs
+2020-01-01 21:49:01	ryouma	drwxr-xr-x  2 root root  4.0K 2019-04-13  xtables
+2020-01-01 21:49:09	ryouma	which are you having trouble with?
+2020-01-01 21:49:28	CoolerX	ryouma, all of it
+2020-01-01 21:49:33	CoolerX	the first is the perms
+2020-01-01 21:49:37	CoolerX	the 2nd column I forget
+2020-01-01 21:49:44	ryouma	never mind that one
+2020-01-01 21:49:46	CoolerX	the 3rd and 4th are the user and group that owns it
+2020-01-01 21:49:53	CoolerX	5th is size
+2020-01-01 21:50:01	konrados	perms, number of links, owner, group,  size, date, name
+2020-01-01 21:50:06	konrados	am I correct?
+2020-01-01 21:50:06	CoolerX	8th is date and 9th is filename
+2020-01-01 21:50:25	konrados	Did I pass the exam?
+2020-01-01 21:50:37	CoolerX	also if you don't use -h flag it can be hard to tell what the thing next to the date is
+2020-01-01 21:50:53	purplex88	when i press i ctrl + z, i sometimes get [1]+  Stopped and [1]-  Stopped, whats + and -?
+2020-01-01 21:50:54	CoolerX	what is the 2nd column?
+2020-01-01 21:50:57	ayecee	but didn't you know? the real exam is in your heart!
+2020-01-01 21:51:03	konrados	:)
+2020-01-01 21:51:38	CoolerX	number of links?
+2020-01-01 21:51:44	CoolerX	links to what?
+2020-01-01 21:51:54	Dagmar	I bet you can figure it out
+2020-01-01 21:52:32	onla	So why not use exa if you have trouble remembering them, and you think it's important?
+2020-01-01 21:52:39	FightingFalcon	I want two directories, named x and y. i want to link them so that whenever i add a file to x, it will also be added to y. is this possible?
+2020-01-01 21:52:50	Dagmar	CoolerX: It's basically the refcount for that item
+2020-01-01 21:53:04	CoolerX	Dagmar, the what?
+2020-01-01 21:53:16	CoolerX	reference count for a file?
+2020-01-01 21:53:25	Dagmar	CoolerX: If you make a hardlink for a file, so that there are two filenames thet point to the same actual file, you'll see the '1' change to a '2'
+2020-01-01 21:53:59	CoolerX	Dagmar, oh
+2020-01-01 21:54:00	Dagmar	CoolerX: A single child directory with no directories inside it will show a 2, because you're looking at one of them, and '..' inside the directory is the other
+2020-01-01 21:54:06	-->	superboot (~agentgasm@unaffiliated/superboot) has joined ##linux
+2020-01-01 21:54:10	-->	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has joined ##linux
+2020-01-01 21:54:12	-->	Skripter (~Skripter@unaffiliated/skripter) has joined ##linux
+2020-01-01 21:54:18	-->	LissajousPattern (~Lissajous@unaffiliated/lissajouspattern) has joined ##linux
+2020-01-01 21:54:25	CoolerX	ok
+2020-01-01 21:54:33	Dagmar	CoolerX: This is why ryouma was quick to skip over that one.  It's not terribly useful
+2020-01-01 21:54:46	superboot	Hi all. I'm running a Plex media server. I want to rename my Firefox web-client to have a uniqe name name. Any hints?
+2020-01-01 21:55:36	CoolerX	it seems kinda lame that ls doesn't have an option to print column headers
+2020-01-01 21:55:37	pnbeast	superboot, what's a plex media server?  In Linux, the "mv" command can be used to rename things.
+2020-01-01 21:55:40	LissajousPattern	superboot, why do you need to rename it?
+2020-01-01 21:55:53	<--	CoolerX (~coolerext@14.139.38.136) has quit (Quit: Leaving)
+2020-01-01 21:55:58	pnbeast	CoolerX, contact your vendor and I'm sure they will provide a complete refund to you.
+2020-01-01 21:56:10	ryouma	FightingFalcon: usually no
+2020-01-01 21:56:12	-->	Kelzorz (~Kelzorz@67.6.83.103) has joined ##linux
+2020-01-01 21:56:27	superboot	LissajousPattern: Because when I try to cast to another client, they all have the same name: "Firefox web app".
+2020-01-01 21:56:29	ghostbuster	plex is a video library / transcoding server
+2020-01-01 21:56:36	<--	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-01-01 21:56:45	ryouma	FightingFalcon: mount might have an option for it
+2020-01-01 21:56:45	superboot	pnbeast: Plex is a network media streaming server.
+2020-01-01 21:56:47	c705	god forbid someone doesn't build free software exactly like I want them to
+2020-01-01 21:57:10	superboot	LissajousPattern: Any hints?
+2020-01-01 21:57:11	-->	mrAZ (~studio@ip-94-112-182-12.net.upcbroadband.cz) has joined ##linux
+2020-01-01 21:57:35	-->	syrex (~deamon@185.35.208.211) has joined ##linux
+2020-01-01 21:57:44	FightingFalcon	ryouma, ln comman wont work?
+2020-01-01 21:57:58	onla	I'm thinking of testing out exa as a ls replacement having read their page now
+2020-01-01 21:58:00	<--	q-u-a-n (~q-u-a-n@176.33.68.34.bc.googleusercontent.com) has quit (Read error: Connection reset by peer)
+2020-01-01 21:58:15	ryouma	FightingFalcon: right
+2020-01-01 21:58:30	ryouma	FightingFalcon: imagine linking a subdir to its parent!
+2020-01-01 21:58:34	onla	time to upgrade my shell to this decade
+2020-01-01 21:58:53	ryouma	N: Unable to locate package exa
+2020-01-01 21:59:00	-->	boombatower (~boombatow@drupal.org/user/214218/view) has joined ##linux
+2020-01-01 21:59:13	<--	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has quit (Ping timeout: 260 seconds)
+2020-01-01 21:59:15	<--	Standalone (~weissi199@mail.n0de.biz) has quit (Ping timeout: 240 seconds)
+2020-01-01 21:59:51	FightingFalcon	ok whats the terminal commmand to move ALL the files in a folder to another folder?
+2020-01-01 21:59:56	ryouma	:        -d, -F, --directory allow the superuser to attempt to hard  link  directo‐ ries  (note: will probably fail due to system restric‐ tions, even for the superuser)
+2020-01-01 21:59:59	Pentode	No package exa available. Error: Unable to find a match.
+2020-01-01 22:00:01	Pentode	yeah you arent alone
+2020-01-01 22:00:07	ryouma	FightingFalcon: mv
+2020-01-01 22:00:08	onla	https://the.exa.website/install/linux
+2020-01-01 22:00:21	FightingFalcon	ryouma, but all the files
+2020-01-01 22:00:23	onla	I guess you are using debian-based distro
+2020-01-01 22:00:23	-->	cosimone (~cosimone@2001:b07:ae5:db26:73a:8101:bd0:2ff9) has joined ##linux
+2020-01-01 22:00:30	onla	weird that they don't have a package
+2020-01-01 22:00:32	LissajousPattern	superboot, no.
+2020-01-01 22:01:18	LissajousPattern	superboot, https://www.howtogeek.com/292399/how-to-rename-your-plex-media-centers-for-easy-identification/
+2020-01-01 22:01:19	Dagmar	Those people spend a lot of time doing drugs
+2020-01-01 22:01:46	-->	Standalone (~weissi199@mail.n0de.biz) has joined ##linux
+2020-01-01 22:01:50	kerframil	purplex88: see https://pubs.opengroup.org/onlinepubs/9699919799/utilities/jobs.html. also, to put that into some additional perspective, try; sleep 5 & sleep 5 & sleep 5 & jobs
+2020-01-01 22:01:57	gordonfish	pnbeast: I didn't want to say that as you could be right :)
+2020-01-01 22:02:06	Pentode	FightingFalcon: mv *?
+2020-01-01 22:02:08	LissajousPattern	Dagmar, what people?
+2020-01-01 22:02:11	<--	yelhamer (~yelhamer@41.96.50.27) has quit (Quit: Leaving)
+2020-01-01 22:02:13	Dagmar	LissajousPattern: The exa people
+2020-01-01 22:02:28	LissajousPattern	I don't even know what exa is?
+2020-01-01 22:02:39	Dagmar	There are multiple things completely jacked up about what's on their introduction page
+2020-01-01 22:02:47	Dagmar	It's a "replacement for ls"
+2020-01-01 22:03:00	Dagmar	...and they're acting like they just invented cheese.
+2020-01-01 22:03:04	ryouma	i use a replacement for ls, but it does what ls does
+2020-01-01 22:03:07	<--	konrados (~konrados@unaffiliated/konrados) has quit (Quit: Leaving)
+2020-01-01 22:03:11	-->	[R] (~rbox@unaffiliated/rbox) has joined ##linux
+2020-01-01 22:03:27	ryouma	except i csn get rid of links and group
+2020-01-01 22:03:37	ryouma	and the timestamp is better
+2020-01-01 22:03:38	<--	strongstan (~textual@pool-108-54-191-212.nycmny.fios.verizon.net) has quit (Ping timeout: 240 seconds)
+2020-01-01 22:03:48	Dagmar	It's like they never even noticed LS_COLORS
+2020-01-01 22:03:51	ryouma	  drwx------ tsugi    12k 12-31 23:46 .
+2020-01-01 22:04:01	Dagmar	...and seeing them do this -> echo -e "\033[32mhello\033[0m"
+2020-01-01 22:04:03	-->	akemhp (~akem@62.112.10.121) has joined ##linux
+2020-01-01 22:04:04	Dagmar	It makes me want to slap someone
+2020-01-01 22:04:31	Dagmar	Do not hard wire ANSI escapes into your junk.  Period.
+2020-01-01 22:04:39	ryouma	  drwx------ ryouma     4k 12-30 17:08 .cache
+2020-01-01 22:04:47	ryouma	so it's consistent
+2020-01-01 22:05:16	-->	strongstan (~textual@pool-108-54-191-212.nycmny.fios.verizon.net) has joined ##linux
+2020-01-01 22:05:16	<--	v01t (~v01t@i59F534D3.versanet.de) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-01-01 22:05:30	onla	ryouma: you use exa?
+2020-01-01 22:05:43	ryouma	no, i use an emacs lisp replacement for ls
+2020-01-01 22:05:51	ryouma	just because it is more configurable
+2020-01-01 22:06:02	Dagmar	You can change the timestamps for ls
+2020-01-01 22:06:02	ryouma	and it would work the same on any os
+2020-01-01 22:06:45	-->	TheWild (~Thunderbi@apn-46-169-62-221.dynamic.gprs.plus.pl) has joined ##linux
+2020-01-01 22:06:52	ryouma	i do not claim ls can't do some or all of what it does but it was what worked for me
+2020-01-01 22:07:15	Dagmar	ryouma: You said "emacs" so the standards are a little different
+2020-01-01 22:07:31	Dagmar	exa's description, on the other hand, reads like a really aspirational ad for snake oil
+2020-01-01 22:08:51	ryouma	ls-lisp was originally intended to just work on systems that don't have ls but i find it works better
+2020-01-01 22:09:18	-->	conyers (~conyers@c-73-114-163-201.hsd1.ma.comcast.net) has joined ##linux
+2020-01-01 22:09:29	LissajousPattern	Dagmar, It appears that ls can be used for the same things, if people only knew how to use it.
+2020-01-01 22:09:39	sauvin	"aspirational"?
+2020-01-01 22:10:02	ryouma	i don't even understand why there are so many grep replacements that don't domuch different from one another
+2020-01-01 22:10:03	-->	fandbot (~fandbot@78.29.161.115) has joined ##linux
+2020-01-01 22:10:46	sauvin	ryouma, "Me, too!" (tm)
+2020-01-01 22:10:53	ryouma	:)
+2020-01-01 22:11:11	-->	scampbell (~scampbell@mail.scampbell.net) has joined ##linux
+2020-01-01 22:11:17	<--	well_laid_lawn (~Jean-luc@c114-77-254-225.rochd21.qld.optusnet.com.au) has quit (Ping timeout: 258 seconds)
+2020-01-01 22:11:42	-->	Clarth (~Clarth@23.226.133.76) has joined ##linux
+2020-01-01 22:11:59	Dagmar	sauvin: Yes, like "our goals are to be completely awesome! (but we're not going to define that yet)"
+2020-01-01 22:12:21	-->	abu0 (~abu0@2a01:4f8:c17:102::2) has joined ##linux
+2020-01-01 22:12:35	LissajousPattern	who needs a mission statement when you have all the pretty colors.
+2020-01-01 22:12:38	Dagmar	Their users will be pissed hte first time they're on a non-ANSI terminal if their website is any indication
+2020-01-01 22:13:03	-->	brool (~grendel@108-216-79-115.lightspeed.wchtks.sbcglobal.net) has joined ##linux
+2020-01-01 22:13:18	ryouma	grep is more of an issue.  i have never heard of a non-ansi-capable terminal.  although i guess they exist?
+2020-01-01 22:13:24	ryouma	colors that is
+2020-01-01 22:13:33	ryouma	grep of colors that is
+2020-01-01 22:13:42	Dagmar	There's plenty, and keep in mind that not everything supports _all_ ANSI functions
+2020-01-01 22:13:56	<--	G3nka1 (~hubatrix@unaffiliated/hubatrix) has quit (Remote host closed the connection)
+2020-01-01 22:13:56	Dagmar	vt100 is actually ANSI
+2020-01-01 22:14:04	ryouma	i am just talking colors.  grepping colored text is an issue.
+2020-01-01 22:14:18	ryouma	emacs shell is a dumb terminal but it does colors
+2020-01-01 22:14:38	Dagmar	_Smart_ programmers query the terminal to find out what type of terminal it is, instead of just blindly spewing ANSI escape codes
+2020-01-01 22:15:02	ryouma	it does not even check that?
+2020-01-01 22:15:05	ryouma	or whetehr it is pioped?
+2020-01-01 22:15:19	Dagmar	If their website is any indication, they probably think that's too much trouble
+2020-01-01 22:16:10	kerframil	fortunate, this is not true. I was bored, so I just tried it.
+2020-01-01 22:16:15	<--	syrex (~deamon@185.35.208.211) has quit (Quit: syrex)
+2020-01-01 22:16:18	<--	HEX0 (~HEX0@unaffiliated/hex0) has quit (Quit: WeeChat 2.7)
+2020-01-01 22:16:28	kerframil	it does, however, have a --color=always option, like GNU ls.
+2020-01-01 22:16:32	-->	HEX0 (~HEX0@unaffiliated/hex0) has joined ##linux
+2020-01-01 22:16:42	ryouma	i have learned to not use that...
+2020-01-01 22:16:49	Dagmar	I fail to see how this is supposed to be a "modern" improvement
+2020-01-01 22:17:29	Dagmar	There's nothing stopping users and distributions from making use of all the normal 256 colors in ls's output, not that it would even be particularly useful
+2020-01-01 22:17:39	Dagmar	But they make a big deal about having 256 colors available
+2020-01-01 22:18:38	onla	how do I use LS_COLORS, or colors in ls? I am going to bed but just a quick question..
+2020-01-01 22:18:54	-->	lewin (~lewinkoon@static-90-181-27-46.ipcom.comunitel.net) has joined ##linux
+2020-01-01 22:18:59	onla	guess it's asked on the internets and I can find the answers
+2020-01-01 22:19:10	<--	MarcinWieczorek (~marcin@dynamic-78-8-19-121.ssp.dialog.net.pl) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-01-01 22:19:50	Dagmar	only: It's pretty much the default on any distribution
+2020-01-01 22:20:15	Dagmar	If you type `ls -al` and see directories in blue, it's because your distribution already set it up for you
+2020-01-01 22:20:44	<--	Night_Elf (~uid6082@176.223.143.94) has quit (Ping timeout: 265 seconds)
+2020-01-01 22:20:53	-->	emberquill (~emberquil@railgun.emberquill.net) has joined ##linux
+2020-01-01 22:20:55	ryouma	do you guys put up with bash echo /whatever/else/.* showing . and ..?
+2020-01-01 22:21:23	onla	the wide view idea and the tree sounds interesting too. ACtually when I have rarely checked the tree for something it has been in some tutorial to do something. Maybe it could be fruitful to use tree somehow more
+2020-01-01 22:21:28	ryouma	to think that the dot file concept was a bug
+2020-01-01 22:21:35	<--	emberquill (~emberquil@railgun.emberquill.net) has quit (Client Quit)
+2020-01-01 22:21:47	<--	cim209 (~cim209@205.185.117.110) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-01-01 22:22:06	ryouma	tree?
+2020-01-01 22:22:10	redsh	ryouma: Now it's a feature.
+2020-01-01 22:22:19	-->	cim209 (~cim209@205.185.117.110) has joined ##linux
+2020-01-01 22:22:25	-->	Xenoslyce (6bf2791e@gateway/web/cgi-irc/kiwiirc.com/ip.107.242.121.30) has joined ##linux
+2020-01-01 22:22:27	ryouma	but * is a bug
+2020-01-01 22:22:28	onla	oh hmm ye, I have different colors, except that .html file is same color as some file
+2020-01-01 22:22:34	Dagmar	"wide view" isn't new
+2020-01-01 22:22:34	Xenoslyce	Okay guys I fucked up big time
+2020-01-01 22:23:00	Xenoslyce	Somehow my laptop ran out of space for no reason (had 800 MB and suddenly it was all gone) and now my laptop is stuck on a login screen loop
+2020-01-01 22:23:06	Xenoslyce	I'm able to open up a terminal though
+2020-01-01 22:23:14	Xenoslyce	How do I find out what's taking up the space?
+2020-01-01 22:23:18	kerframil	ryouma: what do you want to happen?
+2020-01-01 22:23:30	Dagmar	Xenoslyce: Start with `du -sh /*`
+2020-01-01 22:23:38	geirha	du -haxd1 . | sort -h
+2020-01-01 22:23:52	ryouma	kerframil: for the bash DEFAULT to make .* show all but . and .. in all cases.  which is not ogin to occur because it would break stuff.
+2020-01-01 22:23:56	-->	zlogan2003 (~zlogan@2a02:908:f764:b5c0:7164:6fd:4305:8ddd) has joined ##linux
+2020-01-01 22:24:05	Xenoslyce	Oh I think I see something
+2020-01-01 22:24:15	geirha	with -x and without the glob, it avoids pointlessly descending into other filesystems like /proc and /dev
+2020-01-01 22:24:30	-->	audeamus (zzzz@gateway/vpn/protonvpn/audeamus) has joined ##linux
+2020-01-01 22:24:34	<--	cim209 (~cim209@205.185.117.110) has quit (Read error: Connection reset by peer)
+2020-01-01 22:24:37	<--	baloona (~baloona@2a02:8070:4b7:f100:8536:5dbf:33b0:16b2) has quit (Ping timeout: 260 seconds)
+2020-01-01 22:24:40	Dagmar	If you specify .* you should expect to see .*
+2020-01-01 22:24:44	Xenoslyce	Okay how do I check files in a directory?
+2020-01-01 22:24:54	Xenoslyce	Because I think I found the issue but I don't know how to close in on it
+2020-01-01 22:24:57	Xenoslyce	Should I cd it?
+2020-01-01 22:25:14	Xenoslyce	And then just do sudo du -sh?
+2020-01-01 22:25:39	<--	ImQ009 (~ImQ009@unaffiliated/imq009) has quit (Quit: Leaving)
+2020-01-01 22:25:43	LissajousPattern	I prefer cdeez over plain old cd.
+2020-01-01 22:25:44	kerframil	ryouma: that won't happen. however you could coerce * into doing what you want, when required.
+2020-01-01 22:25:44	Xenoslyce	Oh okay
+2020-01-01 22:25:49	Xenoslyce	I found the issue
+2020-01-01 22:25:50	ryouma	kerframil: i know
+2020-01-01 22:26:06	ryouma	kerframil: just wondering if a lot of users here does so
+2020-01-01 22:26:16	Xenoslyce	Looks like it tried to store files on my laptop instead of my hard drive haha
+2020-01-01 22:26:28	Xenoslyce	How do i safely delete these directories recursively?
+2020-01-01 22:26:29	geirha	Xenoslyce: cd into it and run  sudo du -haxd1 . | sort -h
+2020-01-01 22:26:36	kerframil	ryouma: I wouldn't use .* to begin with. but I understand that it is a trap for the unwary.
+2020-01-01 22:26:37	<--	yelof1 (~yelof@c-73-153-172-191.hsd1.co.comcast.net) has quit (Ping timeout: 258 seconds)
+2020-01-01 22:27:04	<--	zlogan (~zlogan@2a02:908:f764:b5c0:7164:6fd:4305:8ddd) has quit (Ping timeout: 252 seconds)
+2020-01-01 22:27:10	Xenoslyce	Yeah I see a folder that was supposed to be stored on my hard drive but somehow got stored on my laptop instead
+2020-01-01 22:27:10	ryouma	i agree with that guy who says filesystems should not allow so many characters and rants about bash
+2020-01-01 22:27:44	Xenoslyce	How do I delete directories recursively? Like sudo ? -r
+2020-01-01 22:27:49	Xenoslyce	forgot the name of the command
+2020-01-01 22:27:54	Dagmar	rm
+2020-01-01 22:27:54	geirha	yeah, it should would be nice if filesystems didn't allow newlines in filenames
+2020-01-01 22:28:03	-->	lucas42 (~filipe@a79-168-227-76.cpe.netcabo.pt) has joined ##linux
+2020-01-01 22:28:13	<--	Lucas_Gray (~Wryhder@197.210.226.171) has quit (Read error: Connection reset by peer)
+2020-01-01 22:28:14	Dagmar	geirha: That's a bit ethniocentric
+2020-01-01 22:28:35	Dagmar	What if japanese people want katakana and emojis in their filenames?
+2020-01-01 22:28:45	Dagmar	Who are you to say they shouldn't be allowed?
+2020-01-01 22:28:50	redsh	Yeah, that may break a lot of different encodings.
+2020-01-01 22:28:53	Xenoslyce	I think I fixed it
+2020-01-01 22:29:04	nibble_zero	emojis in filenames? what?
+2020-01-01 22:29:04	Xenoslyce	Yep
+2020-01-01 22:29:11	Xenoslyce	That worked!
+2020-01-01 22:29:13	Xenoslyce	Thanks guys
+2020-01-01 22:29:21	kerframil	ryouma: where meddling with bash-specific features isn't an option, /whatever/else/.[^.]* is. sometimes, it's a good idea to step back and handle the problem a different way too. a common example might be merging directories, for which I would use rsync and not mv, most of the time.
+2020-01-01 22:29:25	<--	rooftopjoe (5678a199@unaffiliated/rooftopjoe) has quit (Remote host closed the connection)
+2020-01-01 22:29:27	Xenoslyce	I honestly wonder how you guys know pretty much everything about Linux haha
+2020-01-01 22:29:38	redsh	nibble_zero: Most filesystems accept arbitrary bytes aside from NUL and / as parts of a filename.
+2020-01-01 22:29:41	Dagmar	Decades of experience
+2020-01-01 22:29:47	ayecee	mostly google
+2020-01-01 22:29:48	LissajousPattern	Xenoslyce, through osmosis.
+2020-01-01 22:29:51	Dagmar	redsh: Well, not Windows
+2020-01-01 22:30:01	geirha	Dagmar: uh, I only mentioned newline
+2020-01-01 22:30:02	redsh	Dagmar: NTFS allows a lot more than Windows itself does.
+2020-01-01 22:30:06	<--	lewin (~lewinkoon@static-90-181-27-46.ipcom.comunitel.net) has quit (Remote host closed the connection)
+2020-01-01 22:30:10	Dagmar	...and um, not a number of consumer products that should really know better.
+2020-01-01 22:30:13	LissajousPattern	Xenoslyce, never go outside.
+2020-01-01 22:30:16	Xenoslyce	Makes sense LissajousPattern & ayecee & Dagmar
+2020-01-01 22:30:18	-->	lewin (~lewinkoon@static-90-181-27-46.ipcom.comunitel.net) has joined ##linux
+2020-01-01 22:30:20	Xenoslyce	Haha
+2020-01-01 22:30:23	ryouma	katakana and emojis in filenames are considred ok byt hte author of the proposal
+2020-01-01 22:30:26	nibble_zero	Xenoslyce: becuase 2020 is the year of Linux desktop
+2020-01-01 22:30:38	Dagmar	geirha: So what if 0x0a is part of a unicode sequence?  What then?
+2020-01-01 22:30:53	LissajousPattern	Xenoslyce, lurk on ##linux all day until it sinks in.
+2020-01-01 22:30:58	-->	Lucas_Gray (~Wryhder@197.210.227.247) has joined ##linux
+2020-01-01 22:31:09	Xenoslyce	Smart
+2020-01-01 22:31:17	Xenoslyce	I'm gonna go now, gotta backup my phone
+2020-01-01 22:31:22	Xenoslyce	See you guys later!
+2020-01-01 22:31:31	LissajousPattern	Xenoslyce, eat, sleep, drink, and shit Linux.
+2020-01-01 22:31:47	Xenoslyce	that should be a wallpaper lol
+2020-01-01 22:31:49	ryouma	https://lwn.net/Articles/325304/
+2020-01-01 22:31:58	<--	Xenoslyce (6bf2791e@gateway/web/cgi-irc/kiwiirc.com/ip.107.242.121.30) has left ##linux
+2020-01-01 22:32:04	ryouma	fixing unix filenames.  the guy is right imo.
+2020-01-01 22:32:44	Dagmar	He's whining because he can't be bothered to properly detaint input
+2020-01-01 22:32:50	LissajousPattern	Instead of making coffee every morning I > sudo make coffee -c
+2020-01-01 22:32:52	ryouma	the whole thing where youh ave to use -0 -print0 -z primarlily to deal with newlines which should not be there int he first place is insane.
+2020-01-01 22:33:14	Dagmar	If you have to do that it's because your mechanism is unsafe
+2020-01-01 22:33:37	LissajousPattern	Instead of wiping my ass after a number two I > sudo rm poop -r.
+2020-01-01 22:33:45	<--	rindolf (~rindolf@IGLD-84-229-96-136.inter.net.il) has quit (Quit: http://www.shlomifish.org/ ; Some people grow older and wiser. Not I. I grow older and more foolish.)
+2020-01-01 22:33:47	<--	slopey (~slopey@47-208-128-166.erkacmtk03.res.dyn.suddenlink.net) has quit (Ping timeout: 265 seconds)
+2020-01-01 22:33:52	<--	nibble_zero (~nibble_ze@94.250.169.118) has quit (Quit: nibble_zero)
+2020-01-01 22:34:13	Dagmar	Using a language that's _not_ shell, where you can keep your data separate from your stream of freakin' instructions, whatever's in a filename ceases to be a problem
+2020-01-01 22:34:23	LissajousPattern	That is how you learn Linux.
+2020-01-01 22:34:35	ryouma	i think he would say that japanese should be in utf-8.  probably.  which would upset some who prefer 16 bit encoding.  but he would fall back to saying just disallow newline.
+2020-01-01 22:34:37	ayecee	by wiping poop
+2020-01-01 22:35:07	kerframil	or use the shell properly. pathname expansion is not an issue, for example.
+2020-01-01 22:35:23	Dagmar	ryouma: So now you're basically saying that the filesystem needs to actually _understand_ some dozens of methods of encoding so that it cna properly reject a few characters here and there?
+2020-01-01 22:35:36	LissajousPattern	ayecee, no by > sudo rm poop -r | grep wetwipes.
+2020-01-01 22:35:38	kerframil	find -exec isn't either.
+2020-01-01 22:35:48	ryouma	no, read the original author
+2020-01-01 22:35:56	Dagmar	The real soluion is to _always detaint user-supplied data_
+2020-01-01 22:36:01	ryouma	he addersses your claim about real programming langutges and says what youa re saying is not correct
+2020-01-01 22:36:03	<--	Lucas_Gray (~Wryhder@197.210.227.247) has quit (Read error: Connection reset by peer)
+2020-01-01 22:36:06	Dagmar	He's wrong.
+2020-01-01 22:36:15	ryouma	he provides existence proofs
+2020-01-01 22:36:16	ayecee	i can't help but feel like there's a better word for detaint
+2020-01-01 22:36:27	Dagmar	ayecee: heh
+2020-01-01 22:36:28	ryouma	clean
+2020-01-01 22:36:29	LissajousPattern	tabs vs spaces?
+2020-01-01 22:36:29	-->	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has joined ##linux
+2020-01-01 22:36:33	ayecee	sanitize
+2020-01-01 22:36:40	-->	Sc0rp (~Sc0rp@cpc124362-ayle4-2-0-cust68.15-2.cable.virginm.net) has joined ##linux
+2020-01-01 22:36:45	LissajousPattern	wipe
+2020-01-01 22:36:48	Dagmar	ryouma: No, he provides _arguments_ which he hopes prove something.  They don't.
+2020-01-01 22:37:07	LissajousPattern	wash rinse repeat.
+2020-01-01 22:37:12	ryouma	i think his proposal will upset a lot of folk, just like any proposal
+2020-01-01 22:37:21	Dagmar	We have had dozens upon hundreds upon _thousands_ of CERT advisories and bugtraq posts caused because people can't be bothered to properly detaint user input
+2020-01-01 22:37:22	<--	forgon (~forgon@unaffiliated/commander-cody/x-9618197) has quit (Quit: Ceterum censeo Qwerty esse delendam...)
+2020-01-01 22:37:24	Dagmar	This is no different.
+2020-01-01 22:37:42	Dagmar	Just because it's "hard" in some languages doesn't mean it's something one gets to just take a pass on
+2020-01-01 22:37:45	lupine	remember that recent openbsdsecurity issue?
+2020-01-01 22:37:54	LissajousPattern	The internet is broken beyond repair as a result.
+2020-01-01 22:37:57	lupine	that was programming-language-independent
+2020-01-01 22:38:12	lupine	everything is broken, burn it all down, etc
+2020-01-01 22:38:22	LissajousPattern	Which is why everything should be done in C
+2020-01-01 22:38:28	-->	jetchisel (~jetchisel@opensuse/member/jetchisel) has joined ##linux
+2020-01-01 22:38:35	Dagmar	I have had to write code that freakin detained information I got back from a database because I couldn't trust the other programmers not to write stupid data in there
+2020-01-01 22:38:52	Dagmar	Assuming sanity from J. Random Computeruser sort of ignores the existance of mac users
+2020-01-01 22:38:56	LissajousPattern	Dagmar, in C hopefully.
+2020-01-01 22:38:59	<--	Skripter (~Skripter@unaffiliated/skripter) has quit (Quit: Leaving)
+2020-01-01 22:39:04	Dagmar	LissajousPattern: No, in perl
+2020-01-01 22:39:13	LissajousPattern	Damn you!!!!
+2020-01-01 22:39:20	-->	Skripter (~Skripter@unaffiliated/skripter) has joined ##linux
+2020-01-01 22:39:26	hexnewbie	I'm pretty sure ext4 supports UTF-8, just like ZFS
+2020-01-01 22:39:31	<--	D-melanogaster (~D-melanog@212.90.58.216) has quit (Remote host closed the connection)
+2020-01-01 22:39:49	Dagmar	hexnewbie: It acutally doesn't _care_.  It just stores a sequence of bytes and makes no value judgments
+2020-01-01 22:39:56	Dagmar	Nor does it presume their gender
+2020-01-01 22:40:03	ryouma	this addresses teh claim https://dwheeler.com/essays/fixing-unix-linux-filenames.html
+2020-01-01 22:40:19	Dagmar	ryouma: Let me provide you with a counter-claim
+2020-01-01 22:40:22	ryouma	line 193 or so
+2020-01-01 22:40:23	hexnewbie	Dagmar: The casefolding feature supports rejecting non-UTF-8 filenames
+2020-01-01 22:40:55	Dagmar	Awhile back I had to rewrite a filesystem replication mechanism (that was rsync-driven) in a _hurry_ because it came to my attention that someone didn't know to use --protect-args
+2020-01-01 22:41:14	kerframil	yeah, though - to be fair - that's a fairly recent feature. it is generally true of filesystems that they store just bytes and leave it up to userspace to decide what to make of it.
+2020-01-01 22:41:18	Dagmar	This meant that when a filename with something like "&" in it happened _rsync would break_
+2020-01-01 22:41:40	LissajousPattern	I need to download the entire Internet. How long do y'all think that would take?
+2020-01-01 22:41:45	ryouma	that is not the only problem
+2020-01-01 22:41:49	Dagmar	If someone had created a filename like "|| rm -rf /* ; &" we'd only have known the entire environment disappeared.
+2020-01-01 22:42:07	<--	levi13 (~levi@p200300E1BF0B856AB34406361AE94AFA.dip0.t-ipconnect.de) has quit (Ping timeout: 260 seconds)
+2020-01-01 22:42:07	Dagmar	...because people weren't properly handling untrustworthy-data
+2020-01-01 22:42:33	LissajousPattern	That is why we need a New Linux Foundation.
+2020-01-01 22:42:36	geirha	passing a list of filenames is really cumbersome when writing portable scripts, because posix utilities don't have the ability to handle NUL delimited data, so you have to work around it with all kinds of ugly hacks
+2020-01-01 22:42:36	ryouma	why do you need those filenames?
+2020-01-01 22:42:45	Dagmar	So I rewrote the thing and I tested it by writing a little perl script that generated a few thousand completly random filenames (minus null and /) and then replicated it
+2020-01-01 22:42:48	kerframil	I've read Wheeler's article. I think he over-labours the point.
+2020-01-01 22:42:48	ryouma	geirha: ++
+2020-01-01 22:42:51	redsh	LissajousPattern: A sideways 8 amount of seconds.
+2020-01-01 22:42:52	geirha	nor traditional unix tools for that matter
+2020-01-01 22:43:02	Dagmar	ryoms: Becuase you do not know what encoding method or charset a user is using
+2020-01-01 22:43:02	<--	AABatteries (~AABatteri@83.24.76.64.ipv4.supernova.orange.pl) has quit (Read error: Connection reset by peer)
+2020-01-01 22:43:04	LissajousPattern	We need to recreate Linux in our own likeness and image.
+2020-01-01 22:43:14	Dagmar	My replication script worked fine
+2020-01-01 22:43:18	Disconsented	with blackjack and hookers!
+2020-01-01 22:43:29	kerframil	I am sympathetic to the argument that it's too easy to shoot oneself in the foot. a lot of these complaints revolve around shell scripting.
+2020-01-01 22:43:33	LissajousPattern	Disconsented, and blow.
+2020-01-01 22:43:34	-->	l3 (~enigma@216.137.115.75) has joined ##linux
+2020-01-01 22:43:39	Dagmar	The "profressional" backup solution however, got a good sniff of those files and decided four LTO 2 tapes were corrupted beyond recovery
+2020-01-01 22:43:50	Dagmar	....because they weren't handling the f$#@%#$% data properly
+2020-01-01 22:43:53	kerframil	I'm not sure that's a strong enough argument to start defining hard naming policies in the kernel.
+2020-01-01 22:44:08	ryouma	i think he does kind of overdo his point, but he has fallbacks.  he also has addressed new objections in lwn and probably elsewhere.
+2020-01-01 22:44:16	LissajousPattern	redsh, how do I add {-sideways 8} to my equation?
+2020-01-01 22:44:36	redsh	LissajousPattern: ∞
+2020-01-01 22:44:43	Dagmar	redsh++
+2020-01-01 22:44:44	Dagmar	heh
+2020-01-01 22:44:46	-->	emmanuelux (~emmanuelu@2a01cb0000f39300158ca605f2708eba.ipv6.abo.wanadoo.fr) has joined ##linux
+2020-01-01 22:45:02	LissajousPattern	redsh, how do I become omnipotent like yourself?
+2020-01-01 22:45:11	-->	n4dir (~n4dir@88.130.152.219) has joined ##linux
+2020-01-01 22:45:14	ryouma	😇
+2020-01-01 22:45:23	<--	Kelzorz (~Kelzorz@67.6.83.103) has quit (Ping timeout: 265 seconds)
+2020-01-01 22:45:31	redsh	LissajousPattern: It's only 348 simple payments of $49.99
+2020-01-01 22:45:34	Dagmar	This business that filenames can contain any character except / and NUL has been in POSIX for ages
+2020-01-01 22:45:41	<--	johnnyfive (~johnnyfiv@unaffiliated/isalive) has quit (Quit: I quit now.)
+2020-01-01 22:45:47	LissajousPattern	redsh, only.
+2020-01-01 22:45:49	LissajousPattern	?
+2020-01-01 22:45:52	Dagmar	If WHeeler has a problem with it, he can go complain to the IEEE and various POSIX committes
+2020-01-01 22:45:54	redsh	Yes, only!
+2020-01-01 22:45:58	Dagmar	Otherwise it's just lame whining
+2020-01-01 22:46:02	LissajousPattern	redsh, if I act now do I get a second you for free?
+2020-01-01 22:46:07	ryouma	i think it is an itneresting idea
+2020-01-01 22:46:16	redsh	LissajousPattern: If you send the first payment within the next 5 seconds.
+2020-01-01 22:46:26	Dagmar	It's not "hard" to do it the right way.  Some people are just lazy.
+2020-01-01 22:46:29	geirha	yes, but the POSIX utilities that allow filenames on stdin, expect those filenames newline delimited
+2020-01-01 22:46:42	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined ##linux
+2020-01-01 22:46:54	Dagmar	You should probably look into that very closely
+2020-01-01 22:46:59	LissajousPattern	redsh, sent.
+2020-01-01 22:47:24	ryouma	take a look at sha1sum.  it actually escapes stuff on output.
+2020-01-01 22:47:38	ayecee	which is really annoying when you're not expecting it
+2020-01-01 22:47:40	ryouma	and there is no null possibility
+2020-01-01 22:47:47	-->	Sir_Real (~xyzone@unaffiliated/xyzone) has joined ##linux
+2020-01-01 22:47:54	-->	johnnyfive (~johnnyfiv@unaffiliated/isalive) has joined ##linux
+2020-01-01 22:48:13	Dagmar	...and i'm going to be very frank with this one, many of Wheeler's examples sort of range between "dumb" and "extremely stupid"
+2020-01-01 22:48:17	[R]	ayecee: but what if you WERE expecting it...
+2020-01-01 22:48:17	-->	cim209 (~cim209@205.185.117.110) has joined ##linux
+2020-01-01 22:48:34	i9zO5AP	do you suggest borg for backup/restore?
+2020-01-01 22:49:01	Dagmar	The bit where he complains about `cat *` and then switches over to python and proceeds to run the exact same damn thing as a subprocess instead of reading the directory like an adult is one of the _jaw-droppingly stupid_ arguments
+2020-01-01 22:49:06	ayecee	[R]: then it's somewhere between irksome and godsend
+2020-01-01 22:49:13	ryouma	i don't recommend any backup system that requires itself to restore unless there is a really good reason
+2020-01-01 22:49:14	<--	SwiftMatt (~Objective@2601:282:4301:21a1:edde:11bc:42b3:b3f7) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2020-01-01 22:49:38	[R]	i9zO5AP: you want your computer to be assimilated?
+2020-01-01 22:49:45	-->	modlin (~modlin@unaffiliated/modlin) has joined ##linux
+2020-01-01 22:49:45	esselfe	[R] you're a computer
+2020-01-01 22:49:47	Dagmar	Chainsaws have sharp edges.  Chainsaws get things done.  Rubber baby spoons don't have sharp edges, and no one but babies want to eat with tthem.
+2020-01-01 22:49:50	 *	[R] reboots esselfe 
+2020-01-01 22:49:52	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined ##linux
+2020-01-01 22:49:53	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Client Quit)
+2020-01-01 22:49:55	-->	D-melanogaster (~D-melanog@212.90.58.216) has joined ##linux
+2020-01-01 22:50:04	ayecee	well, mothers
+2020-01-01 22:50:13	ayecee	and i guess fathers
+2020-01-01 22:50:20	i9zO5AP	[R]: yes
+2020-01-01 22:50:22	ayecee	the babies don't want to use them so much
+2020-01-01 22:50:59	<--	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has quit (Max SendQ exceeded)
+2020-01-01 22:52:15	-->	Bashing-om (~sysop@ubuntu/member/bashing-om) has joined ##linux
+2020-01-01 22:52:41	-->	BrianG61UK (~BrianG61U@2a00:23c5:6e2c:4d13:d480:4694:68f:d844) has joined ##linux
+2020-01-01 22:52:42	-->	pepee (~pepee@unaffiliated/pepee) has joined ##linux
+2020-01-01 22:52:53	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined ##linux
+2020-01-01 22:53:39	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 22:53:47	Dagmar	Hey I have an idea
+2020-01-01 22:53:51	kerframil	geirha: speaking of which, is there a stakeholder consensus on this problem? that is, is it something that it is seen to be worthy of addressing in the future?
+2020-01-01 22:54:00	Dagmar	Since programming is so hard, let's just set an upper limit on buffer sizes
+2020-01-01 22:54:11	-->	tnrl (~tnrl@unaffiliated/tnrl) has joined ##linux
+2020-01-01 22:54:14	Dagmar	No C programs can store more than 256 bytes per variable, because it's just too dangerous
+2020-01-01 22:54:18	kfrench	255?
+2020-01-01 22:54:31	kfrench	first byte is the length
+2020-01-01 22:54:56	geirha	kerframil: not that I know of. We're about 40 years late of fixing the issue in any sensible manner I think
+2020-01-01 22:55:03	<--	audeamus (zzzz@gateway/vpn/protonvpn/audeamus) has quit (Ping timeout: 265 seconds)
+2020-01-01 22:55:09	kerframil	geirha: such a pity.
+2020-01-01 22:55:19	lupine	mmmm, pascal strings
+2020-01-01 22:55:30	lupine	always odd to see them in C programs
+2020-01-01 22:55:42	Dagmar	Yes, POSIX should have had a way to cause raised-flooring failures a part of life in IT
+2020-01-01 22:55:50	Dagmar	s/a/as a/
+2020-01-01 22:56:18	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined ##linux
+2020-01-01 22:56:29	LissajousPattern	I need to figure out how to remove the coating on my touch-pad.
+2020-01-01 22:57:15	kerframil	I'm not sure what you mean. being able to consistenly process nul-delimited input where it matters would be undeniably useful.
+2020-01-01 22:57:31	-->	Trevor_B- (~Android@92.184.104.106) has joined ##linux
+2020-01-01 22:58:06	<--	TESTED123 (~abc@bl8-158-27.dsl.telepac.pt) has left ##linux
+2020-01-01 22:58:25	<--	n4dir (~n4dir@88.130.152.219) has quit (Remote host closed the connection)
+2020-01-01 22:58:29	Dagmar	Use a language that's capable of handling NULs then
+2020-01-01 22:58:38	Dagmar	bash isn't
+2020-01-01 22:58:48	<--	cosimone (~cosimone@2001:b07:ae5:db26:73a:8101:bd0:2ff9) has quit (Quit: Terminated!)
+2020-01-01 22:58:55	lupine	eh, it does alright
+2020-01-01 22:59:05	Dagmar	Strore nul in a variable
+2020-01-01 22:59:13	Dagmar	s/Strore/Store/
+2020-01-01 22:59:21	Dagmar	...and then test for it's presence.
+2020-01-01 22:59:24	geirha	bash does handle nul-delimited data though
+2020-01-01 22:59:27	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 22:59:33	geirha	even though it can't store NULs in its variables
+2020-01-01 22:59:37	kerframil	yep, you're not getting it. take pax(1), if you want a good example.
+2020-01-01 22:59:53	kerframil	it is designed to take pathnames from stdin when writing an archive.
+2020-01-01 22:59:58	<--	Jmabsd (~jmabsd@unaffiliated/jmabsd) has quit (Ping timeout: 258 seconds)
+2020-01-01 23:00:27	<--	AK5Z (~goatman@unaffiliated/goatman) has quit (Ping timeout: 240 seconds)
+2020-01-01 23:00:28	Dagmar	It's not "handling" that any more than it's "handling" the data when you use it to copy a stream of random crap from /dev/urandom
+2020-01-01 23:00:31	kerframil	guess which delimiter it expects. that's the problem we are referring to. changing languages won't do squat.
+2020-01-01 23:00:34	Dagmar	It's just going through a pipe
+2020-01-01 23:00:38	kerframil	we know.
+2020-01-01 23:00:43	-->	user1254 (~user@2001:984:e436:1:5545:7498:546:1895) has joined ##linux
+2020-01-01 23:01:07	geirha	but you can't do   find ... | pax -w ...   to create an archive
+2020-01-01 23:01:12	kerframil	^ this.
+2020-01-01 23:01:20	Dagmar	-print0
+2020-01-01 23:01:24	geirha	not posix
+2020-01-01 23:01:26	lupine	you can always encode it if you need to
+2020-01-01 23:01:28	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined ##linux
+2020-01-01 23:01:40	geirha	and posix pax only reads newline-delimited filenames
+2020-01-01 23:01:45	Dagmar	So make them change POSIX
+2020-01-01 23:01:52	-->	cosimone (~cosimone@2001:b07:ae5:db26:9520:741c:a5e9:2223) has joined ##linux
+2020-01-01 23:02:01	kerframil	precisely. so what's with the raised-flooring remark?
+2020-01-01 23:02:28	Dagmar	Because it all comes down to people wanting the lower standards because they can't be bothered to use tools of sufficient complexity
+2020-01-01 23:02:45	geirha	wat
+2020-01-01 23:02:50	-->	im0nde (~im0nde@2a0a-a546-6598-0-2ad2-44ff-fe00-9395.ipv6dyn.netcologne.de) has joined ##linux
+2020-01-01 23:02:51	kerframil	handling nul-delimited output is the high bar here. it's the only safe delimiter there is for pathnames.
+2020-01-01 23:02:54	<--	im0nde_ (~im0nde@xdsl-85-197-30-250.nc.de) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:02:57	kerframil	we are not trying to lower anything.
+2020-01-01 23:03:05	c705	must this be done in sh/bash? there are plenty generic-purpose prog language these days
+2020-01-01 23:03:12	Dagmar	When you start making value-judgements about filenames, it's just blindly starting down a slippery slope that's goijng to cause more confusion, not less
+2020-01-01 23:03:14	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined ##linux
+2020-01-01 23:03:20	<--	padraigd (~padraigd@c-73-48-132-102.hsd1.ca.comcast.net) has left ##linux
+2020-01-01 23:03:27	c705	As far as i'm concerned, sh/bash is totally unsafe
+2020-01-01 23:03:35	kerframil	exactly. that is why the absence of being able to process nul-delimited input in standard posix utilities is a genuine problem.
+2020-01-01 23:03:46	kerframil	I'm not talking about any of the other bunk.
+2020-01-01 23:03:46	-->	devster (~devster@host15-129-dynamic.46-79-r.retail.telecomitalia.it) has joined ##linux
+2020-01-01 23:03:54	Dagmar	So fix the utilities, or fix POSIX
+2020-01-01 23:04:06	Dagmar	...or just use sufficiently advanced tools.
+2020-01-01 23:04:19	jetchisel	fix POSIX? :-)
+2020-01-01 23:05:01	Dagmar	Precisely.
+2020-01-01 23:05:09	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 23:05:22	<--	devster31 (~devster@host254-92-dynamic.53-79-r.retail.telecomitalia.it) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:05:38	LissajousPattern	∞
+2020-01-01 23:05:43	<--	drznpy (~drznpy@2-238-108-195.ip243.fastwebnet.it) has quit (Ping timeout: 258 seconds)
+2020-01-01 23:06:13	Dagmar	LissajousPattern: Did you at least try &infin; first?
+2020-01-01 23:06:14	jetchisel	40 years too late like what geirha said ^^
+2020-01-01 23:06:34	<--	KOR_Solidarity (~zergrager@1.231.93.107) has quit (Read error: Connection reset by peer)
+2020-01-01 23:06:42	LissajousPattern	&infin;
+2020-01-01 23:06:51	Dagmar	jetchisel: Claiming "40 years too late" is a cop-out for not being willing to admit the idea is unsound
+2020-01-01 23:07:15	Dagmar	LissajousPattern: Well, it's obviously not going to parse here
+2020-01-01 23:07:37	-->	barteks2x (~barteks2x@c137-141.icpnet.pl) has joined ##linux
+2020-01-01 23:07:38	jetchisel	Dagmar: you can start by volunteering on fixing it...
+2020-01-01 23:07:53	LissajousPattern	I volunteer.
+2020-01-01 23:07:55	<--	plazia (~plazia@cpc111855-pete12-2-0-cust41.4-4.cable.virginm.net) has quit (Remote host closed the connection)
+2020-01-01 23:08:01	-->	akk (~akk@75-161-90-59.albq.qwest.net) has joined ##linux
+2020-01-01 23:08:11	-->	davidv7 (~davidv7@BSN-143-125-237.dynamic.siol.net) has joined ##linux
+2020-01-01 23:08:18	Dagmar	jetchisel: I do.  I have no problem throwing someone to the woods for failing to properly handle input data
+2020-01-01 23:08:24	Dagmar	s/woods/wolves/
+2020-01-01 23:08:54	jetchisel	Dagmar: I wish you good luck on your journey then...
+2020-01-01 23:09:08	Dagmar	jetchisel: It's kept me from ever having to explain things on Full Disclosure
+2020-01-01 23:09:15	<--	gffa (~unknown@unaffiliated/gffa) has quit (Remote host closed the connection)
+2020-01-01 23:09:24	jetchisel	sure
+2020-01-01 23:09:40	geirha	It's not about failing to properly handle input data, it's about not being able to properly handle input data with the portable tools defined by posix
+2020-01-01 23:09:48	LissajousPattern	Anytime someone tells me, "Good help is hard to find". I tell them, "You get what you pay for".
+2020-01-01 23:09:51	Dagmar	I guess next you're going to argue that buffer overflows should just be forgiven?
+2020-01-01 23:09:54	-->	Lucas_Gray (~Wryhder@197.210.85.203) has joined ##linux
+2020-01-01 23:10:00	<--	modlin (~modlin@unaffiliated/modlin) has quit (Quit: Leaving)
+2020-01-01 23:10:15	Dagmar	geirha: Then don't use those tools, or fix those tools
+2020-01-01 23:10:17	-->	ramsan (~ramsan@45.12.220.237) has joined ##linux
+2020-01-01 23:10:21	sauvin	Of course, the rich man's wife just retorts that hard help is good to find.
+2020-01-01 23:10:23	<--	Clarth (~Clarth@23.226.133.76) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:10:31	 *	LissajousPattern is about to have a buffer overflow.
+2020-01-01 23:10:40	kerframil	sauvin: whew, lad.
+2020-01-01 23:10:48	ramsan	Hi there. I'm trying to restore my partition in macos using diskutil. Could somebody help me through?
+2020-01-01 23:10:58	ramsan	It's a partition containing damaged windows
+2020-01-01 23:11:11	Dagmar	Sure, we could declare that all filenames should only contain printable ASCII, but that would be a huge step in the wrong direction
+2020-01-01 23:11:18	[R]	ramsan: and this has what to do with linux?
+2020-01-01 23:11:19	-->	whjeon (~whjeon@122.46.214.189) has joined ##linux
+2020-01-01 23:11:21	sauvin	ramsan, you might be better served asking a question like that in ##macosx
+2020-01-01 23:11:30	Dagmar	Might as well go right back and standardize on 8.3 case-insensitive
+2020-01-01 23:11:55	LissajousPattern	ramsan, they are trying to tell you no without saying "NO"
+2020-01-01 23:12:11	sauvin	Dagmar, yeah, and mandate that filenames never contain shell metacharacters.
+2020-01-01 23:12:12	geirha	many posix compliant tools do handle nul-delimited data, but you can't rely on it. That's the whole point
+2020-01-01 23:12:31	geirha	Until posix says the utility should handle nul-delimited data, you can't rely on it being able to handle nul-delimited data
+2020-01-01 23:12:33	Dagmar	So you shoudln't use the unreliable tools
+2020-01-01 23:12:36	LissajousPattern	Some people here are long winded.
+2020-01-01 23:13:05	 *	sauvin huffs and he puffs and he BLOWS the house of cards down
+2020-01-01 23:13:14	<--	rebrec (~rebrec@82-64-53-213.subs.proxad.net) has quit (Quit: The Lounge - https://thelounge.github.io)
+2020-01-01 23:13:28	brool	sauvin: i don't understand that retort, or why it comes from a rich man's wife
+2020-01-01 23:13:40	LissajousPattern	sauvin, it isn't how hard you blow but where you direct it that counts.
+2020-01-01 23:13:42	 *	sauvin falls over in a dead faint
+2020-01-01 23:14:09	 *	brool waves a baguette over sauvin's face
+2020-01-01 23:14:24	sauvin	Is it a  _hard_ baguette?
+2020-01-01 23:14:27	-->	rebrec (~rebrec@82-64-53-213.subs.proxad.net) has joined ##linux
+2020-01-01 23:14:30	brool	uhhhhh
+2020-01-01 23:14:36	 *	brool googles "french favorite baguette"
+2020-01-01 23:14:50	Dagmar	I don't think those come in "soft"
+2020-01-01 23:14:50	brool	here i'll just print out the results
+2020-01-01 23:14:55	LissajousPattern	What rhymes with baguette?
+2020-01-01 23:15:10	brool	LissajousPattern: CASSETTE!!!
+2020-01-01 23:15:16	LissajousPattern	I am writing a song about baguettes.
+2020-01-01 23:15:18	brool	cigarette?
+2020-01-01 23:15:21	Dagmar	flechette
+2020-01-01 23:15:26	brool	regret!
+2020-01-01 23:15:27	jim	rabbit
+2020-01-01 23:15:31	geirha	Dagmar: You don't think it's useful to be able to write scripts that will work across different operating systems?
+2020-01-01 23:15:31	LissajousPattern	hahahahaa
+2020-01-01 23:15:40	brool	jim: no >:c
+2020-01-01 23:15:43	OerHeks	"njom njom njom"
+2020-01-01 23:15:57	<--	xlx (~xlx@unaffiliated/xlx) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:15:58	LissajousPattern	Now write it in C.
+2020-01-01 23:15:59	sauvin	brool, here's another joke for you: three kids, a German, a Brit and a French kid, ages 9, 7 and 5, respectively, peered in through the window of a closed shop downtown. The German asked "What are that man and woman doing?" The Brit said "They're making love." The French kid said "Yeah... and badly."
+2020-01-01 23:16:09	jim	rabbette?
+2020-01-01 23:16:14	Dagmar	geirha: I do, and I do so frequently.  I don't do so with shell utilities that are wholly unsuited for the task
+2020-01-01 23:16:14	hexnewbie	kopete?
+2020-01-01 23:16:15	-->	barteks2x_ (~barteks2x@c137-141.icpnet.pl) has joined ##linux
+2020-01-01 23:16:29	sauvin	brool, now, sit and ponder for a while: why would a woman claim that hard help is good to find?
+2020-01-01 23:16:29	<--	barteks2x (~barteks2x@c137-141.icpnet.pl) has quit (Read error: Connection reset by peer)
+2020-01-01 23:16:31	geirha	Dagmar: so you never use find?
+2020-01-01 23:16:47	geirha	you never deal with tar archives?
+2020-01-01 23:16:53	jim	yet, set, bet
+2020-01-01 23:16:53	 *	|Psych0| unfolds his baguette
+2020-01-01 23:17:13	LissajousPattern	How do you fold a baguette?
+2020-01-01 23:17:17	jim	debt, fret
+2020-01-01 23:17:18	-->	Quigly (~quigly@24.224.222.106) has joined ##linux
+2020-01-01 23:17:21	brool	sauvin: is this just a penis joke ._.
+2020-01-01 23:17:21	jim	wet
+2020-01-01 23:17:28	jim	met
+2020-01-01 23:17:41	hexnewbie	LissajousPattern: Just like how you fold spaghetti
+2020-01-01 23:17:48	LissajousPattern	brool, this whole channel is just one big penis joke.
+2020-01-01 23:18:04	sauvin	Heh. Some people have "go-there" photons, and others have "go-there" schoolbuses. I guess some of the latter are struck in granny gear.
+2020-01-01 23:18:04	LissajousPattern	get it?
+2020-01-01 23:18:08	brool	LissajousPattern: y o u ' r e  a penis joke
+2020-01-01 23:18:15	Dagmar	geirha: Let me make this simple for you.  You're _not_ going to change my mind with any of these stupid questions.  You are wrong.  I write code like a man who expects it to keep his planes in the sky, which is something I think all people shoudl do, since as it turns out programs actually DO Keep planes in the freakin' sky
+2020-01-01 23:18:49	Dagmar	geirha: I didn't come across this problem last week, either.  I have been dealing with it for over twenty years.  So just take your little theoretical problems and bugger off.
+2020-01-01 23:18:49	jim	get, pet
+2020-01-01 23:18:58	brool	sauvin: what do photons and schoolbuses have in common, and how is _that_ related to penises? ._.
+2020-01-01 23:19:00	hexnewbie	And occasionally try to randomly nosedive
+2020-01-01 23:19:20	<--	Sleepy63 (~Sleepy63@47.185.234.251) has quit (Quit: http://i.imgur.com/TmZRD3r.jpg)
+2020-01-01 23:19:24	sauvin	What Dagmar said, only *some* plans can NOT be flown without computers assisting, and those computers have to be damn fast. We're not talking about a single computer, either - we're talking about a whole LAN of them.
+2020-01-01 23:19:25	jim	jet
+2020-01-01 23:19:38	Dagmar	hexnewbie: Yeah I was using that phrase before the Boeing thing, and now I'm trying to not look like a bastard for snickering when I say iy
+2020-01-01 23:19:39	jim	let
+2020-01-01 23:19:41	Dagmar	s/iy/it/
+2020-01-01 23:19:43	<--	ijens (~ijens@unaffiliated/ijens) has quit (Remote host closed the connection)
+2020-01-01 23:19:56	jim	net
+2020-01-01 23:19:57	sauvin	s/plans/planes/;
+2020-01-01 23:20:12	<--	ice999 (~ice9@unaffiliated/ice9) has quit (Remote host closed the connection)
+2020-01-01 23:20:25	jim	vet
+2020-01-01 23:20:26	sauvin	I'm kinda with Dagmar on this one, too: change POSIX.
+2020-01-01 23:20:35	LissajousPattern	https://youtu.be/z0O32YA4Ibs
+2020-01-01 23:20:35	rascul	damn did i just miss an argument?
+2020-01-01 23:20:39	rascul	i feel left out :(
+2020-01-01 23:20:53	LissajousPattern	best computer program ever.
+2020-01-01 23:20:54	sauvin	rascul, you didn't miss much. It was kinda stupid.
+2020-01-01 23:20:58	brool	jim: are you still trying to rhyme with baguette?
+2020-01-01 23:20:58	LissajousPattern	even in 20202
+2020-01-01 23:21:01	LissajousPattern	2020
+2020-01-01 23:21:07	rascul	even stupid arguments can entertain!
+2020-01-01 23:21:28	-->	Betal (~Betal@unaffiliated/betal) has joined ##linux
+2020-01-01 23:21:34	<--	beegrrl (~beegrrl@162.221.119.178) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-01-01 23:21:38	LissajousPattern	rascul, you missed one helluva bro down.
+2020-01-01 23:21:44	<--	Samizdat (~ambassado@75.141.230.217) has quit (Quit: Ambassador 1.2.0 [Mypal 28.5.2/20190612111708])
+2020-01-01 23:21:49	brool	rascul: from what i gather it was something to do about POSIX not enforcing support for NUL-terminated input, but i did not read it carefully
+2020-01-01 23:21:52	rascul	2020 is the year of me missing things :(
+2020-01-01 23:22:10	brool	2020?
+2020-01-01 23:22:14	brool	no
+2020-01-01 23:22:14	brool	this is 2019 2
+2020-01-01 23:22:18	Dagmar	People wanmting to argue that if something isn't compatible with crude prototypes that it should be _made_ compatible, basically
+2020-01-01 23:23:02	LissajousPattern	basically people just bitching about pointless things.
+2020-01-01 23:23:07	<--	barteks2x_ (~barteks2x@c137-141.icpnet.pl) has quit (Read error: Connection reset by peer)
+2020-01-01 23:23:10	rascul	balls?
+2020-01-01 23:23:13	rascul	they don't have points
+2020-01-01 23:23:29	rascul	i guess beer cans don't either
+2020-01-01 23:23:37	jim	howboutr ball -point- pens
+2020-01-01 23:23:44	rascul	but they do have points!
+2020-01-01 23:23:51	rascul	clearly irrelevant in this context
+2020-01-01 23:23:55	LissajousPattern	what rhymes with beer? I am writing another song.
+2020-01-01 23:23:58	-->	royal_screwup21 (023173db@gateway/web/cgi-irc/kiwiirc.com/ip.2.49.115.219) has joined ##linux
+2020-01-01 23:24:01	rascul	deer
+2020-01-01 23:24:23	<--	ramsan (~ramsan@45.12.220.237) has quit (Quit: Lost terminal)
+2020-01-01 23:24:30	rascul	there exist online rhyming dictionaries
+2020-01-01 23:24:34	LissajousPattern	oh dear
+2020-01-01 23:24:59	LissajousPattern	rascul, those are often flawed because they weren't written in C.
+2020-01-01 23:25:16	<--	ryouma (~user@unaffiliated/ryouma) has quit (Remote host closed the connection)
+2020-01-01 23:25:20	rascul	oh
+2020-01-01 23:25:27	rascul	neither was i
+2020-01-01 23:25:42	brool	LissajousPattern: leer, year, fear, rear, ear, tear, gear, veer, cheer, hear, peer, mere, near, queer, meer, sheer, shear
+2020-01-01 23:26:05	brool	rascul was written in COBOL
+2020-01-01 23:26:13	<--	purplex88 (AdiIRC@unaffiliated/purplex88) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2020-01-01 23:26:18	rascul	so expensive to get my maintenance nowadays :(
+2020-01-01 23:26:30	rascul	there's only like 6 people left on the planet who know cobol
+2020-01-01 23:26:57	jim	seer, deer/dear, fear, gear, hear, jeer, leer, mere, near, peer, rear, tear, veer, year
+2020-01-01 23:27:03	<--	jdubs (~jwilborn@12.219.113.2) has quit (Disconnected by services)
+2020-01-01 23:27:09	-->	oxek (qjvl@gateway/vpn/privateinternetaccess/oxek) has joined ##linux
+2020-01-01 23:27:11	LissajousPattern	rascul, six of them dies last night.
+2020-01-01 23:27:16	LissajousPattern	died*
+2020-01-01 23:27:18	rascul	well i guess i'm screwed
+2020-01-01 23:27:22	rascul	my bits are gonna rot
+2020-01-01 23:27:27	-->	Dreaman (~Dreaman@90-154-196-119.ip.btc-net.bg) has joined ##linux
+2020-01-01 23:27:28	-->	jwilborn (~jwilborn@12.219.113.2) has joined ##linux
+2020-01-01 23:27:44	 *	LissajousPattern hands rascul a bit bucket
+2020-01-01 23:27:50	rascul	thanks
+2020-01-01 23:27:56	LissajousPattern	YW
+2020-01-01 23:28:02	 *	rascul flips the bucket over and sits down
+2020-01-01 23:28:04	ezech	rascul: they'll rewrite you in python, they have technology
+2020-01-01 23:28:31	rascul	i don't like snakes, though
+2020-01-01 23:28:51	-->	utack (~utack@95.91.251.206) has joined ##linux
+2020-01-01 23:29:01	jim	LissajousPattern, abbvs ar nt gd :P
+2020-01-01 23:29:16	-->	Jantz (~IceChat9@118-93-28-19.dsl.dyn.ihug.co.nz) has joined ##linux
+2020-01-01 23:29:18	LissajousPattern	ikr?
+2020-01-01 23:29:25	<--	squirrel (~mj@unaffiliated/squirrel) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:29:37	brool	ja dwis
+2020-01-01 23:30:14	LissajousPattern	wewwdiesua?
+2020-01-01 23:30:19	-->	sidetrack (~sidetrack@99-164-34-24.lightspeed.rcsntx.sbcglobal.net) has joined ##linux
+2020-01-01 23:30:35	brool	nidekwytts
+2020-01-01 23:30:53	esselfe	justrafunction
+2020-01-01 23:31:09	-->	dendazen (~dendazen@pool-72-76-93-243.nwrknj.fios.verizon.net) has joined ##linux
+2020-01-01 23:31:34	<--	Lucas_Gray (~Wryhder@197.210.85.203) has quit (Read error: Connection reset by peer)
+2020-01-01 23:32:27	-->	colonel_panic1 (~colonel_p@2607:f0d0:f000:1b00:fd50:bfb9:a11d:291f) has joined ##linux
+2020-01-01 23:32:48	<--	cosimone (~cosimone@2001:b07:ae5:db26:9520:741c:a5e9:2223) has quit (Quit: Quit.)
+2020-01-01 23:32:57	<--	seven-eleven (~seven-ele@unaffiliated/seven-eleven) has left ##linux ("Leaving")
+2020-01-01 23:33:05	<--	colonel_panic1 (~colonel_p@2607:f0d0:f000:1b00:fd50:bfb9:a11d:291f) has left ##linux
+2020-01-01 23:33:17	<--	emmanuelux (~emmanuelu@2a01cb0000f39300158ca605f2708eba.ipv6.abo.wanadoo.fr) has quit (Read error: Connection reset by peer)
+2020-01-01 23:34:17	-->	cosimone (~cosimone@2001:b07:ae5:db26:9520:741c:a5e9:2223) has joined ##linux
+2020-01-01 23:34:37	<--	palasso (~palasso@unaffiliated/palasso) has quit (Remote host closed the connection)
+2020-01-01 23:34:58	<--	Jantz (~IceChat9@118-93-28-19.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:35:05	Dagmar	Hey while we're at it, why are we allowing the files themslves to contain arbitrary data
+2020-01-01 23:35:18	-->	ferdna (~ferdna@cpe-69-23-148-218.elp.res.rr.com) has joined ##linux
+2020-01-01 23:35:29	ayecee	indeed. there are way to many newlines in files.
+2020-01-01 23:35:32	Dagmar	This is clearly an exclusionary practice which aims to disenfrancise and disempower 7-bit networks and architectures
+2020-01-01 23:35:38	rascul	down with newlines!
+2020-01-01 23:35:49	brool	files should only contain _my_ pornographical preferences.
+2020-01-01 23:36:15	Dagmar	brool:  *Truth*.  None of those twisted perversions.  Just wholesome perversions.
+2020-01-01 23:36:16	rascul	on one line
+2020-01-01 23:36:31	 *	LissajousPattern is shutting down to disinfect my laptop.
+2020-01-01 23:36:34	<--	LissajousPattern (~Lissajous@unaffiliated/lissajouspattern) has quit (Quit: Leaving)
+2020-01-01 23:36:46	brool	f
+2020-01-01 23:36:59	brool	i guess that's one way to protect from viruses
+2020-01-01 23:38:16	<--	lewin (~lewinkoon@static-90-181-27-46.ipcom.comunitel.net) has quit (Quit: WeeChat 2.7)
+2020-01-01 23:38:18	<--	Typhon (~Typhon@dslb-084-056-177-078.084.056.pools.vodafone-ip.de) has quit (Ping timeout: 258 seconds)
+2020-01-01 23:40:40	-->	barteks2x (~barteks2x@c137-141.icpnet.pl) has joined ##linux
+2020-01-01 23:40:48	<--	led_belly (led_belly@gateway/vpn/protonvpn/ledbelly/x-06903193) has quit (Quit: zen)
+2020-01-01 23:41:14	-->	squirrel (~mj@unaffiliated/squirrel) has joined ##linux
+2020-01-01 23:41:20	<--	Trevor_B- (~Android@92.184.104.106) has quit (Quit: -a- IRC for Android 2.1.55)
+2020-01-01 23:42:13	-->	Pragma (~kvirc@kvirc/developer/Pragma) has joined ##linux
+2020-01-01 23:44:28	-->	Typhon (~Typhon@dslb-084-056-190-119.084.056.pools.vodafone-ip.de) has joined ##linux
+2020-01-01 23:44:54	-->	purplex88 (AdiIRC@unaffiliated/purplex88) has joined ##linux
+2020-01-01 23:44:57	-->	LissajousPattern (~Lissajous@unaffiliated/lissajouspattern) has joined ##linux
+2020-01-01 23:45:29	-->	modlin (~modlin@unaffiliated/modlin) has joined ##linux
+2020-01-01 23:46:05	<--	tomgray (~Thunderbi@145.120.24.136.in-addr.arpa) has quit (Quit: Go Giants!)
+2020-01-01 23:46:06	-->	colonel_panic1 (~colonel_p@2607:f0d0:f000:1b00:fd50:bfb9:a11d:291f) has joined ##linux
+2020-01-01 23:47:29	LissajousPattern	well I guess everyone went to sleep.
+2020-01-01 23:47:55	<--	Dan39 (~dan@unaffiliated/dan39) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:48:34	joepublic	we sleep when you shutdown your laptop?
+2020-01-01 23:48:53	ayecee	well i do
+2020-01-01 23:48:59	brool	i just woke up now that LissajousPattern's laptop is back on
+2020-01-01 23:49:03	<--	nobo (~nobo@APN-123-247-174-gprs.simobil.net) has quit (Quit: Leaving)
+2020-01-01 23:49:04	<--	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has quit (Read error: Connection reset by peer)
+2020-01-01 23:49:09	LissajousPattern	good
+2020-01-01 23:50:24	-->	an3223 (~an3223@96.47.226.21) has joined ##linux
+2020-01-01 23:50:40	LissajousPattern	I wonder how I became so popular?
+2020-01-01 23:50:48	-->	Beam_Inn (~Beam_Inn@unaffiliated/beam-inn/x-3943829) has joined ##linux
+2020-01-01 23:51:09	colonel_panic1	i no longer require sleep, i can now convert coffee directly into bad code
+2020-01-01 23:51:19	<--	laerte (~laerte@static.177.96.47.78.clients.your-server.de) has quit (Quit: Lost terminal)
+2020-01-01 23:51:27	joepublic	I think it was when you said "ikr" and people with kids lumped you in with adorable children
+2020-01-01 23:51:27	Dagmar	colonel_panic1++
+2020-01-01 23:51:29	-->	laerte (~laerte@static.177.96.47.78.clients.your-server.de) has joined ##linux
+2020-01-01 23:51:31	brool	colonel_panic1: we could all do that
+2020-01-01 23:51:46	Dagmar	s/adorable/disposable/
+2020-01-01 23:51:48	-->	Beam_Inn_ (~Beam_Inn@unaffiliated/beam-inn/x-3943829) has joined ##linux
+2020-01-01 23:52:14	colonel_panic1	colonel_panic1++ = colonel_panic2
+2020-01-01 23:52:15	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined ##linux
+2020-01-01 23:52:21	LissajousPattern	joepublic, well If growing up requires becoming a sour fuck of a human being, then you can count me out.
+2020-01-01 23:52:29	Dagmar	I can definitely identify with that, having just spent a half hour trying to figure out where an array builder in bash was failing
+2020-01-01 23:52:38	-->	tomgray (~Thunderbi@145.120.24.136.in-addr.arpa) has joined ##linux
+2020-01-01 23:52:41	<--	user844842 (user@gateway/vpn/mullvad/user844842) has quit (Quit: WeeChat 2.6)
+2020-01-01 23:52:45	joepublic	not a requirement, just an often and unfortunate side effect.  resist.
+2020-01-01 23:52:47	Dagmar	Result: Users can just figure out the last-chosen host is at the top of the list on their own
+2020-01-01 23:52:57	LissajousPattern	joepublic, I am the resistance.
+2020-01-01 23:53:02	-->	tachoknight_ (~tachoknig@2600:1700:3060:3ee0:6c1d:aad7:d59:5e27) has joined ##linux
+2020-01-01 23:53:08	joepublic	ikr?
+2020-01-01 23:53:14	<--	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has quit (Max SendQ exceeded)
+2020-01-01 23:53:15	<--	i9zO5AP (~BQcdf9eiZ@41.249.93.251) has quit (Ping timeout: 240 seconds)
+2020-01-01 23:53:29	LissajousPattern	joepublic, do you know Ohms law?
+2020-01-01 23:53:42	<--	Quigly (~quigly@24.224.222.106) has quit (Quit: Leaving)
+2020-01-01 23:53:55	joepublic	the v=i/r one?
+2020-01-01 23:54:08	Dagmar	Elecricity will always choose the path of most expensive
+2020-01-01 23:54:21	lupine	most hurtiest, perhaps
+2020-01-01 23:54:42	<--	yustin (~yustin@unaffiliated/yustin) has quit (Ping timeout: 268 seconds)
+2020-01-01 23:54:44	joepublic	actually I think v=ir
+2020-01-01 23:54:51	<--	Bowgly_ (~Cesar@p5DEA92DD.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2020-01-01 23:55:02	<--	DrBrownBear (~DrBrownbe@2601:40f:c100:ddd0:21b9:87cd:17b7:cc8c) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:55:26	cyberpunx	hahaha
+2020-01-01 23:55:44	joepublic	I know not to let out the blue smoke in any event
+2020-01-01 23:55:53	<--	Beam_Inn (~Beam_Inn@unaffiliated/beam-inn/x-3943829) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:55:58	<--	rajpra (~Thunderbi@203.129.246.222) has quit (Quit: rajpra)
+2020-01-01 23:56:03	--	Beam_Inn_ is now known as Beam_Inn
+2020-01-01 23:56:40	ezech	you need to keep the smoke in
+2020-01-01 23:56:40	joepublic	that would be, voltage equals current times LissajousPattern ?
+2020-01-01 23:56:45	colonel_panic1	at DEFCON last year, there was issue with people putting the battery for the badge in wrong (idk how you fuck that up) and then they had to publish an offical memo warning people nott to let the magic blue smoke out
+2020-01-01 23:57:11	-->	drznpy (~drznpy@2-238-108-195.ip243.fastwebnet.it) has joined ##linux
+2020-01-01 23:57:23	<--	Eryn_1983_FL (~Eryn_1983@c-73-24-115-100.hsd1.fl.comcast.net) has quit (Quit: WeeChat 2.3)
+2020-01-01 23:57:42	oxek	does HDD (spinning ones) manufactuer brand matter for linux? Or are all harddrives identical in terms of support on linux?
+2020-01-01 23:58:12	ezech	oxek: it's all the same
+2020-01-01 23:58:28	[R]	ezech: you're all the same
+2020-01-01 23:59:03	ezech	[R]: you're all the sesame
+2020-01-01 23:59:23	<--	`7hr34t_hvntr (~ThePortWh@unaffiliated/theportwhisperer) has quit (Ping timeout: 260 seconds)
+2020-01-02 00:00:16	-->	Blondie101010 (~blondie10@unaffiliated/blondie101010) has joined ##linux
+2020-01-02 00:00:27	<--	XanGotBan (~XanGotBan@138.201.203.88) has quit (Quit: Seeya bois)
+2020-01-02 00:00:40	-->	i9zO5AP (~BQcdf9eiZ@41.249.93.251) has joined ##linux
+2020-01-02 00:02:29	-->	simpledat (~unknown@unaffiliated/simpledat) has joined ##linux
+2020-01-02 00:03:08	<--	dogbert2 (~Bill@ip174-72-164-16.lv.lv.cox.net) has quit (Quit: Leaving)
+2020-01-02 00:03:22	-->	XanGotBan (~XanGotBan@138.201.203.88) has joined ##linux
+2020-01-02 00:03:48	-->	Velgor (~Velgor@HSI-KBW-109-193-081-230.hsi7.kabel-badenwuerttemberg.de) has joined ##linux
+2020-01-02 00:04:41	iflema	muppet?
+2020-01-02 00:05:37	-->	frmus (~frmus@unaffiliated/frmus) has joined ##linux
+2020-01-02 00:06:22	-->	ackpacket (~ackpacket@unaffiliated/ackpacket) has joined ##linux
+2020-01-02 00:06:25	-->	sangriacobalt (sangriacob@gateway/vpn/protonvpn/houseoftards/x-33971078) has joined ##linux
+2020-01-02 00:06:57	-->	akoana (~ah@213-147-163-88.nat.highway.bob.at) has joined ##linux

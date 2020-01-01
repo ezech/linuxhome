@@ -1,0 +1,54 @@
+2020-01-01 17:08:02		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2020-01-01 17:08:02		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2020-01-01 17:08:02		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2020-01-01 17:08:02		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2020-01-01 17:08:02		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2020-01-01 17:08:02		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2020-01-01 17:08:02		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2020-01-01 17:08:02		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2020-01-01 17:08:02		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2020-01-01 17:08:02		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2020-01-01 17:08:02		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2020-01-01 17:08:02		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2020-01-01 17:08:02		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2020-01-01 17:08:02		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2020-01-01 17:08:02		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2020-01-01 17:08:15	=!=	irc: unable to add temporary server "irc.freenode.net" because the addition of temporary servers with command /connect is currently disabled
+2020-01-01 17:08:15	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2020-01-01 17:08:39	=!=	Too few arguments for command "/server add" (help on command: /help server)
+2020-01-01 17:08:46		[irc]  /server  list|listfull [<name>]
+2020-01-01 17:08:46		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2020-01-01 17:08:46		                copy|rename <name> <new_name>
+2020-01-01 17:08:46		                reorder <name> [<name>...]
+2020-01-01 17:08:46		                open <name>|-all [<name>...]
+2020-01-01 17:08:46		                del|keep <name>
+2020-01-01 17:08:46		                deloutq|jump|raw
+2020-01-01 17:08:46		list, add or remove IRC servers
+2020-01-01 17:08:46		    list: list servers (without argument, this list is displayed)
+2020-01-01 17:08:46		listfull: list servers with detailed info for each server
+2020-01-01 17:08:46		     add: add a new server
+2020-01-01 17:08:46		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2020-01-01 17:08:46		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2020-01-01 17:08:46		   -temp: add a temporary server (not saved)
+2020-01-01 17:08:46		  option: set option for server (for boolean option, value can be omitted)
+2020-01-01 17:08:46		nooption: set boolean option to 'off' (for example: -nossl)
+2020-01-01 17:08:46		    copy: duplicate a server
+2020-01-01 17:08:46		  rename: rename a server
+2020-01-01 17:08:46		 reorder: reorder list of servers
+2020-01-01 17:08:46		    open: open the server buffer without connecting
+2020-01-01 17:08:46		    keep: keep server in config file (for temporary servers only)
+2020-01-01 17:08:46		     del: delete a server
+2020-01-01 17:08:46		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2020-01-01 17:08:46		    jump: jump to server buffer
+2020-01-01 17:08:46		     raw: open buffer with raw IRC data
+2020-01-01 17:08:46		Examples:
+2020-01-01 17:08:46		  /server listfull
+2020-01-01 17:08:46		  /server add freenode chat.freenode.net
+2020-01-01 17:08:46		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2020-01-01 17:08:46		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2020-01-01 17:08:46		  /server copy freenode freenode-test
+2020-01-01 17:08:46		  /server rename freenode-test freenode2
+2020-01-01 17:08:46		  /server reorder freenode2 freenode
+2020-01-01 17:08:46		  /server del freenode
+2020-01-01 17:08:46		  /server deloutq
+2020-01-01 17:09:07		irc: server freenode added

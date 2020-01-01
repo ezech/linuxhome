@@ -1,0 +1,51 @@
+! urxvt
+!Xft.dpi: 92
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.autohint: 0
+Xft.rgba: rgb
+Xft.antialias: 1
+
+XLock.mode:                blank
+!XLock.font:                -*-helvetica-*-r-*-*-*-*-*-*-*-130-*-*
+XLock.font:                xft:DejaVu Sans Mono:pixelsize=18
+XLock.background:          black
+XLock.foreground:          white
+XLock.username:   
+XLock.password:            Enter your password bitch!
+XLock.infl:       
+XLock.validate:   
+XLock.invalid:             Wrong password bitch!
+
+urxvt.loginShell:          true
+urxvt.geometry:            120x40
+urxvt.saveLines:           10000
+urxvt.cutchars:            "`\"'&()*,:;<=>?[\\]^{|}$"
+
+urxvt.font:                xft:DejaVu Sans Mono:pixelsize=18
+!urxvt.font:                xft:Droid Sans Mono:pixelsize=14
+!urxvt.font:                -*-liberation mono-medium-r-*-*-*-*-*-*-*-*-*-*
+!urxvt.italicFont:          -*-liberation mono-medium-r-*-*-*-*-*-*-*-*-*-*
+urxvt.scrollBar:           false
+urxvt.visualBell:          true
+urxvt.fading:              15
+!urxvt.perl-ext-common:     default,matcher,tabbed,resize-font
+urxvt.perl-ext-common:     default,matcher,tabbed
+urxvt.url-launcher:        /usr/bin/xdg-open
+urxvt.matcher.button:      1
+urxvt.keysym.C-Delete:     perl:matcher:last
+urxvt.keysym.M-Delete:     perl:matcher:list
+urxvt.matcher.rend.0:      Uline Bold fg5
+urxvt.tabbed.tabbar-fg:    2
+urxvt.tabbed.tabbar-bg:    0
+urxvt.tabbed.tab-fg:       3
+urxvt.tabbed.tab-bg:       0
+!urxvt.resize-font.smaller: C-Down
+!urxvt.resize-font.bigger:  C-Up
+urxvt.iso14755:            false
+urxvt.iso14755_52:         false
+
+urxvt.foreground:   #c5c8c6
+urxvt.background:   #1d1f21
+urxvt.cursorColor:  #c5c8c6

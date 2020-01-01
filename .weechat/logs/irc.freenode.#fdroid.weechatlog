@@ -1,0 +1,71 @@
+2020-01-01 17:13:16	-->	ezech (~arek@2a02:a314:8145:6480:c6d9:87ff:fe7a:f760) has joined #fdroid
+2020-01-01 17:13:16	--	Topic for #fdroid is "Official F-Droid room - bridged with #fdroid at Freenode | Free and Open Source Android App Repository | https://f-droid.org | https://forum.f-droid.org | https://mastodon.technology/@fdroidorg | For development discussion use #fdroid-dev:f-droid.org | This channel is publicly logged at https://matrix.f-droid.org/alias/%23fdroid:f-droid.org."
+2020-01-01 17:13:16	--	Topic set by BubuIIC (bubububu1e@gateway/shell/matrix.org/x-jxrnkfgrmvkvveie) on Tue, 26 Nov 2019 21:05:31
+2020-01-01 17:13:17	--	Channel #fdroid: 551 nicks (3 ops, 1 voice, 547 normals)
+2020-01-01 17:13:17	--	URL for #fdroid: https://f-droid.org
+2020-01-01 17:13:18	--	Channel created on Sat, 06 Nov 2010 23:23:40
+2020-01-01 17:18:07	-->	gareppa (~gareppa@unaffiliated/gareppa) has joined #fdroid
+2020-01-01 17:21:37	-->	nt80 (~nt80@gateway/tor-sasl/nt80) has joined #fdroid
+2020-01-01 17:33:42	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined #fdroid
+2020-01-01 17:34:35	r4pr0n	is there a sshfs app on fdroid that supports mounting the device (without root) like a nextcloud webdav account is mounted?
+2020-01-01 17:43:52	<--	gareppa (~gareppa@unaffiliated/gareppa) has quit (Quit: Leaving)
+2020-01-01 17:50:30	-->	FiReSTaRT (~blah@198-16-252-77.on.cable.ebox.net) has joined #fdroid
+2020-01-01 17:50:30	<--	FiReSTaRT (~blah@198-16-252-77.on.cable.ebox.net) has quit (Changing host)
+2020-01-01 17:50:30	-->	FiReSTaRT (~blah@unaffiliated/firestart) has joined #fdroid
+2020-01-01 17:56:35	--	Notice([gibot]): [data] CiaranG pushed 20 commits to master - https://gitlab.com/fdroid/fdroiddata/compare/e3c250b6...ae30751c
+2020-01-01 18:25:19	ezech	is there an app/widget that allows one-touch-start-satnav feature?
+2020-01-01 18:25:34	ezech	for osmand preferably
+2020-01-01 18:26:45	ezech	so I can have a shortcut on screen and in car I can simply touch it and it starts map in turn by turn navigation mode
+2020-01-01 18:35:19	<--	HeXiLeD (~grumpynes@gateway/tor-sasl/hexiled) has quit (Remote host closed the connection)
+2020-01-01 18:37:11	-->	HeXiLeD (~grumpy@gateway/tor-sasl/hexiled) has joined #fdroid
+2020-01-01 18:39:58	--	Notice([gibot]): [rfp] thibseisel opened #1186: Odeon - https://gitlab.com/fdroid/rfp/issues/1186
+2020-01-01 19:01:03	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Ping timeout: 240 seconds)
+2020-01-01 19:03:07	<--	vussl (vussl@gateway/vpn/mullvad/vussl) has quit (Quit: Leaving)
+2020-01-01 19:04:23	-->	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has joined #fdroid
+2020-01-01 19:05:27	<--	r4pr0n (~r4pr0n@gateway/tor-sasl/r4pr0n) has quit (Client Quit)
+2020-01-01 19:13:22	-->	vussl (vussl@gateway/vpn/mullvad/vussl) has joined #fdroid
+2020-01-01 19:36:26	<--	cyman (~simonh@fsfe/simonh) has quit (Quit: The Lounge - https://thelounge.chat)
+2020-01-01 19:36:44	<--	utack (~utack@2a02:810d:1380:a24:34fa:7f3c:9bf7:8407) has quit (Remote host closed the connection)
+2020-01-01 19:36:53	-->	cyman (~simonh@fsfe/simonh) has joined #fdroid
+2020-01-01 19:37:27	<--	alexeyneud (~alex@ppp-124-120-118-96.revip2.asianet.co.th) has quit (Quit: Leaving)
+2020-01-01 19:51:54	-->	shiver (~shiver@unaffiliated/shiver32) has joined #fdroid
+2020-01-01 19:51:55	<--	adfeno (~Icedove@179.105.44.57) has quit (Quit: adfeno)
+2020-01-01 19:59:21	MTRNord	Hi I got a problem with a repo created using repomaker. The repo itself shows up fine in fdroid including the app itself. But somehow it fails to download the apk. But using the same link on my pc it starts to download the apk. Any ideas what is happening here?
+2020-01-01 20:00:22	MTRNord	oh I see: it adds somehow a repo to much in the url 😕 `"HEAD /repos/_0unQMzksMb3ozIdpcWrYGf_vhmUr0CL/repo/repo/app-release.apk HTTP/1.1" 404 140 "-" "F-Droid 1.6"`
+2020-01-01 20:00:51	MTRNord	the repo url using the qrcode is `/repos/_0unQMzksMb3ozIdpcWrYGf_vhmUr0CL/repo` but the app makes it to `/repos/_0unQMzksMb3ozIdpcWrYGf_vhmUr0CL/repo/repo`
+2020-01-01 20:01:12	MTRNord	is there any way to fix this issue without tinkering in the code or adding manual steps to the user?
+2020-01-01 20:04:26	MTRNord	it even does that in the mirror server section in the app. So am I correct that the qr code has a /repo too much?
+2020-01-01 20:08:01	-->	x1ddos (~x1ddos@2a02:aa12:a682:7500:228:f8ff:fef9:5033) has joined #fdroid
+2020-01-01 20:54:38	<--	trfl (~ed@static.59.110.40.188.clients.your-server.de) has quit (Quit: ZNC - http://znc.in)
+2020-01-01 20:58:16	--	Notice([gibot]): [forum] New thread: "DictionaryForMIDs is supposed to be offline why is the permission \"have full network access\" needed?" - https://forum.f-droid.org/t/dictionaryformids-is-supposed-to-be-offline-why-is-the-permission-have-full-network-access-needed
+2020-01-01 20:59:03	-->	milkt (~debian@gateway/tor-sasl/milkt) has joined #fdroid
+2020-01-01 21:31:24	-->	riff-IRC (~riff2@2607:fb90:d77:659c:4f8e:3dd0:1439:4c5e) has joined #fdroid
+2020-01-01 21:33:09	-->	trfl (~ed@static.59.110.40.188.clients.your-server.de) has joined #fdroid
+2020-01-01 21:38:03	<--	trfl (~ed@static.59.110.40.188.clients.your-server.de) has quit (Ping timeout: 240 seconds)
+2020-01-01 21:38:23	<--	x1ddos (~x1ddos@2a02:aa12:a682:7500:228:f8ff:fef9:5033) has quit (Quit: x1ddos)
+2020-01-01 21:39:37	--	Soeng-GamLuTeleg is now known as Soeng-GamLu[m]
+2020-01-01 21:40:50	-->	izh_ (~izh_@unaffiliated/izh/x-2009676) has joined #fdroid
+2020-01-01 21:48:43	-->	x1ddos (~x1ddos@2a02:aa12:a682:7500:228:f8ff:fef9:5033) has joined #fdroid
+2020-01-01 21:49:54	<--	vussl (vussl@gateway/vpn/mullvad/vussl) has quit (Quit: Leaving)
+2020-01-01 21:53:18	-->	trfl (~ed@static.59.110.40.188.clients.your-server.de) has joined #fdroid
+2020-01-01 21:55:05	--	Notice(Synapsestorm): ⟳ apt.izzysoft.de from Tue, 31 Dec 2019 19:01:24 GMT updated on Wed, 01 Jan 2020 20:51:11 GMT contains 437 apps. 1 added: Odeon. 2 updated: SkyTube Extra, FairEmail.
+2020-01-01 22:03:14	<--	bowlofeggs (~bowlofegg@fedora/bowlofeggs) has quit (Read error: Connection reset by peer)
+2020-01-01 22:03:35	--	Notice([gibot]): [data] tbsprs opened !6138: Fix emphasizing in app description text. - https://gitlab.com/fdroid/fdroiddata/merge_requests/6138
+2020-01-01 22:05:01	-->	bowlofeggs (~bowlofegg@flag.electronsweatshop.com) has joined #fdroid
+2020-01-01 22:05:01	<--	bowlofeggs (~bowlofegg@flag.electronsweatshop.com) has quit (Changing host)
+2020-01-01 22:05:01	-->	bowlofeggs (~bowlofegg@fedora/bowlofeggs) has joined #fdroid
+2020-01-01 22:05:16	-->	vussl (vussl@gateway/vpn/mullvad/vussl) has joined #fdroid
+2020-01-01 22:12:54	<--	torv (~torv@gateway/tor-sasl/torv) has quit (Remote host closed the connection)
+2020-01-01 22:17:12	-->	torv (~torv@gateway/tor-sasl/torv) has joined #fdroid
+2020-01-01 22:42:12	--	Notice([gibot]): [data] renszarv opened !6139: Update free.rm.skytube.oss.yml to 2.969 - https://gitlab.com/fdroid/fdroiddata/merge_requests/6139
+2020-01-01 23:04:42	--	Notice([gibot]): [data] pardomi opened !6140: New app - paseo - https://gitlab.com/fdroid/fdroiddata/merge_requests/6140
+2020-01-01 23:26:08	<--	caskd (~caskd@45.77.55.222) has quit (Ping timeout: 260 seconds)
+2020-01-01 23:28:51	-->	utack (~utack@95.91.251.206) has joined #fdroid
+2020-01-01 23:44:43	--	Notice([gibot]): [data] licaon-kter opened !6141: Linphone 4.2.0, update description, add antifeatu… - https://gitlab.com/fdroid/fdroiddata/merge_requests/6141
+2020-01-01 23:47:45	--	Notice([gibot]): [data] licaon-kter pushed to master: Fix emphasizing in app description text. - https://gitlab.com/fdroid/fdroiddata/commit/2e3ea56d
+2020-01-01 23:49:40	<--	izh_ (~izh_@unaffiliated/izh/x-2009676) has quit (Quit: Leaving)
+2020-01-01 23:50:18	<--	prg318 (~prg@deadcodersociety/prg318) has quit (Quit: ZNC 1.7.5 - https://znc.in)
+2020-01-01 23:52:41	<--	user844842 (user@gateway/vpn/mullvad/user844842) has quit (Quit: WeeChat 2.6)
+2020-01-01 23:53:08	-->	prg318 (~prg@deadcodersociety/prg318) has joined #fdroid
+2020-01-02 00:03:35	<--	NonToxicFugu (~fugu@ip5b405177.dynamic.kabel-deutschland.de) has quit (Quit: ZNC 1.7.2+deb3 - https://znc.in)
+2020-01-02 00:06:26	-->	NonToxicFugu (~fugu@ip5b405177.dynamic.kabel-deutschland.de) has joined #fdroid

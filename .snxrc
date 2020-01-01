@@ -1,0 +1,16 @@
+#server          SNX server to connet to
+#sslport         The SNX SSL port (if not default)
+#username        the user name
+#certificate     certificate file to use
+#calist          directory containing CA files
+#reauth          enable automatic reauthentication. Valid values { yes, no }
+#debug           enable debug output. Valid values { yes, 1-5 }
+#cipher          encryption algorithm to use. Valid values { RC4 / 3DES }
+#proxy_name      proxy hostname 
+#proxy_port      proxy port
+#proxy_user      username for proxy authentication
+
+server 62.93.43.130
+username pip5
+# c=BurY4h
+debug 5
