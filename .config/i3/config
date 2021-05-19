@@ -1,19 +1,14 @@
 set $mod Mod4
 
-font pango:DejaVu Sans Mono 14
+font pango:DejaVu Sans Mono 12
 
 floating_modifier $mod
 
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec st -f 'DejaVu Sans Mono-9'
+bindsym $mod+Return exec st -f 'DejaVu Sans Mono-8'
 bindsym $mod+Shift+q kill
 
-#bindsym $mod+space exec i3-dmenu-desktop --dmenu="dmenu -l 15 -i -fn 'DejaVu Sans Mono-14'"
-bindsym $mod+space exec rofi -show drun -modi drun -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 -show-icons true 
-
-#bindsym $mod+r exec dmenu_run -l 15 -fn 'DejaVu Sans Mono-14' -nf '#BBBBBB' -nb '#000000' -sb '#31310B' -sf '#FDFD3B' 
-bindsym $mod+r exec rofi -show run -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 
-
+bindsym $mod+space exec rofi -show drun -modi drun -location 2 -font 'pango:DejaVu Sans Mono 24' -yoffset 68 -show-icons true 
+bindsym $mod+r     exec rofi -show  run            -location 2 -font 'pango:DejaVu Sans Mono 24' -yoffset 68 
 
 bindsym $mod+Left        focus left
 bindsym $mod+Down        focus down
@@ -24,12 +19,8 @@ bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
 bindsym $mod+h split h
-# split in vertical orientation
 bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 bindsym $mod+s   layout stacking
@@ -38,7 +29,6 @@ bindsym $mod+e   layout toggle split
 bindsym $mod+tab focus  mode_toggle
 bindsym $mod+Shift+space floating toggle
 
-# focus the parent container
 bindsym $mod+a focus parent
 
 set $ws1  "1"
@@ -101,7 +91,7 @@ for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="mpv" instance="gl"] floating enable
 for_window [class="Virt-manager"] floating enable
 for_window [class="URxvt"] floating enable resize set 1300 600, move position center
-for_window [class="st-256color"] floating enable resize set 1300 600, move position center
+for_window [class="st-256color"] floating enable resize set 2000 900, move position center
 for_window [class="Skype"] floating enable resize set 900 600
 for_window [class="Dwarf_Fortress"] floating enable resize set 900 600
 for_window [window_role="About"] floating enable
@@ -109,7 +99,6 @@ for_window [class="Pavucontrol"] floating enable resize set 1300 600, move posit
 for_window [class="Nm-connection-editor"] floating enable resize set 1300 600, move position center
 
 mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
     bindsym Left   resize shrink width 10 px or 10 ppt
     bindsym Down   resize grow height 10 px or 10 ppt
     bindsym Up     resize shrink height 10 px or 10 ppt
@@ -139,9 +128,9 @@ bindsym $mod+d mode "resize"
 #}
 
 # i3 gaps config
-#gaps inner 5
-#smart_borders on
-#smart_gaps on
+gaps inner 5
+smart_borders on
+smart_gaps on
 
 #bindsym $mod+l exec i3lock -t -i /etc/X11/xdm/bg.png
 bindsym $mod+l exec i3lock -t -c 000000
