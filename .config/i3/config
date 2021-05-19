@@ -4,19 +4,24 @@ font pango:DejaVu Sans Mono 14
 
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st -f 'DejaVu Sans Mono-9'
 bindsym $mod+Shift+q kill
 
-bindsym $mod+space exec i3-dmenu-desktop --dmenu="dmenu -l 15 -i -fn 'DejaVu Sans Mono-14'"
-bindsym $mod+r exec dmenu_run -l 15 -fn 'DejaVu Sans Mono-14'
+#bindsym $mod+space exec i3-dmenu-desktop --dmenu="dmenu -l 15 -i -fn 'DejaVu Sans Mono-14'"
+bindsym $mod+space exec rofi -show drun -modi drun -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 -show-icons true 
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+#bindsym $mod+r exec dmenu_run -l 15 -fn 'DejaVu Sans Mono-14' -nf '#BBBBBB' -nb '#000000' -sb '#31310B' -sf '#FDFD3B' 
+bindsym $mod+r exec rofi -show run -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 
+
+
+bindsym $mod+Left        focus left
+bindsym $mod+Down        focus down
+bindsym $mod+Up          focus up
+bindsym $mod+Right       focus right
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
@@ -27,25 +32,26 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+s   layout stacking
+bindsym $mod+w   layout tabbed
+bindsym $mod+e   layout toggle split
+bindsym $mod+tab focus  mode_toggle
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+tab focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "0"
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -90,29 +96,73 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -f 'pango:DejaVu Sans Mono 14' -t warning -m 'You wanna exit X?' -b 'Yes!' 'i3-msg exit'"
 
+# xprop WM_CLASS
+for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="mpv" instance="gl"] floating enable
+for_window [class="Virt-manager"] floating enable
+for_window [class="URxvt"] floating enable resize set 1300 600, move position center
+for_window [class="st-256color"] floating enable resize set 1300 600, move position center
+for_window [class="Skype"] floating enable resize set 900 600
+for_window [class="Dwarf_Fortress"] floating enable resize set 900 600
+for_window [window_role="About"] floating enable
+for_window [class="Pavucontrol"] floating enable resize set 1300 600, move position center
+for_window [class="Nm-connection-editor"] floating enable resize set 1300 600, move position center
+
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+d mode "default"
+    bindsym Left   resize shrink width 10 px or 10 ppt
+    bindsym Down   resize grow height 10 px or 10 ppt
+    bindsym Up     resize shrink height 10 px or 10 ppt
+    bindsym Right  resize grow width 10 px or 10 ppt
+    bindsym Return mode   "default"
+    bindsym Escape mode   "default"
+    bindsym $mod+d mode   "default"
 }
 bindsym $mod+d mode "resize"
 
-bar {
-    position top
-    status_command i3status
-    font pango:DejaVu Sans Mono 14
-}
+# using polybar now
+#bar {
+#  position top
+#  status_command i3status
+#  font pango:DejaVu Sans Mono 14
+#  colors {
+#    background #000000
+#    statusline #FFFFFF
+#    separator  #666666
+#
+#    focused_workspace  #FDFD3B #000000 #FDFD3B
+#    active_workspace   #333333 #000000 #FFFFFF
+#    inactive_workspace #333333 #000000 #888888
+#    urgent_workspace   #2F343A #900000 #FFFFFF
+#    binding_mode       #2F343A #900000 #FFFFFF
+#  }
+#}
 
-bindsym $mod+l exec i3lock -i /etc/X11/xdm/bg.png
-exec_always --no-startup-id nitrogen --restore
+# i3 gaps config
+#gaps inner 5
+#smart_borders on
+#smart_gaps on
+
+#bindsym $mod+l exec i3lock -t -i /etc/X11/xdm/bg.png
+bindsym $mod+l exec i3lock -t -c 000000
 exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id feh --bg-scale /etc/X11/xdm/bg.png
-exec --no-startup-id nm-tray
+#exec --no-startup-id feh --bg-scale /etc/X11/xdm/bg.png
+#exec --no-startup-id xsetroot -solid black
+exec --no-startup-id feh -B black --bg-center /home/adzik/Pictures/logos/arasaka-small.jpg
+#exec --no-startup-id nm-tray
+exec --no-startup-id nm-applet
 #exec --no-startup-id systemctl --user start redshift-gtk
 exec --no-startup-id dunst
+#exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id compton --config ~/.config/compton.conf -b
+
+# class                 border  bground text    indicator child_border
+client.focused          #FDFD3B #000000 #FDFD3B #FDFD3B   #A09608
+client.focused_inactive #B7B7B7 #303030 #B7B7B7 #B7B7B7   #5F676A
+client.unfocused        #B7B7B7 #303030 #B7B7B7 #B7B7B7   #222222
+client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #000000
 
