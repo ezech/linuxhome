@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '/etc/X11/xdm/bg.png' 
+feh --no-fehbg --bg-center --image-bg 'black' '/home/adzik/Pictures/logos/arasaka-small.jpg' 
