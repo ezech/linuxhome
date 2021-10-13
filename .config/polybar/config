@@ -36,16 +36,18 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = pango:DejaVu Sans Mono 10
-font-1 = fixed:pixelsize=10;1
-font-2 = "Material Icons Sharp:10;4"
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = "Noto Sans Mono:pixelsize=14:antialias=false"
+font-1 = "Noto Emoji:scale=8:antialias=false"
+font-2 = "Unifont:fontformat=truetype:size=8:antialias=false;0"
+;font-0 = "DejaVu Sans Mono:pixelsize=14"
+;font-1 = "Roboto:pixelsize=10;1"
+;font-2 = "Material Icons Sharp:10;4"
 #font-3 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = date
 ;modules-right = backlight-acpi pulseaudio wlan eth battery powermenu 
-modules-right = custom_backlight pulseaudio-control wlan eth battery powermenu 
+modules-right = custom_backlight pulseaudio-control wlan eth0 eth1 battery powermenu 
 
 tray-position = left
 tray-padding = 2
@@ -81,10 +83,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = pango:DejaVu Sans Mono 10
-font-1 = fixed:pixelsize=10;1
-font-2 = "Material Icons Sharp:10;4"
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = "Noto Sans Mono:pixelsize=14:antialias=false"
+font-1 = "Noto Emoji:scale=8:antialias=false"
+font-2 = "Unifont:fontformat=truetype:size=8:antialias=false;0"
+;font-0 = pango:DejaVu Sans Mono 10
+;font-1 = fixed:pixelsize=10;1
+;font-2 = "Material Icons Sharp:10;4"
+;font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 ;font-0 = pango:DejaVu Sans Mono 14
 ;font-1 = fixed:pixelsize=10;1
@@ -94,7 +99,7 @@ font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
 modules-left = bspwm i3
 modules-center = date
 ;modules-right = pulseaudio wlan eth powermenu 
-modules-right = pulseaudio-control wlan eth powermenu 
+modules-right = pulseaudio-control wlan eth0 eth1 powermenu 
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature powermenu
 
 tray-position = left
@@ -178,7 +183,7 @@ scroll-down = exec light -s sysfs/backlight/acpi_video0 -U 5
 ;enable-scroll = true
 
 ;format = <label> <bar>
-format-prefix = " "
+format-prefix = "🕯"
 format = <label>
 label = ↑↓
 
@@ -199,21 +204,22 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+;format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 format-connected-underline = #fdfd3b
-label-connected = %essid%
+label-connected = 📶 %essid%
 
 ;format-disconnected = 
 format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = 
+label-disconnected = 💤
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
 ;ramp-signal-0 = 
 ;ramp-signal-1 = 
 ;ramp-signal-2 = 
@@ -223,13 +229,31 @@ ramp-signal-foreground = ${colors.foreground-alt}
 #     
 #    
 
-[module/eth]
+[module/eth0]
 type = internal/network
 interface = enp0s25
+;interface = enp0s3 
 interval = 3.0
 
 format-connected-underline = #fdfd3b
-format-connected-prefix = " "
+format-connected-prefix = "🕸 "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/eth1]
+type = internal/network
+;interface = enp0s25
+interface = enp3s0 
+interval = 3.0
+
+format-connected-underline = #fdfd3b
+format-connected-prefix = "🕸 "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -248,8 +272,9 @@ date-alt = " %Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
+;📆🔄🔆🔅🆗𝑝𝍪✔❌✖✅❎☠®🏁
 
-format-prefix = 
+format-prefix = 📆
 format-prefix-foreground = ${colors.foreground-alt}
 #format-underline = #fdfd3b
 
@@ -268,14 +293,16 @@ label-foreground = #fdfd3b
 # trouble-free but repetitive, or apply only the relevant ones (for example
 # --sink-blacklist is only needed for next-sink).
 ;exec = pulseaudio-control --icons-volume " , " --icon-muted "🔇🔇♪ " --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_01_00.1.hdmi-stereo: Monitor" --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo: Laptop" --sink-nickname "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo: USB Headset" listen
-exec = pulseaudio-control --icons-volume " , , , " --icon-muted "" --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_01_00.1.hdmi-stereo: " --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo:" --sink-nickname "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo:" listen
+;exec = pulseaudio-control --icons-volume " , , , " --icon-muted "" --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_01_00.1.hdmi-stereo: " --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo:" --sink-nickname "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo:" listen
+exec = pulseaudio-control --icons-volume "🔈,🔉,🔊,📢" --icon-muted "🔇" --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_01_00.1.hdmi-stereo: 🖥" --sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo:💻" --sink-nickname "alsa_output.usb-Logitech_Logitech_USB_Headset-00.analog-stereo:🎧" listen
 
 #--sink-nickname "alsa_output.pci-0000_00_1b.0.analog-stereo:  Speakers" \
 #--sink-nickname "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo:  Headphones" \
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 ;click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" next-sink
-click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo" next-sink
+;click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo" next-sink
+click-middle = pulseaudio-control next-sink
 scroll-up = pulseaudio-control --volume-max 130 up
 scroll-down = pulseaudio-control --volume-max 130 down
 
@@ -287,6 +314,7 @@ scroll-down = pulseaudio-control --volume-max 130 down
 #  headset   
 # power   
 # brightnes  
+
 [module/pulseaudio]
 type = internal/pulseaudio
 
@@ -333,7 +361,8 @@ format-charging-underline = #fdfd3b
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+;format-full-prefix = " "
+format-full-prefix = "🔌"
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
@@ -345,15 +374,15 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 ;animation-charging-0 = 
 ;animation-charging-1 = 
 ;animation-charging-2 = 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 🔌
+;animation-charging-1 = 
+;animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 = 🔋
+;animation-discharging-1 = 
+;animation-discharging-2 = 
 ;animation-discharging-0 = 
 ;animation-discharging-1 = 
 ;animation-discharging-2 = 
@@ -366,31 +395,34 @@ type = custom/menu
 expand-right = true
 
 format-spacing = 1
-
-label-open = 
+;label-open = 
+label-open = 🚪
 label-open-foreground = ${colors.secondary}
 ;label-close =  cancel
 ;label-close =
+label-close = ↩
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
 ;menu-0-0 = reboot
-menu-0-0 = 
+menu-0-0 = 🏳
 menu-0-0-exec = menu-open-1
 # power   
-menu-0-1 = 
+menu-0-1 = 🏁
 menu-0-1-exec = menu-open-2
 
-menu-1-0 =  
+menu-1-0 = 🏳 ↩ 
 menu-1-0-exec = menu-open-0
-menu-1-1 = 
+menu-1-1 = ✅
 menu-1-1-exec = systemctl reboot
 
-menu-2-0 =  
+menu-2-0 = 🏁 ✅
 menu-2-0-exec = systemctl poweroff
-menu-2-1 = 
+menu-2-1 = ↩
 menu-2-1-exec = menu-open-0
+
+;📆🔄🔆🔅🆗𝑝𝍪✔❌✖✅❎☠®🏁
 
 [settings]
 screenchange-reload = true
