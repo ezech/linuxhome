@@ -1,0 +1,18 @@
+#!/bin/sh
+
+file_tmp_lockscreen=/tmp/lockscreen.png
+file_padlock_picture=$HOME/Pictures/lock.png
+#RES=$(xrandr | grep 'current' | sed -E 's/.*current\s([0-9]+)\sx\s([0-9]+).*/\1x\2/')
+#str_resolution=$(xrandr | grep 'current' | sed -E 's/.*current\s([0-9]+)\sx\s([0-9]+).*/\1x\2/')
+int_monitor_width=1920
+int_monitors=$(xrandr | grep -w connected | wc -l)
+int_width=$(($int_monitor_width * $int_monitors))
+int_height=1080
+#str_resolution="1920x1080" 
+str_resolution="${int_width}x${int_height}" 
+ffmpeg -f x11grab -video_size $str_resolution -y -i $DISPLAY \
+    -i $file_padlock_picture \
+    -filter_complex "boxblur=5:1,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" \
+    -vframes 1 $file_tmp_lockscreen -loglevel quiet
+i3lock -i $file_tmp_lockscreen
+rm $file_tmp_lockscreen

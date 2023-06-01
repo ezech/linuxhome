@@ -1,0 +1,14 @@
+[user]
+	name = Ezech
+	email = ar.kad.iuszd@gmail.com
+[push]
+	default = simple
+[credential]
+#	helper = /usr/share/doc/git-1.8.3.1/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+#	helper = /usr/share/doc/git-core-doc/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+#	helper = /usr/libexec/git-core/git-credential-libsecret
+	helper = libsecret
+[url "https://"]
+	insteadOf = git+https://
+[pull]
+	regase = false

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "To create password file:"
+echo " - create file in ~/.local/pki/password"
+echo " - gpg2 -qer 'Arkadiusz Dzik' <file from previous>"
+echo " - remove original file"
+echo "In your script add source command:"
+echo "   source <(gpg2 -qd ~/.local/pki/windows_whatever.gpg"

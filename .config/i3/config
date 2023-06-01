@@ -1,168 +1,201 @@
-set $mod Mod4
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+set         $mod            Mod4
 
-font pango:DejaVu Sans Mono 14
+#set        $wallpaper  /usr/share/backgrounds/f29/default/normalish/f29.png
+set         $wallpaper      /home/adzik/Pictures/background.jpg
 
+font        pango:Ubuntu,14
+#output      * bg $wallpaper fill
+#exec        feh --bg-scale $wallpaper
+exec        feh --bg-scale /home/adzik/Pictures/background.jpg
+
+#font       pango:monospace 8
+#font       pango:DejaVu Sans Mono 8
+#font       -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec st -f 'DejaVu Sans Mono-9'
-bindsym $mod+Shift+q kill
+# start a terminal
+bindsym     $mod+Return     exec i3-sensible-terminal
 
-#bindsym $mod+space exec i3-dmenu-desktop --dmenu="dmenu -l 15 -i -fn 'DejaVu Sans Mono-14'"
-bindsym $mod+space exec rofi -show drun -modi drun -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 -show-icons true 
+# kill focused window
+bindsym     $mod+Shift+q    kill
 
-#bindsym $mod+r exec dmenu_run -l 15 -fn 'DejaVu Sans Mono-14' -nf '#BBBBBB' -nb '#000000' -sb '#31310B' -sf '#FDFD3B' 
-bindsym $mod+r exec rofi -show run -location 2 -font 'pango:DejaVu Sans Mono 14' -yoffset 34 
+# start dmenu (a program launcher)
+bindsym    $mod+r          exec dmenu_run -i -l 15 -p "bin: " -fn 'Ubuntu:regular:pixelsize=24'
+#bindsym     $mod+r          exec --no-startup-id i3-dmenu-desktop
+#bindsym     $mod+space      exec dmenu_run -i -b -p 'Arch Linux' -fn 'Ubuntu Mono:bold:pixelsize=15' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#b58900'
 
+bindsym     $mod+space      exec i3-dmenu-desktop --dmenu="dmenu -i -l 15 -fn 'Ubuntu:regular:pixelsize=24'"
 
-bindsym $mod+Left        focus left
-bindsym $mod+Down        focus down
-bindsym $mod+Up          focus up
-bindsym $mod+Right       focus right
-bindsym $mod+Shift+Left  move left
-bindsym $mod+Shift+Down  move down
-bindsym $mod+Shift+Up    move up
-bindsym $mod+Shift+Right move right
+# lock screen
+#bindsym     $mod+l          exec i3lock -d -c 000000
+#bindsym     $mod+l          exec i3lock -i <(import -window root - | convert -blur -0x5 - png:-)
+bindsym     $mod+l          exec lockscreen
+
+# change focus
+bindsym     $mod+Left       focus left
+bindsym     $mod+Down       focus down
+bindsym     $mod+Up         focus up
+bindsym     $mod+Right      focus right
+
+# alternatively, you can use the cursor keys:
+bindsym     $mod+Shift+Left move left
+bindsym     $mod+Shift+Down move down
+bindsym     $mod+Shift+Up   move up
+bindsym     $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym     $mod+h          split h
+
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym     $mod+v          split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym     $mod+f          fullscreen toggle
 
-bindsym $mod+s   layout stacking
-bindsym $mod+w   layout tabbed
-bindsym $mod+e   layout toggle split
-bindsym $mod+tab focus  mode_toggle
-bindsym $mod+Shift+space floating toggle
+# change container layout (stacked, tabbed, toggle split)
+bindsym     $mod+s          layout stacking
+bindsym     $mod+w          layout tabbed
+bindsym     $mod+e          layout toggle split
+
+# toggle tiling / floating
+bindsym     $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+#bindsym     $mod+space      focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym     $mod+a          focus parent
 
-set $ws1  "1"
-set $ws2  "2"
-set $ws3  "3"
-set $ws4  "4"
-set $ws5  "5"
-set $ws6  "6"
-set $ws7  "7"
-set $ws8  "8"
-set $ws9  "9"
-set $ws10 "0"
+# focus the child container
+#bindsym    $mod+d          focus child
 
+#bindsym Print exec --no-startup-id import "/home/adzik/Pictures/Screenshots/Screenshot-$(uname -n)-$(date +'%Y%m%d%H%M%S').png"
+bindsym --release Print exec import "/home/adzik/Pictures/Screenshots/Screenshot-$(uname -n)-$(date +'%Y%m%d%H%M%S').png"
+
+# setup HDMI-1 output monitor
+exec --no-startup-id xrandr --output HDMI-1 --left-of eDP-1
+bindsym $mod+g exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1
+
+bindsym $mod+p move workspace to output right
+bindsym $mod+o move workspace to output left
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set         $ws1  "1 im"
+set         $ws2  "2 www"
+set         $ws3  "3 tty"
+set         $ws4  "4 priv"
+set         $ws5  "5"
+set         $ws6  "6"
+set         $ws7  "7"
+set         $ws8  "8"
+set         $ws9  "9"
+set         $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-bindsym $mod+Prior workspace prev
-bindsym $mod+Next  workspace next
+bindsym     $mod+1      workspace   $ws1
+bindsym     $mod+2      workspace   $ws2
+bindsym     $mod+3      workspace   $ws3
+bindsym     $mod+4      workspace   $ws4
+bindsym     $mod+5      workspace   $ws5
+bindsym     $mod+6      workspace   $ws6
+bindsym     $mod+7      workspace   $ws7
+bindsym     $mod+8      workspace   $ws8
+bindsym     $mod+9      workspace   $ws9
+bindsym     $mod+0      workspace   $ws10
+# PgUp and PgDown 
+bindsym     $mod+Prior  workspace   prev
+bindsym     $mod+Next   workspace   next
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+Prior move container to workspace prev
-bindsym $mod+Shift+Next  move container to workspace next
+bindsym     $mod+Shift+1        move    container to workspace $ws1
+bindsym     $mod+Shift+2        move    container to workspace $ws2
+bindsym     $mod+Shift+3        move    container to workspace $ws3
+bindsym     $mod+Shift+4        move    container to workspace $ws4
+bindsym     $mod+Shift+5        move    container to workspace $ws5
+bindsym     $mod+Shift+6        move    container to workspace $ws6
+bindsym     $mod+Shift+7        move    container to workspace $ws7
+bindsym     $mod+Shift+8        move    container to workspace $ws8
+bindsym     $mod+Shift+9        move    container to workspace $ws9
+bindsym     $mod+Shift+0        move    container to workspace $ws10
+bindsym     $mod+Shift+Prior    move    workspace prev
+bindsym     $mod+Shift+Next     move    workspace next
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# reload the configuration file
+bindsym     $mod+Shift+c    reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym     $mod+Shift+r    restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar --font pango:Ubuntu,14 -t warning -m 'Wanna exit?' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -f 'pango:DejaVu Sans Mono 14' -t warning -m 'You wanna exit X?' -b 'Yes!' 'i3-msg exit'"
+bindsym XF86AudioMute           exec --no-startup-id amixer set Master  toggle
+bindsym XF86AudioMicMute        exec --no-startup-id amixer set Capture toggle
+bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume    exec --no-startup-id amixer set Master 5%-
+bindsym XF86MonBrightnessUp     exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown   exec --no-startup-id light -U 10
+bindsym $mod+XF86AudioMute      exec amixer set Capture toggle
+bindsym $mod+XF86AudioRaiseVolume exec amixer set Capture 5%+ 
+bindsym $mod+XF86AudioLowerVolume exec amixer set Capture 5%-
 
-# xprop WM_CLASS
-for_window [class="Nautilus" instance="file_progress"] floating enable
-for_window [class="mpv" instance="gl"] floating enable
-for_window [class="Virt-manager"] floating enable
-for_window [class="URxvt"] floating enable resize set 1300 600, move position center
-for_window [class="st-256color"] floating enable resize set 1300 600, move position center
-for_window [class="Skype"] floating enable resize set 900 600
-for_window [class="Dwarf_Fortress"] floating enable resize set 900 600
-for_window [window_role="About"] floating enable
-for_window [class="Pavucontrol"] floating enable resize set 1300 600, move position center
-for_window [class="Nm-connection-editor"] floating enable resize set 1300 600, move position center
-
+# resize window (you can also use the mouse for that)
 mode "resize" {
-    # These bindings trigger as soon as you enter the resize mode
-    bindsym Left   resize shrink width 10 px or 10 ppt
-    bindsym Down   resize grow height 10 px or 10 ppt
-    bindsym Up     resize shrink height 10 px or 10 ppt
-    bindsym Right  resize grow width 10 px or 10 ppt
-    bindsym Return mode   "default"
-    bindsym Escape mode   "default"
-    bindsym $mod+d mode   "default"
+        # These bindings trigger as soon as you enter the resize mode
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+d
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+d mode "default"
 }
+
 bindsym $mod+d mode "resize"
 
-# using polybar now
-#bar {
-#  position top
-#  status_command i3status
-#  font pango:DejaVu Sans Mono 14
-#  colors {
-#    background #000000
-#    statusline #FFFFFF
-#    separator  #666666
-#
-#    focused_workspace  #FDFD3B #000000 #FDFD3B
-#    active_workspace   #333333 #000000 #FFFFFF
-#    inactive_workspace #333333 #000000 #888888
-#    urgent_workspace   #2F343A #900000 #FFFFFF
-#    binding_mode       #2F343A #900000 #FFFFFF
-#  }
+mode "Move workspace" {
+        #Move current workspace to different output
+        bindsym Left  move workspace to output left
+        bindsym Right move workspace to output right
+        bindsym Up    move workspace to output up
+        bindsym Down  move workspace to output down
+        bindsym Escape mode "default"
+}
+bindsym $mod+m mode "Move workspace"
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+  font pango:Ubuntu, Icons 16
+  status_command i3status
+  position top
+    colors {
+        statusline #ffffff
+        background #323232a0
+        inactive_workspace #323232a0 #323232a0 #5c5c5ca0
+    }
+}
+
+#set $gnome-schema org.gnome.desktop.interface
+
+#exec_always {
+#    gsettings set $gnome-schema gtk-theme    'Adwaita'
+#    gsettings set $gnome-schema icon-theme   'Adwaita'
+#    gsettings set $gnome-schema cursor-theme 'Adwaita'
 #}
 
-# i3 gaps config
-#gaps inner 5
-#smart_borders on
-#smart_gaps on
-
-#bindsym $mod+l exec i3lock -t -i /etc/X11/xdm/bg.png
-bindsym $mod+l exec i3lock -t -c 000000
-exec --no-startup-id xmodmap ~/.Xmodmap
-#exec --no-startup-id feh --bg-scale /etc/X11/xdm/bg.png
-#exec --no-startup-id xsetroot -solid black
-exec --no-startup-id feh -B black --bg-center /home/adzik/Pictures/logos/arasaka-small.jpg
-#exec --no-startup-id nm-tray
-exec --no-startup-id nm-applet
-#exec --no-startup-id systemctl --user start redshift-gtk
+#####################################################################
+######## Compton
+# seq 0 3 | xargs -l1 -I@ compton -b -d :0.@  # Multihead support
+#exec --no-startup-id compton --opacity-rule '30:window_type = "dock" && class_g = "i3bar"' --config ~/.config/compton.conf -b
+#exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id "compton -b"
 exec --no-startup-id dunst
-#exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id compton --config ~/.config/compton.conf -b
-
-# class                 border  bground text    indicator child_border
-client.focused          #FDFD3B #000000 #FDFD3B #FDFD3B   #A09608
-client.focused_inactive #B7B7B7 #303030 #B7B7B7 #B7B7B7   #5F676A
-client.unfocused        #B7B7B7 #303030 #B7B7B7 #B7B7B7   #222222
-client.urgent           #2F343A #900000 #FFFFFF #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-
-client.background       #000000
 

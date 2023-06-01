@@ -1,0 +1,2 @@
+warpdrive_ip=$(ps aux | grep whitenoise | grep play | awk '{print $2}')
+[ "" == "$warpdrive_ip" ] || kill $warpdrive_ip

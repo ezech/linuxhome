@@ -1,0 +1,144 @@
+set                 $mod                Mod4
+set                 $left               h
+set                 $down               j
+set                 $up                 k
+set                 $right              l
+
+#set                $term               urxvt256c-ml
+set                 $term               urxvt
+set                 $menu               dmenu_run
+set $wallpaper  /usr/share/backgrounds/f29/default/normalish/f29.png
+
+font    pango:Ubuntu,20
+output  * bg $wallpaper fill
+
+#output eDP-1 resolution 1920x1080 position 1920,0 scale 1
+
+#input "1:1:AT_Translated_Set_2_keyboard" xkb_layout pc104 
+
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+
+bindsym             $mod+Return         exec $term
+bindsym             $mod+Shift+q        kill
+bindsym             $mod+r              exec $menu
+bindsym             $mod+Alt+l          exec swaylock -c 000000
+floating_modifier   $mod                normal
+
+bindsym             $mod+Shift+c        reload
+bindsym             $mod+Shift+e        exit
+bindsym             $mod+$left          focus left
+bindsym             $mod+Left           focus left
+bindsym             $mod+$right         focus right
+bindsym             $mod+Right          focus right
+bindsym             $mod+$up            focus up
+bindsym             $mod+Up             focus up
+bindsym             $mod+$down          focus down
+bindsym             $mod+Down           focus down
+
+bindsym             $mod+Shift+$left    move left
+bindsym             $mod+Shift+Left     move left
+bindsym             $mod+Shift+$right   move right
+bindsym             $mod+Shift+Right    move right
+bindsym             $mod+Shift+$down    move down
+bindsym             $mod+Shift+Down     move down
+bindsym             $mod+Shift+$up      move up
+bindsym             $mod+Shift+Up       move up
+    
+bindsym             $mod+1 workspace    1
+bindsym             $mod+2 workspace    2
+bindsym             $mod+3 workspace    3
+bindsym             $mod+4 workspace    4
+bindsym             $mod+5 workspace    5
+bindsym             $mod+6 workspace    6
+bindsym             $mod+7 workspace    7
+bindsym             $mod+8 workspace    8
+bindsym             $mod+9 workspace    9
+bindsym             $mod+0 workspace    10
+bindsym             $mod+Shift+1 move   container to workspace 1
+bindsym             $mod+Shift+2 move   container to workspace 2
+bindsym             $mod+Shift+3 move   container to workspace 3
+bindsym             $mod+Shift+4 move   container to workspace 4
+bindsym             $mod+Shift+5 move   container to workspace 5
+bindsym             $mod+Shift+6 move   container to workspace 6
+bindsym             $mod+Shift+7 move   container to workspace 7
+bindsym             $mod+Shift+8 move   container to workspace 8
+bindsym             $mod+Shift+9 move   container to workspace 9
+bindsym             $mod+Shift+0 move   container to workspace 10
+bindsym             $mod+b              splith
+bindsym             $mod+v              splitv
+bindsym             $mod+s              layout stacking
+bindsym             $mod+w              layout tabbed
+bindsym             $mod+e              layout toggle split
+bindsym             $mod+f              fullscreen
+bindsym             $mod+Shift+space    floating toggle
+bindsym             $mod+space          focus mode_toggle
+bindsym             $mod+a              focus parent
+bindsym             $mod+Shift+minus    move scratchpad
+bindsym             $mod+minus          scratchpad show
+
+bindsym XF86AudioMute           exec --no-startup-id amixer set Master  toggle
+bindsym XF86AudioMicMute        exec --no-startup-id amixer set Capture toggle
+bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume    exec --no-startup-id amixer set Master 5%-
+bindsym XF86MonBrightnessUp     exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown   exec --no-startup-id light -U 10
+bindsym $mod+XF86AudioMute        exec amixer set Capture toggle
+bindsym $mod+XF86AudioRaiseVolume exec amixer set Capture 5%+ 
+bindsym $mod+XF86AudioLowerVolume exec amixer set Capture 5%-
+
+
+mode "resize" {
+    bindsym         $left               resize shrink width 10 px or 10 ppt
+    bindsym         Left                resize shrink width 10 px or 10 ppt
+    bindsym         $right              resize grow width 10 px or 10 ppt
+    bindsym         Right               resize grow width 10 px or 10 ppt
+    bindsym         $up                 resize shrink height 10 px or 10 ppt
+    bindsym         Up                  resize shrink height 10 px or 10 ppt
+    bindsym         $down               resize grow height 10 px or 10 ppt
+    bindsym         Down                resize grow height 10 px or 10 ppt
+    bindsym         Return              mode "default"
+    bindsym         Escape              mode "default"
+}
+bindsym $mod+d mode "resize"
+
+#bar {
+#    font pango:Ubuntu Mono,20
+#    workspace_buttons yes
+#    tray_output yes
+#    position top
+#    colors {
+#        statusline #ffffff
+#        background #323232a0
+#        inactive_workspace #323232a0 #323232a0 #5c5c5ca0
+#    }
+#}
+
+bar {
+  font pango:Ubuntu, Icons 16
+  status_command i3status
+  position top
+    colors {
+        statusline #ffffff
+        background #323232a0
+        inactive_workspace #323232a0 #323232a0 #5c5c5ca0
+    }
+}
+
+#set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme    'Adwaita'
+    gsettings set $gnome-schema icon-theme   'Adwaita'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
+}
+
+include /etc/sway/config.d/*
+
+exec xrdb ~/.Xresources
+

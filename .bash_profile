@@ -1,17 +1,8 @@
 # .bash_profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -f "$HOME/.bashrc" ]  && source "$HOME/.bashrc"
 
-# User specific environment and startup programs
 
-export JAVA_HOME=$HOME/java/latest
-
-PATH=$JAVA_HOME/bin:$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-
-ll="ls -lh"
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
